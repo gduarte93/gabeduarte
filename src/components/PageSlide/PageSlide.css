@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Hepta+Slab&display=swap');
+
 .PageSlide {
     height: 100vh;
     width: 100vw;
@@ -30,6 +32,8 @@
             padding: 20px;
             height: 100%;
             box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
         }
     }
 
@@ -38,8 +42,14 @@
         color: white;
         margin-top: 15vh;
         color: white;
-        font-family: Futura, Futura-Medium, "Futura Medium", sans-serif;
-        font-size: 24px;
+        font-family: 'Hepta Slab', serif;  ;
+        font-size: 28px;
         letter-spacing: 1px;
-    }    
+        flex-grow: 1;
+    }
+
+    &__info {
+        align-self: flex-end;
+        max-width: 500px;
+    }
 }

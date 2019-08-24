@@ -3,17 +3,22 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "proxy": "http://localhost:5000",
   "scripts": {
     "build": "webpack",
-    "start": "webpack-dev-server",
+    "start-client": "webpack-dev-server",
+    "start-server": "node server.js",
+    "start": "npm run build && npm run start-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Gabriel A. Duarte",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.17.1",
     "parallax-js": "^3.1.0",
     "react": "^16.9.0",
-    "react-dom": "^16.9.0"
+    "react-dom": "^16.9.0",
+    "react-router-dom": "^5.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",

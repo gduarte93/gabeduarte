@@ -1,8 +1,11 @@
-var React    = require('react'),
-    ReactDOM = require('react-dom'),
-    Shell    = require('./components/Shell/index.jsx');
+var React         = require('react'),
+    ReactDOM      = require('react-dom'),
+    Shell         = require('./components/Shell/index.jsx'),
+    BrowserRouter = require('react-router-dom').BrowserRouter;
 
-ReactDOM.render(
-    <Shell />,
-    document.getElementById('root')
+ReactDOM.render((
+    <BrowserRouter>
+        <Shell />
+    </BrowserRouter>
+    ), document.getElementById('root')
 );

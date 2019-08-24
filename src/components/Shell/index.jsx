@@ -1,10 +1,31 @@
 var React     = require('react'),
-    PageSlide = require('../PageSlide/index.jsx');
+    Component = React.Component,
+    Routing   = require('../Routing/index.jsx');
 
 require('./Shell.css')
 
-function Shell() {
-    return (<PageSlide />);
+class Shell extends Component {
+    constructor(props) {
+        super(props);
+
+        this.connectToServer = this.connectToServer.bind(this);
+    }
+
+    connectToServer() {
+        fetch('/');
+    }
+
+    componentDidMount() {
+        this.connectToServer();
+    }
+
+    render() {
+        return (
+            <div id="shell">
+                <Routing />
+            </div>
+        );
+    }
 }
 
 module.exports = Shell;

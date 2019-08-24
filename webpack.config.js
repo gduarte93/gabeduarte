@@ -28,5 +28,9 @@ module.exports = {
         filename: 'bundle.js',
         path: __dirname + '/build'
     },
-    plugins: [HTMLWebpackPluginConfig]
+    plugins: [HTMLWebpackPluginConfig],
+    devServer: {
+        host: '0.0.0.0',
+        port: '8080'
+    }
 };

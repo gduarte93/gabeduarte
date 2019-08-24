@@ -72,3 +72,8 @@
         opacity: 0.8;
     }
 }
+
+.Link__info--button {
+    display: inline-block;
+    margin-top: 20px;
+}

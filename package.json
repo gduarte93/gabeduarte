@@ -11,6 +11,7 @@
   "author": "Gabriel A. Duarte",
   "license": "ISC",
   "dependencies": {
+    "parallax-js": "^3.1.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0"
   },

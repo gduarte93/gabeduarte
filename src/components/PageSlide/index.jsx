@@ -1,6 +1,7 @@
 var React            = require('react'),
     Component        = React.Component,
     data             = require('./mockData.json'),
+    Link             = require('react-router-dom').Link,
     Parallax         = require('parallax-js'),
     pInstance;
 
@@ -44,13 +45,14 @@ class PageSlide extends Component {
         return (
             <div className="PageSlide" ref={this.scene}>
                 <div className="PageSlide__background" style={backgroundStyle} data-depth="0.1"></div>
-                <div className="PageSlide__overlay">
+                <div className="PageSlide__overlay" data-depth="0">
                     <div className="PageSlide__overlay--background" style={overlayStyle}>
                         <div className="PageSlide__overlay--contents">
                             <div className="PageSlide__name" style={primaryColorStyle}>{title}</div>
                             <div className="PageSlide__info">
                                 <div className="PageSlide__title" style={primaryColorStyle}>{infoTitle}</div>
                                 <div className="PageSlide__subtitle" style={secondaryColorStyle}>{infoSub}</div>
+                                <Link to="/info">Test</Link>
                                 <div className="PageSlide__description" style={primaryColorStyle}>{desc}</div>
                             </div>
                         </div>

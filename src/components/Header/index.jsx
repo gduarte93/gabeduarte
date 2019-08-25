@@ -48,8 +48,10 @@ function Header() {
                 <div className="Header__info">
                     <div className="Header__info--container" style={overlayStyle}>
                         <div className="Header__info--top">
-                            <div className="Header__title" style={primaryColorStyle}>{title}</div>
-                            <div className="Header__subtitle" style={secondaryColorStyle}>{subtitle}</div>
+                            <div className="Header__title--container">
+                                <div className="Header__title" style={primaryColorStyle}>{title}</div>
+                                <div className="Header__subtitle" style={secondaryColorStyle}>{subtitle}</div>
+                            </div>
                         </div>
                         <div className="Header__info--middle">
                             <div className="Header__description" style={tertiaryColorStyle}>{infoDesc}</div>

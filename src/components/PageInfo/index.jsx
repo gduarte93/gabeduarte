@@ -1,10 +1,11 @@
-var React = require('react');
+var React  = require('react'),
+    Header = require('../Header/index.jsx');
 
 require('./PageInfo.css')
 
 function PageInfo() {
     return (
-        <div>This is the info page!!!!!</div>
+        <Header />
     )
 }
 

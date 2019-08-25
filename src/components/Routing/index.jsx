@@ -7,12 +7,10 @@ var React       = require('react'),
 
 function Routes() {
     return (
-        <main>
-            <Switch>
-                <Route exact path='/' component={PageSlide}/>
-                <Route path='/info' component={PageInfo}/>
-            </Switch>
-        </main>
+        <Switch>
+            <Route exact path='/' component={PageSlide}/>
+            <Route path='/info' component={PageInfo}/>
+        </Switch>
     );
 }
 

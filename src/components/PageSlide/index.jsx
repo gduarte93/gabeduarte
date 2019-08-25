@@ -18,6 +18,13 @@ class PageSlide extends Component {
         pInstance = new Parallax(this.scene.current);
     }
 
+    componentWillUnmount() {
+        if (pInstance) {
+            // garbage collection
+            pInstance.destroy();
+        }
+    }
+
     render() {
         var title               = data && data.title,
             background          = data && data.background,
@@ -33,7 +40,7 @@ class PageSlide extends Component {
                 backgroundImage: `url(${background})`
             },
             overlayStyle        = {
-                background: overlayColor
+                backgroundColor: overlayColor
             },
             primaryColorStyle   = {
                 color: primary

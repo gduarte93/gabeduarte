@@ -35,11 +35,16 @@ function Header() {
         },
         tertiaryColorStyle  = {
             color: tertiary
+        },
+        gradientStyle = {
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.0) 70%, ${backgroundColor} 100%)`
         }
 
     return (
         <div className="Header" style={backgroundColorStyle}>
-            <div className="Header__background" style={backgroundStyle}/>
+            <div className="Header__background" style={backgroundStyle}>
+                <div className="Header__background--gradient" style={gradientStyle}/>
+            </div>
             <div className="Header__container">
                 <div>
                     <div>Nav</div>

@@ -6,6 +6,8 @@ require('./PageInfo.css')
 function PageInfo() {
     return (
         <Header />
+        // TODO: Showcase Component
+        // TODO: Bulletedlist Component
     )
 }
 

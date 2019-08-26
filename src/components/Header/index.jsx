@@ -18,6 +18,8 @@ function Header() {
         tertiary            = infoColor && infoColor.tertiary,
         infoTitle           = info && info.title,
         infoStory           = info && info.story,
+        col1                = infoStory.column1,
+        col2                = infoStory.column2,
         backgroundStyle     = {
             backgroundImage: `url(${background})`
         },
@@ -38,7 +40,7 @@ function Header() {
         },
         gradientStyle = {
             backgroundImage: `linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.0) 70%, ${backgroundColor} 100%)`
-        }
+        };
 
     return (
         <div className="Header" style={backgroundColorStyle}>
@@ -64,7 +66,10 @@ function Header() {
                         <div className="Header__info--bottom">
                             <div className="Header__story" style={primaryColorStyle}>
                                 <div className="Header__story--title">{infoTitle}</div>
-                                <div className="Header__story--story" dangerouslySetInnerHTML={{__html: infoStory}} />
+                                <div className="Header__story--container">
+                                    <div className="Header__story--col1" dangerouslySetInnerHTML={{__html: col1}} />
+                                    <div className="Header__story--col2" dangerouslySetInnerHTML={{__html: col2}} />
+                                </div>
                             </div>
                             <div className="Header__facts">
                                 {/* add this to mockData as an array to loop over */}

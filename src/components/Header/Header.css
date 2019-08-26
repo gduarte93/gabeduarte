@@ -1,10 +1,17 @@
-@import url('https://fonts.googleapis.com/css?family=Hepta+Slab:400,600&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif:400,700&display=swap');
 
 body {
     overflow-x: hidden;
 }
 
 .Header {
+    &__nav {
+        position: fixed;
+        background-color: white;
+        margin-top: 40px;
+        margin-left: 40px;
+    }
+
     &__background {
         width: 100vw;
         height: 100vh;
@@ -51,7 +58,7 @@ body {
     }
 
     &__title, &__subtitle, &__description, &__story--title, &__blurbs--title {
-        font-family: 'Hepta Slab', serif;
+        font-family: 'Noto Serif', serif;
     }
 
     &__title {
@@ -76,7 +83,7 @@ body {
         margin-left: 25vw;
 
         &--title {
-            font-size: 14px;
+            font-size: 15px;
             opacity: 0.8;
             margin-bottom: 5px;
             letter-spacing: 1px;
@@ -108,7 +115,7 @@ body {
         width: 10vw;
 
         &--title {
-            font-size: 14px;
+            font-size: 15px;
             margin-bottom: 5px;
             letter-spacing: 1px;
             font-weight: bold;

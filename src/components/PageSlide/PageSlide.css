@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Hepta+Slab:400,600&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif:400,700&display=swap');
 
 #root {
     overflow: hidden;
@@ -43,9 +43,8 @@
 
     &__name {
         margin-top: 15vh;
-        font-family: 'Hepta Slab', serif;
+        font-family: 'Noto Serif', serif;
         font-size: 28px;
-        letter-spacing: 1px;
         flex-grow: 1;
     }
 
@@ -58,7 +57,7 @@
 
     &__title, &__subtitle {
         font-size: 30px;
-        font-family: 'Hepta Slab', serif;
+        font-family: 'Noto Serif', serif;
         font-weight: bold;
     }
 

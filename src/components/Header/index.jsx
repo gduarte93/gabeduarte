@@ -20,6 +20,7 @@ function Header() {
         infoStory           = info && info.story,
         col1                = infoStory.column1,
         col2                = infoStory.column2,
+        blurbs              = data && data.blurbs,
         backgroundStyle     = {
             backgroundImage: `url(${background})`
         },
@@ -40,6 +41,9 @@ function Header() {
         },
         gradientStyle = {
             backgroundImage: `linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.0) 70%, ${backgroundColor} 100%)`
+        },
+        primaryColorBackground = {
+            backgroundColor: primary
         };
 
     return (
@@ -71,10 +75,21 @@ function Header() {
                                     <div className="Header__story--col2" dangerouslySetInnerHTML={{__html: col2}} />
                                 </div>
                             </div>
-                            <div className="Header__facts">
-                                {/* add this to mockData as an array to loop over */}
-                                <div className="Header__facts--title">Project</div>
-                                <div className="Header__facts--description">Did this and that for this project.</div>
+                            <div className="Header__blurbs">
+                                {
+                                    blurbs.map(item => {
+                                        var title = item && item.title,
+                                            desc  = item && item.description;
+
+                                        return (
+                                            <React.Fragment>
+                                                <div className="Header__blurbs--title" style={primaryColorStyle}>{title}</div>
+                                                <div className="Header__blurbs--description" style={primaryColorStyle}>{desc}</div>
+                                                <div className="Header__blurbs--border" style={primaryColorBackground} />
+                                            </React.Fragment>
+                                        );
+                                    })
+                                }
                             </div>
                         </div>
                     </div>

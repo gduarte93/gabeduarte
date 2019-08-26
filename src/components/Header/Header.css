@@ -43,9 +43,14 @@ body {
         &--top {
             height: 25vh;
         }
+
+        &--bottom {
+            display: flex;
+            justify-content: space-between;
+        }
     }
 
-    &__title, &__subtitle, &__description, &__story--title, &__facts--title {
+    &__title, &__subtitle, &__description, &__story--title, &__blurbs--title {
         font-family: 'Hepta Slab', serif;
     }
 
@@ -54,7 +59,7 @@ body {
             font-size: 30px;
             font-weight: bold;
             width: 30vw;
-            margin-left: 20vw;
+            margin-left: 25vw;
             margin-top: 3vh;
         }
     }
@@ -68,7 +73,7 @@ body {
     }
 
     &__story {
-        margin-left: 20vw;
+        margin-left: 25vw;
 
         &--title {
             font-size: 14px;
@@ -79,7 +84,7 @@ body {
         }
 
         &--container {
-            width: 60vw;
+            width: 50vw;
             display: flex;
             justify-content: space-between;
             font-family: sans-serif;
@@ -90,12 +95,38 @@ body {
         }
 
         &--col1 {
-            width: 30vw;
+            width: 25vw;
             margin-right: 40px;
         }
 
         &--col2 {
-            width: 30vw;
+            width: 25vw;
+        }
+    }
+
+    &__blurbs {
+        width: 10vw;
+
+        &--title {
+            font-size: 14px;
+            margin-bottom: 5px;
+            letter-spacing: 1px;
+            font-weight: bold;
+        }
+    
+        &--description {
+            font-family: sans-serif;
+            font-size: 14px;
+            line-height: 18px;
+            font-weight: 100;
+        }
+
+        &--border {
+            height: 1px;
+            opacity: 0.5;
+            width: 100%;
+            margin-top: 10px;
+            margin-bottom: 10px;
         }
     }
 }

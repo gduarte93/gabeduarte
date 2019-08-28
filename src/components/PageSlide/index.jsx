@@ -59,7 +59,16 @@ class PageSlide extends Component {
                             <div className="PageSlide__info">
                                 <div className="PageSlide__title" style={primaryColorStyle}>{infoTitle}</div>
                                 <div className="PageSlide__subtitle" style={secondaryColorStyle}>{infoSub}</div>
-                                <Link className="Link__info--button" to="/info">info...</Link>
+                                <Link className="Link__info--button" to="/info">
+                                    <div className="Threedots">
+                                        <div className="Threedots__dot" />
+                                        <div className="Threedots__dot" />
+                                        <div className="Threedots__dot" />
+                                    </div>
+                                </Link>
+                                <div className="Link__info--text">
+                                    See more
+                                </div>
                                 <div className="PageSlide__description" style={primaryColorStyle}>{desc}</div>
                             </div>
                         </div>

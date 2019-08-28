@@ -1,0 +1,17 @@
+{
+    "title": "Skills",
+    "items": [
+        {
+            "title": "English",
+            "proficiency": 10
+        },
+        {
+            "title": "Spanish",
+            "proficiency": 7
+        },
+        {
+            "title": "Typing",
+            "proficiency": 8
+        }
+    ]
+}

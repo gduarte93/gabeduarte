@@ -6,6 +6,8 @@
     align-items: center;
     padding: 20px;
     box-sizing: border-box;
+    background-size: cover;
+    background-position: center;
 
     &:nth-child(odd) {
         background-color: #ededef;

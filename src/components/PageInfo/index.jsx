@@ -1,6 +1,8 @@
 var React         = require('react'),
     Header        = require('../Header/index.jsx'),
     Showcase      = require('../Showcase/index.jsx'),
+    List          = require('../List/index.jsx'),
+
     showcaseMock1 = require('../Showcase/mockData.json'),
     showcaseMock2 = require('../Showcase/mockData2.json');
 
@@ -12,6 +14,7 @@ function PageInfo() {
             <Header />
             <Showcase imgPos="left" data={showcaseMock2} />
             <Showcase imgPos="right" data={showcaseMock1} />
+            <List />
             {/* // TODO: Bulletedlist Component */}
         </React.Fragment>
     )

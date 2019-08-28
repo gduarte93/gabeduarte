@@ -1,0 +1,40 @@
+.Showcase {
+    width: 100vw;
+    height: 100vh; /* don't make full height? */
+    background-color: #f3f3f5;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+
+    &:nth-child(odd) {
+        background-color: #ededef;
+    }
+
+    &__left, &__right {
+        flex: 0 0 50%;
+        padding: 20px;
+        box-sizing: border-box;
+        font-family: sans-serif;
+        font-weight: 100;
+    }
+
+    &__image--container {
+        flex-flow: row wrap;
+        text-align: center;
+    }
+    
+    &__image {
+        max-width: 500px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        width: calc(100% * (1/2) - 5px);
+
+        &:nth-child(even) {
+            margin-left: 10px;
+        }
+
+        &:nth-child(2n+1) {
+            margin-top: 10px;
+        }
+    }
+}

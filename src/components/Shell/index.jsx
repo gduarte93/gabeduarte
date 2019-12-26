@@ -1,6 +1,7 @@
 var React     = require('react'),
     Component = React.Component,
-    Routing   = require('../Routing/index.jsx');
+    Routing   = require('../Routing/index.jsx'),
+    Link      = require('react-router-dom').Link;
 
 require('./Shell.css')
 
@@ -21,7 +22,14 @@ class Shell extends Component {
 
     render() {
         return (
-            <div id="shell">
+            <div id='shell'>
+                <Link className="Link__menu--button" to="/menu">
+                    <div className="Threelines">
+                        <div className="Threelines__line" />
+                        <div className="Threelines__line" />
+                        <div className="Threelines__line" />
+                    </div>
+                </Link>
                 <Routing />
             </div>
         );

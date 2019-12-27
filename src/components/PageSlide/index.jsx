@@ -1,8 +1,14 @@
-var React            = require('react'),
-    Component        = React.Component,
-    data             = require('./mockData.json'),
-    Link             = require('react-router-dom').Link,
-    Parallax         = require('parallax-js'),
+var React      = require('react'),
+    PropTypes  = require('prop-types'),
+    Component  = React.Component,
+    data       = require('./mockData.json'),
+    Link       = require('react-router-dom').Link,
+    Parallax   = require('parallax-js'),
+
+    CONSTANTS  = require('common-constants'),
+    PAGE_TYPES = CONSTANTS.PAGE_TYPES,
+    SLIDE      = PAGE_TYPES.SLIDE,
+
     pInstance;
 
 require('./PageSlide.css');
@@ -15,10 +21,26 @@ class PageSlide extends Component {
     }
 
     componentDidMount() {
+        var me          = this,
+            context     = me && me.context,
+            setPageType = context && context.setPageType;
+
+        if (typeof setPageType === 'function') {
+            setPageType(SLIDE);
+        }
+
         pInstance = new Parallax(this.scene.current);
     }
 
     componentWillUnmount() {
+        var me          = this,
+            context     = me && me.context,
+            setPageType = context && context.setPageType;
+
+        if (typeof setPageType === 'function') {
+            setPageType();
+        }
+        
         if (pInstance) {
             // garbage collection
             pInstance.destroy();
@@ -78,5 +100,11 @@ class PageSlide extends Component {
         );
     } 
 }
+
+PageSlide.displayName = 'PageSlide';
+
+PageSlide.contextTypes = {
+    setPageType: PropTypes.func
+};
 
 module.exports = PageSlide;

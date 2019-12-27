@@ -29,6 +29,51 @@
             }
         }
     }
+
+    &__back {
+        &--button {
+            display: inline-block;
+            top: 40px;
+            left: 100px;
+            text-decoration: none;
+            color: rgba(0, 0, 0, 0.5);
+            width: 48px;
+            height: 48px;
+            border: 1px solid #969696;
+            background-color: #999999;
+            border-radius: 100%;
+            position: fixed;
+            z-index: 1;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &:hover {
+                .Arrow {
+                    &--left {
+                        .Arrow__line {
+                            margin-left: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.Arrow {
+    &--left {
+        .Arrow__line {
+            transition: 200ms;
+            border-left: 1px solid white;
+            border-top: 1px solid white;
+            height: 16px;
+            width: 16px;
+            transform: rotate(-45deg);
+            margin-left: 8px;
+        }
+    }
 }
 
 .Threelines {

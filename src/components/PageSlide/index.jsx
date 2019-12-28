@@ -96,7 +96,7 @@ class PageSlide extends Component {
 PageSlide.displayName = 'PageSlide';
 
 PageSlide.contextTypes = {
-    setPageType   : PropTypes.func
+    setPageType: PropTypes.func
 };
 
 module.exports = PageSlide;

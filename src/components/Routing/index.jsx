@@ -1,10 +1,10 @@
 var React                = require('react'),
     reactRouter          = require('react-router-dom'),
     Switch               = reactRouter.Switch,
-    // Router               = reactRouter.BrowserRouter,
     Route                = reactRouter.Route,
     PageSlide            = require('../PageTypes/PageSlide/index.jsx'),
     PageInfo             = require('../PageTypes/PageInfo/index.jsx'),
+    PageMenu             = require('../PageTypes/PageMenu/index.jsx'),
     Error404             = require('../PageTypes/Error404/index.jsx'),
     ReactTransitionGroup = require('react-transition-group'),
     TransitionGroup      = ReactTransitionGroup.TransitionGroup,
@@ -28,12 +28,13 @@ function Routes(props) {
                             classNames="page"
                             timeout={{
                                 enter: 500,
-                                exit: 500,
+                                exit: 500
                             }}
                         >
                             <Switch>
                                 <Route exact path='/' component={PageSlide}/>
                                 <Route path='/info' component={PageInfo}/>
+                                <Route path='/menu' component={PageMenu}/>
                                 <Route component={Error404}/>
                             </Switch>
                         </CSSTransition>

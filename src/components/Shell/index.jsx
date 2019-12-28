@@ -75,6 +75,7 @@ class Shell extends Component {
 
         return (
             <div id='shell'>
+                {/* TODO: add location state to menu link to add --fromMenu class so that exit transitions don't move */}
                 <Link className="Link__menu--button" to="/menu">
                     <div className="Threelines">
                         <div className="Threelines__line" />

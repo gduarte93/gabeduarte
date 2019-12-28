@@ -4,12 +4,13 @@
     width: 100vw;
 }
 
+/* Info Page Transitions */
 .page--info.page-enter {
-    transform: translate(100%, 0) !important;
+    transform: translate(100%, 0);
 }
 
 .page--info.page-enter-active {
-    transform: translate(0, 0) !important;
+    transform: translate(0, 0);
     transition: transform 500ms linear;
     z-index: 1;
 }
@@ -24,6 +25,28 @@
     z-index: 1;
 }
 
+/* Menu Page Transitions */
+.page--menu.page-enter {
+    transform: translate(-100%, 0);
+}
+
+.page--menu.page-enter-active {
+    transform: translate(0, 0);
+    transition: transform 500ms linear;
+    z-index: 1;
+}
+
+.page--menu.page-exit {
+    transform: translate(0, 0);
+}
+
+.page--menu.page-exit-active {
+    transform: translate(-100%, 0);
+    transition: transform 500ms linear;
+    z-index: 1;
+}
+
+/* Slide Page (non) Transitions */
 .page--slide.page-enter {
     transform: translate(0, 0);
 }

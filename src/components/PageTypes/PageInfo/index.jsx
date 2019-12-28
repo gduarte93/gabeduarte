@@ -1,12 +1,12 @@
 var React         = require('react'),
     PropTypes     = require('prop-types'),
     Component     = React.Component,
-    Header        = require('../Header/index.jsx'),
-    Showcase      = require('../Showcase/index.jsx'),
-    List          = require('../List/index.jsx'),
+    Header        = require('../../Header/index.jsx'),
+    Showcase      = require('../../Showcase/index.jsx'),
+    List          = require('../../List/index.jsx'),
 
-    showcaseMock1 = require('../Showcase/mockData.json'),
-    showcaseMock2 = require('../Showcase/mockData2.json'),
+    showcaseMock1 = require('../../Showcase/mockData.json'),
+    showcaseMock2 = require('../../Showcase/mockData2.json'),
 
     CONSTANTS     = require('common-constants'),
     PAGE_TYPES    = CONSTANTS.PAGE_TYPES,

@@ -16,7 +16,7 @@
             background-color: white;
             border-radius: 100%;
             position: fixed;
-            z-index: 1;
+            z-index: 10;
             
             &:hover {
                 .Threelines {
@@ -34,7 +34,6 @@
         &--button {
             display: inline-block;
             top: 40px;
-            left: 100px;
             text-decoration: none;
             color: rgba(0, 0, 0, 0.5);
             width: 48px;
@@ -43,11 +42,14 @@
             background-color: #999999;
             border-radius: 100%;
             position: fixed;
-            z-index: 1;
+            z-index: 9;
 
             display: flex;
             justify-content: center;
             align-items: center;
+
+            left: 40px;
+            transition: 400ms ease-in-out;
 
             &:hover {
                 .Arrow {
@@ -58,6 +60,17 @@
                     }
                 }
             }
+        }
+
+        &--show {
+            left: 100px;
+            opacity: 1;
+            transition-delay: 1000ms;
+        }
+
+        &--hide {
+            left: 40px;
+            opacity: 0.2;
         }
     }
 }

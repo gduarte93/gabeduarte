@@ -52,10 +52,6 @@ function Header() {
                 <div className="Header__background--gradient" style={gradientStyle}/>
             </div>
             <div className="Header__container">
-                <div className="Header__nav">
-                    <div>Menu</div>
-                    <Link to="/">Home</Link>
-                </div>
                 <div className="Header__info">
                     <div className="Header__info--container" style={overlayStyle}>
                         <div className="Header__info--top">

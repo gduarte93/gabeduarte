@@ -1,12 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Serif:400,700&display=swap');
 
-#root {
-    overflow: hidden;
-}
-
 .PageSlide {
     height: 100vh;
     width: 100vw;
+    overflow: hidden;
 
     &__background {
         width: 110vw;

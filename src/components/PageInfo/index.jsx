@@ -22,32 +22,27 @@ class PageInfo extends Component {
     componentDidMount() {
         var me          = this,
             context     = me && me.context,
+            setBackUrl  = context && context.setBackUrl,
             setPageType = context && context.setPageType;
+
+        if (typeof setBackUrl === 'function') {
+            setBackUrl('/');
+        }
 
         if (typeof setPageType === 'function') {
             setPageType(INFO);
         }
     }
 
-    componentWillUnmount() {
-        var me          = this,
-            context     = me && me.context,
-            setPageType = context && context.setPageType;
-
-        if (typeof setPageType === 'function') {
-            setPageType();
-        }
-    }
-
     render() {
         return (
-            <React.Fragment>
+            <div className='PageInfo page page--info'>
                 <Header />
                 <Showcase imgPos="left" data={showcaseMock2} />
                 <Showcase imgPos="right" data={showcaseMock1} />
                 <List />
                 {/* // TODO: Bulletedlist Component */}
-            </React.Fragment>
+            </div>
         )
     }
 }
@@ -55,7 +50,8 @@ class PageInfo extends Component {
 PageInfo.displayName = 'PageInfo';
 
 PageInfo.contextTypes = {
-    setPageType: PropTypes.func
+    setBackUrl  : PropTypes.func,
+    setPageType : PropTypes.func
 }
 
 module.exports = PageInfo;

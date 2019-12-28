@@ -29,19 +29,11 @@ class PageSlide extends Component {
             setPageType(SLIDE);
         }
 
-        pInstance = new Parallax(this.scene.current);
+        pInstance = new Parallax(me.scene.current);
     }
 
     componentWillUnmount() {
-        var me          = this,
-            context     = me && me.context,
-            setPageType = context && context.setPageType;
-
-        if (typeof setPageType === 'function') {
-            setPageType();
-        }
-        
-        if (pInstance) {
+        if (pInstance && pInstance.element) {
             // garbage collection
             pInstance.destroy();
         }
@@ -72,7 +64,7 @@ class PageSlide extends Component {
             };
 
         return (
-            <div className="PageSlide" ref={this.scene}>
+            <div className="PageSlide page page--slide" ref={this.scene}>
                 <div className="PageSlide__background" style={backgroundStyle} data-depth="0.1"></div>
                 <div className="PageSlide__overlay" data-depth="0">
                     <div className="PageSlide__overlay--background" style={overlayStyle}>
@@ -104,7 +96,7 @@ class PageSlide extends Component {
 PageSlide.displayName = 'PageSlide';
 
 PageSlide.contextTypes = {
-    setPageType: PropTypes.func
+    setPageType   : PropTypes.func
 };
 
 module.exports = PageSlide;

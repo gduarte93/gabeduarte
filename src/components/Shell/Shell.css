@@ -65,7 +65,7 @@
         &--show {
             left: 100px;
             opacity: 1;
-            transition-delay: 1000ms;
+            transition-delay: 500ms;
         }
 
         &--hide {

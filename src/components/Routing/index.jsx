@@ -27,8 +27,8 @@ function Routes(props) {
                             key={pathname}
                             classNames="page"
                             timeout={{
-                                enter: 1000,
-                                exit: 1000,
+                                enter: 500,
+                                exit: 500,
                             }}
                         >
                             <Switch>

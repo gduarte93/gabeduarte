@@ -1,28 +1,29 @@
 .page {
     position: absolute;
     top: 0;
-    width: 100vw;
+    width: 100%;
+    z-index: 1;
 }
 
 /* Info Page Transitions */
-.page--info.page-enter {
+.page--info.page-enter:not(.page--fromMenu) {
     transform: translate(100%, 0);
 }
 
-.page--info.page-enter-active {
+.page--info.page-enter-active:not(.page--fromMenu) {
     transform: translate(0, 0);
     transition: transform 500ms linear;
-    z-index: 1;
+    z-index: 2;
 }
 
-.page--info.page-exit {
+.page--info.page-exit:not(.page--toMenu) {
     transform: translate(0, 0);
 }
 
-.page--info.page-exit-active {
+.page--info.page-exit-active:not(.page--toMenu) {
     transform: translate(100%, 0);
     transition: transform 500ms linear;
-    z-index: 1;
+    z-index: 2;
 }
 
 /* Menu Page Transitions */
@@ -33,7 +34,7 @@
 .page--menu.page-enter-active {
     transform: translate(0, 0);
     transition: transform 500ms linear;
-    z-index: 1;
+    z-index: 2;
 }
 
 .page--menu.page-exit {
@@ -43,14 +44,10 @@
 .page--menu.page-exit-active {
     transform: translate(-100%, 0);
     transition: transform 500ms linear;
-    z-index: 1;
+    z-index: 2;
 }
 
 /* Slide Page (non) Transitions */
-.page--slide.page-enter {
-    transform: translate(0, 0);
-}
-
-.page--slide.page-exit {
+.page--slide.page-enter, .page--slide.page-enter-active, .page--slide.page-exit {
     transform: translate(0, 0);
 }

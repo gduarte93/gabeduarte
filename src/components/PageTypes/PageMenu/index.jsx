@@ -16,12 +16,7 @@ class PageMenu extends Component {
     componentDidMount() {
         var me          = this,
             context     = me && me.context,
-            setBackUrl  = context && context.setBackUrl,
             setPageType = context && context.setPageType;
-
-        if (typeof setBackUrl === 'function') {
-            setBackUrl('/');
-        }
 
         if (typeof setPageType === 'function') {
             setPageType(MENU);
@@ -40,7 +35,6 @@ class PageMenu extends Component {
 PageMenu.displayName = 'PageMenu';
 
 PageMenu.contextTypes = {
-    setBackUrl  : PropTypes.func,
     setPageType : PropTypes.func
 }
 

@@ -35,8 +35,19 @@ class PageInfo extends Component {
     }
 
     render() {
+        var me           = this,
+            props        = me && me.props,
+            appState     = props && props.state,
+            toMenu       = appState && appState.toMenu,
+            location     = props && props.location,
+            locState     = location && location.state,
+            fromMenu     = locState && locState.fromMenu,
+            navMenuClass = toMenu ? 'page--toMenu' 
+                            : fromMenu ? 'page--fromMenu' 
+                            : '';
+
         return (
-            <div className='PageInfo page page--info'>
+            <div className={`PageInfo page page--info ${navMenuClass}`}>
                 <Header />
                 <Showcase imgPos="left" data={showcaseMock2} />
                 <Showcase imgPos="right" data={showcaseMock1} />

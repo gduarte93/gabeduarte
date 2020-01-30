@@ -13,7 +13,8 @@ var React                = require('react'),
 require('./Routing.css');
 
 function Routes(props) {
-    var location = props && props.location;
+    var location = props && props.location,
+        state    = props && props.state;
 
     return (
         <Route
@@ -32,10 +33,10 @@ function Routes(props) {
                             }}
                         >
                             <Switch>
-                                <Route exact path='/' component={PageSlide}/>
-                                <Route path='/info' component={PageInfo}/>
-                                <Route path='/menu' component={PageMenu}/>
-                                <Route component={Error404}/>
+                                <Route exact path='/' render={(props) => <PageSlide {...props} state={state}/>}/>
+                                <Route path='/info' render={(props) => <PageInfo {...props} state={state}/>}/>
+                                <Route path='/menu' render={(props) => <PageMenu {...props} state={state}/>}/>
+                                <Route render={(props) => <Error404 {...props} state={state}/>}/>
                             </Switch>
                         </CSSTransition>
                     </TransitionGroup>

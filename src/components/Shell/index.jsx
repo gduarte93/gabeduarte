@@ -8,7 +8,8 @@ var React        = require('react'),
 
     CONSTANTS    = require('common-constants'),
     PAGE_TYPES   = CONSTANTS.PAGE_TYPES,
-    SLIDE        = PAGE_TYPES.SLIDE;
+    SLIDE        = PAGE_TYPES.SLIDE,
+    MENU         = PAGE_TYPES.MENU;
 
 require('./Shell.css')
 
@@ -16,10 +17,13 @@ class Shell extends Component {
     constructor(props) {
         super(props);
 
-        this.connectToServer = this.connectToServer.bind(this);
-        this.goBack          = this.goBack.bind(this);
-        this.setBackUrl      = this.setBackUrl.bind(this);
-        this.setPageType     = this.setPageType.bind(this);
+        this.connectToServer  = this.connectToServer.bind(this);
+        this.setBackUrl       = this.setBackUrl.bind(this);
+        this.setPageType      = this.setPageType.bind(this);
+        this.onRouteChange    = this.onRouteChange.bind(this);
+        this.setTransitioning = this.setTransitioning.bind(this);
+        this.handleMenuClick  = this.handleMenuClick.bind(this);
+        this.redirect         = this.redirect.bind(this);
     }
 
     connectToServer() {
@@ -30,27 +34,20 @@ class Shell extends Component {
         this.connectToServer();
     }
 
-    goBack() {
-        var me      = this,
-            props   = me && me.props,
-            history = props && props.history,
-            _goBack = history && history.goBack;
-
-        if (typeof _goBack === 'function') {
-            _goBack();
-        }
-    }
-
     setPageType(pageType) {
         var me = this;
 
         me.setState({ pageType });
     }
 
-    setBackUrl(url) {
+    setBackUrl(url, pageType) {
         var me = this;
 
-        me.setState({ backUrl: url });
+        if (pageType === MENU) {
+            me.setState({ menuUrl: url });    
+        } else {
+            me.setState({ backUrl: url });
+        }
     }
 
     getChildContext() {
@@ -62,6 +59,70 @@ class Shell extends Component {
         }
     }
 
+    componentDidUpdate(prevProps) {
+        var me           = this,
+            props        = me && me.props,
+            location     = props && props.location,
+            prevLocation = prevProps && prevProps.location;
+
+        if (location !== prevLocation) {
+            me.setState({toMenu: false});
+            me.onRouteChange(prevLocation);
+        }
+    }
+
+    onRouteChange(prevLocation) {
+        var me      = this,
+            backUrl = prevLocation && prevLocation.pathname || '/';
+
+        me.setTransitioning(true);
+        me.setBackUrl(backUrl, MENU);
+
+        setTimeout(() => me.setTransitioning(false), 600);
+    }
+
+    setTransitioning(option) {
+        var me = this;
+
+        me.setState({transitioning: option});
+    }
+
+    handleMenuClick(menuLink, e) {
+        e.preventDefault();
+
+        var me            = this,
+            state         = me && me.state,
+            transitioning = state && state.transitioning,
+            link          = {},
+            toMenu;
+
+        // prevent clicking menu while page is transitioning
+        if (transitioning) {
+            return;
+        }
+
+        if (menuLink === '/menu') {
+            toMenu = true;
+        } else {
+            toMenu = false;
+        }
+
+        link = {
+            pathname : menuLink,
+            state    : {
+                fromMenu: !toMenu
+            }
+        };
+
+        me.setState({toMenu}, me.redirect.bind(me, link))
+    }
+
+    redirect(url) {
+        var me = this;
+
+        me.props.history.push(url);
+    }
+
     render() {
         var me         = this,
             props      = me && me.props,
@@ -69,14 +130,16 @@ class Shell extends Component {
             state      = me && me.state,
             pageType   = state && state.pageType,
             isSlide    = pageType === SLIDE,
-            showBack   = !isSlide,
+            isMenu     = pageType === MENU,
+            showBack   = !isSlide && !isMenu,
             backUrl    = state && state.backUrl,
-            toggleBack = showBack && backUrl ? 'Link__back--show' : 'Link__back--hide';
+            menuUrl    = state && state.menuUrl,
+            toggleBack = showBack && backUrl ? 'Link__back--show' : 'Link__back--hide',
+            menuLink   = isMenu ? menuUrl || '/' : '/menu';
 
         return (
             <div id='shell'>
-                {/* TODO: add location state to menu link to add --fromMenu class so that exit transitions don't move */}
-                <Link className="Link__menu--button" to="/menu">
+                <Link className="Link__menu--button" to={menuLink} onClick={me.handleMenuClick.bind(me, menuLink)}>
                     <div className="Threelines">
                         <div className="Threelines__line" />
                         <div className="Threelines__line" />
@@ -88,7 +151,7 @@ class Shell extends Component {
                         <div className="Arrow__line" />
                     </div>
                 </Link>
-                <Routing location={location} />
+                <Routing location={location} state={state} />
             </div>
         );
     }

@@ -9,7 +9,8 @@ var React        = require('react'),
     CONSTANTS    = require('common-constants'),
     PAGE_TYPES   = CONSTANTS.PAGE_TYPES,
     SLIDE        = PAGE_TYPES.SLIDE,
-    MENU         = PAGE_TYPES.MENU;
+    MENU         = PAGE_TYPES.MENU,
+    INFO         = PAGE_TYPES.INFO;
 
 require('./Shell.css')
 
@@ -24,6 +25,7 @@ class Shell extends Component {
         this.setTransitioning = this.setTransitioning.bind(this);
         this.handleMenuClick  = this.handleMenuClick.bind(this);
         this.redirect         = this.redirect.bind(this);
+        this.handleBackClick  = this.handleBackClick.bind(this);
     }
 
     connectToServer() {
@@ -117,6 +119,17 @@ class Shell extends Component {
         me.setState({toMenu}, me.redirect.bind(me, link))
     }
 
+    handleBackClick(url, e) {
+        e.preventDefault();
+
+        var me       = this,
+            state    = me && me.state,
+            pageType = state && state.pageType,
+            isInfo   = pageType === INFO;
+
+        isInfo && me.redirect(url);
+    }
+
     redirect(url) {
         var me = this;
 
@@ -124,29 +137,36 @@ class Shell extends Component {
     }
 
     render() {
-        var me         = this,
-            props      = me && me.props,
-            location   = props && props.location,
-            state      = me && me.state,
-            pageType   = state && state.pageType,
-            isSlide    = pageType === SLIDE,
-            isMenu     = pageType === MENU,
-            showBack   = !isSlide && !isMenu,
-            backUrl    = state && state.backUrl,
-            menuUrl    = state && state.menuUrl,
-            toggleBack = showBack && backUrl ? 'Link__back--show' : 'Link__back--hide',
-            menuLink   = isMenu ? menuUrl || '/' : '/menu';
+        var me                = this,
+            props             = me && me.props,
+            location          = props && props.location,
+            state             = me && me.state,
+            pageType          = state && state.pageType,
+            isSlide           = pageType === SLIDE,
+            isMenu            = pageType === MENU,
+            isMenuButtonClass = isMenu ? 'Link__menu--isMenu' : '',
+            showBack          = !isSlide && !isMenu,
+            backUrl           = state && state.backUrl,
+            menuUrl           = state && state.menuUrl,
+            toggleBack        = showBack && backUrl ? 'Link__back--show' : 'Link__back--hide',
+            menuLink          = isMenu ? menuUrl || '/' : '/menu';
 
         return (
             <div id='shell'>
-                <Link className="Link__menu--button" to={menuLink} onClick={me.handleMenuClick.bind(me, menuLink)}>
-                    <div className="Threelines">
-                        <div className="Threelines__line" />
-                        <div className="Threelines__line" />
-                        <div className="Threelines__line" />
-                    </div>
+                <Link className={`Link__menu--button ${isMenuButtonClass}`} to={menuLink} onClick={me.handleMenuClick.bind(me, menuLink)}>
+                    {
+                        isMenu ?
+                            <div className="Menu__close"><span>+</span></div>
+                            :
+                            <div className="Threelines">
+                                <div className="Threelines__line" />
+                                <div className="Threelines__line" />
+                                <div className="Threelines__line" />
+                            </div>
+                            
+                    }
                 </Link>
-                <Link className={`Link__back--button ${toggleBack}`} to={backUrl}>
+                <Link className={`Link__back--button ${toggleBack}`} to={backUrl} onClick={me.handleBackClick.bind(me, backUrl)}>
                     <div className="Arrow--left">
                         <div className="Arrow__line" />
                     </div>

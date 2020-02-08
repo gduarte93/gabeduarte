@@ -12,7 +12,7 @@ var React        = require('react'),
     MENU         = PAGE_TYPES.MENU,
     INFO         = PAGE_TYPES.INFO;
 
-require('./Shell.css')
+require('./Shell.css');
 
 class Shell extends Component {
     constructor(props) {
@@ -34,6 +34,18 @@ class Shell extends Component {
 
     componentDidMount() {
         this.connectToServer();
+
+        var hasIcons = document.querySelector('#icons'),
+            script;
+
+        if (!hasIcons) {
+            script = document.createElement('script');    
+            script.src = 'https://kit.fontawesome.com/b7936aa9f4.js';
+            script.async = true;
+            script.id = 'icons';
+
+            document.body.appendChild(script);
+        }
     }
 
     setPageType(pageType) {

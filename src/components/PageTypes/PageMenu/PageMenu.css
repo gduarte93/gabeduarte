@@ -1,4 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif:400,700&display=swap');
+
 .PageMenu {
     background-color: #9c9c9c;
     height: 100vh;
+    font-family: 'Noto Serif', serif;
+}
+
+.Right__panel {
+    width: 100%;
+    margin-left: 30%;
+    margin-top: 135px;
+
+    ul {
+        list-style-type: none;
+
+        li {
+            color: white;
+            font-size: 30px;
+
+            &:not(:last-child) {
+                margin-bottom: 15px;
+            }
+        }
+    }
+}
+
+.Contact {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+
+    &__picture {
+        img {
+            width: 80px;
+            height: 80px;
+            border-radius: 100%;
+        }
+    }
 }

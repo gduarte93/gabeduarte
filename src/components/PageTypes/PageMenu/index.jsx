@@ -26,6 +26,9 @@ class PageMenu extends Component {
     render() {
         return (
             <div className='PageMenu page page--menu'>
+                <div className="Menu__triangle Menu__triangle--left" />
+                <div className="Menu__triangle Menu__triangle--right" />
+
                 <div className="Right__panel">
                     <ul>
                         <li>Contact</li>

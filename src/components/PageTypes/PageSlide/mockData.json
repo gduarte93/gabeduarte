@@ -1,6 +1,7 @@
 {
     "title": "Gabriel Duarte",
     "background": "http://imgcy.trivago.com/c_limit,d_dummy.jpeg,f_auto,h_1300,q_auto,w_2000/itemimages/17/62/1762715_v3.jpeg",
+    "backgroundColor": "#3a8499",
     "overlayColor": "rgba(93, 172, 194, 0.9)",
     "info": {
         "color": {

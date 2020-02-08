@@ -28,7 +28,58 @@
 .Contact {
     position: absolute;
     bottom: 20px;
-    left: 20px;
+    left: 40px;
+    display: flex;
+
+    &__left {
+        order: 1;
+    }
+
+    &__right {
+        order:2;
+        margin-left: 15px;
+        display: flex;
+        flex-direction: column;
+
+        .Contact__link, .Contact__name {
+            height: 24px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            font-size: 16px;
+        }
+
+        .Contact__link {
+            color: black;
+
+            a {
+                text-decoration: none;
+                color: inherit;
+
+                &:hover {
+                    .fa-linkedin {
+                        color: #0e76a8;
+                    }
+            
+                    .fa-github {
+                        color: #333333;
+                    }
+                }
+            }
+
+            i {
+                transition: all 0.2s ease-in-out;
+                -webkit-transition: all 0.2s ease-in-out;
+                margin-right: 5px;
+                font-size: 18px;
+                width: 18px;
+            }
+
+            span {
+                font-size: 14px;
+            }
+        }
+    }
 
     &__picture {
         img {

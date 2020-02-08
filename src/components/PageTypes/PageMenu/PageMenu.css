@@ -2,8 +2,9 @@
 
 .PageMenu {
     background-color: #9c9c9c;
-    height: 100vh;
+    height: 100%;
     font-family: 'Noto Serif', serif;
+    overflow: hidden;
 
     .Menu__triangle {
         &--left {
@@ -31,9 +32,9 @@
 }
 
 .Right__panel {
-    width: 100%;
     margin-left: 30%;
     margin-top: 135px;
+    display: inline-block;
     position: relative;
     z-index: 3;
 
@@ -41,12 +42,22 @@
         list-style-type: none;
 
         li {
-            color: white;
             font-size: 30px;
             letter-spacing: 1px;
 
             &:not(:last-child) {
                 margin-bottom: 15px;
+            }
+
+            a {
+                color: white;
+                text-decoration: none;
+                transition: all 0.2 ease-in-out;
+                -webkit-transition: all 0.2s ease-in-out;
+
+                &:hover {
+                    margin-left: 10px;
+                }
             }
         }
     }

@@ -1,6 +1,7 @@
 var React         = require('react'),
     PropTypes     = require('prop-types'),
     Component     = React.Component,
+    Link          = require('react-router-dom').Link,
 
     CONSTANTS     = require('common-constants'),
     PAGE_TYPES    = CONSTANTS.PAGE_TYPES,
@@ -31,9 +32,9 @@ class PageMenu extends Component {
 
                 <div className="Right__panel">
                     <ul>
-                        <li>Contact</li>
-                        <li>Projects</li>
-                        <li>Other</li>
+                        <li><Link to="/contact">Contact</Link></li>
+                        <li><Link to="/projects">Projects</Link></li>
+                        <li><Link to="/">Home</Link></li>
                     </ul>
                 </div>
                 <div className="Contact">

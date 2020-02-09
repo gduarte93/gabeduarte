@@ -44,4 +44,6 @@ function Proficiency(props) {
     );
 }
 
+List.displayName = 'List';
+
 module.exports = List;

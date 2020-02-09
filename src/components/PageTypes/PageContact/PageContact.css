@@ -1,0 +1,7 @@
+.PageContact {
+    background-color: #fafafa;
+    
+    &__container {
+        margin-top: 130px;
+    }
+}

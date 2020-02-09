@@ -39,4 +39,6 @@ function Showcase(props) {
     )
 }
 
+Showcase.displayName = 'Showcase';
+
 module.exports = Showcase;

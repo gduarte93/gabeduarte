@@ -5,6 +5,7 @@ var React                = require('react'),
     PageSlide            = require('../PageTypes/PageSlide/index.jsx'),
     PageInfo             = require('../PageTypes/PageInfo/index.jsx'),
     PageMenu             = require('../PageTypes/PageMenu/index.jsx'),
+    PageContact          = require('../PageTypes/PageContact/index.jsx'),
     Error404             = require('../PageTypes/Error404/index.jsx'),
     ReactTransitionGroup = require('react-transition-group'),
     TransitionGroup      = ReactTransitionGroup.TransitionGroup,
@@ -36,6 +37,7 @@ function Routes(props) {
                                 <Route exact path='/' render={(props) => <PageSlide {...props} state={state}/>}/>
                                 <Route path='/info' render={(props) => <PageInfo {...props} state={state}/>}/>
                                 <Route path='/menu' render={(props) => <PageMenu {...props} state={state}/>}/>
+                                <Route path='/contact' render={(props) => <PageContact {...props} state={state}/>}/>
                                 <Route render={(props) => <Error404 {...props} state={state}/>}/>
                             </Switch>
                         </CSSTransition>
@@ -45,5 +47,7 @@ function Routes(props) {
         />
     );
 }
+
+Routes.displayName = 'Routes';
 
 module.exports = Routes;

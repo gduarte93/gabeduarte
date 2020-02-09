@@ -1,6 +1,5 @@
 var React = require('react'),
-    data  = require('./mockData.json'),
-    Link  = require('react-router-dom').Link;
+    data  = require('./mockData.json');
 
 require('./Header.css');
 
@@ -94,5 +93,7 @@ function Header() {
         </div>
     )
 }
+
+Header.displayName = 'Header';
 
 module.exports = Header;

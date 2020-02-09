@@ -1,0 +1,9 @@
+.info {
+    .Link {
+        &__menu {
+            &--text {
+                display: none;
+            }
+        }
+    }
+}

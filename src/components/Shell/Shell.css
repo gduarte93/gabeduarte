@@ -16,6 +16,10 @@
             position: fixed;
             z-index: 10;
             
+            &:not(.Link__menu--isMenu) {
+                background-color: rgba(255, 255, 255, 0.25);
+            }
+
             &:hover {
                 .Threelines {
                     &__line {
@@ -27,9 +31,20 @@
             }
         }
 
-        &--button:not(.Link__menu--isMenu) {
-            border: 1px solid #efefef;
-            background-color: white;
+        &--text {
+            font-family: sans-serif;
+            color: black;
+            opacity: 0;
+            font-size: 12px;
+            position: fixed;
+            top: 59px;
+            left: 95px;
+            transition: 200ms;
+            z-index: 10;
+        }
+    
+        &--button:hover + &--text {
+            opacity: 0.4;
         }
 
         &--isMenu {
@@ -58,8 +73,7 @@
             color: rgba(0, 0, 0, 0.5);
             width: 48px;
             height: 48px;
-            border: 1px solid #969696;
-            background-color: #999999;
+            background-color: rgba(0, 0, 0, 0.25);
             border-radius: 100%;
             position: fixed;
             z-index: 9;
@@ -125,6 +139,6 @@
         box-sizing: border-box;
         width: 24px;
         height: 1px;
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color:rgba(0, 0, 0, 0.5);
     }
 }

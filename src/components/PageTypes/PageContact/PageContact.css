@@ -1,3 +1,19 @@
+.contact {
+    .Link {
+        &__menu {
+            &--button:not(.Link__menu--isMenu) {
+                background-color: rgba(0, 0, 0, 0.25);
+    
+                .Threelines {
+                    &__line {
+                        background-color: #ffffff;
+                    }
+                }
+            }
+        }
+    }
+}
+
 .PageContact {
     background-color: #fafafa;
     

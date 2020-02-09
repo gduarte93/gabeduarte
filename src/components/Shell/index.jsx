@@ -163,7 +163,7 @@ class Shell extends Component {
             menuLink          = isMenu ? menuUrl || '/' : '/menu';
 
         return (
-            <div id='shell'>
+            <div id='shell' className={pageType}>
                 <Link className={`Link__menu--button ${isMenuButtonClass}`} to={menuLink} onClick={me.handleMenuClick.bind(me, menuLink)}>
                     {
                         isMenu ?
@@ -177,6 +177,14 @@ class Shell extends Component {
                             
                     }
                 </Link>
+                {
+                    !isMenu ?
+                        <div className="Link__menu--text">
+                            Menu
+                        </div>
+                        :
+                        null
+                }
                 <Link className={`Link__back--button ${toggleBack}`} to={backUrl} onClick={me.handleBackClick.bind(me, backUrl)}>
                     <div className="Arrow--left">
                         <div className="Arrow__line" />

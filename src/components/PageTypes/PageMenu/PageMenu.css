@@ -5,6 +5,7 @@
     height: 100%;
     font-family: 'Noto Serif', serif;
     overflow: hidden;
+    position: fixed !important;
 
     .Menu__triangle {
         &--left {

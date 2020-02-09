@@ -8,7 +8,6 @@ var React        = require('react'),
 
     CONSTANTS    = require('common-constants'),
     PAGE_TYPES   = CONSTANTS.PAGE_TYPES,
-    SLIDE        = PAGE_TYPES.SLIDE,
     MENU         = PAGE_TYPES.MENU,
     INFO         = PAGE_TYPES.INFO;
 
@@ -154,10 +153,10 @@ class Shell extends Component {
             location          = props && props.location,
             state             = me && me.state,
             pageType          = state && state.pageType,
-            isSlide           = pageType === SLIDE,
             isMenu            = pageType === MENU,
+            isInfo            = pageType === INFO,
             isMenuButtonClass = isMenu ? 'Link__menu--isMenu' : '',
-            showBack          = !isSlide && !isMenu,
+            showBack          = isInfo,
             backUrl           = state && state.backUrl,
             menuUrl           = state && state.menuUrl,
             toggleBack        = showBack && backUrl ? 'Link__back--show' : 'Link__back--hide',

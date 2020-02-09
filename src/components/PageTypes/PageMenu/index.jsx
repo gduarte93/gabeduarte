@@ -37,6 +37,7 @@ class PageMenu extends Component {
                         <li><Link to="/">Home</Link></li>
                     </ul>
                 </div>
+
                 <div className="Contact">
                     <div className="Contact__left">
                         <div className="Contact__picture">

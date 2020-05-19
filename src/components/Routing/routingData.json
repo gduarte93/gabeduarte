@@ -1,0 +1,56 @@
+[
+    {
+        "title": "Gabriel Duarte",
+        "background": "http://imgcy.trivago.com/c_limit,d_dummy.jpeg,f_auto,h_1300,q_auto,w_2000/itemimages/17/62/1762715_v3.jpeg",
+        "backgroundColor": "#3a8499",
+        "overlayColor": "rgba(93, 172, 194, 0.9)",
+        "info": {
+            "color": {
+                "primary": "#ffffff",
+                "secondary": "#cde5ec"
+            },
+            "title": "Test",
+            "subtitle": "This is just a test",
+            "url": "/info",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        },
+        "next": "/route2",
+        "prev": "/route3"
+    },
+    {
+        "title": "Second Page",
+        "background": "https://www.gardeningknowhow.com/wp-content/uploads/2017/05/zone-8-orange.jpg",
+        "backgroundColor": "#ff4500",
+        "overlayColor": "rgba(255, 88, 26, 0.9)",
+        "info": {
+            "color": {
+                "primary": "#ffffff",
+                "secondary": "#ffb59a"
+            },
+            "title": "Test 2",
+            "subtitle": "This is just another test",
+            "url": "/info2",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        },
+        "next": "/route3",
+        "prev": "/"
+    },
+    {
+        "title": "Third Page (TEST)",
+        "background": "https://www.gardeningknowhow.com/wp-content/uploads/2017/05/zone-8-orange.jpg",
+        "backgroundColor": "#ff4500",
+        "overlayColor": "rgba(255, 88, 26, 0.9)",
+        "info": {
+            "color": {
+                "primary": "#ffffff",
+                "secondary": "#ffb59a"
+            },
+            "title": "Test 2",
+            "subtitle": "This is just another test",
+            "url": "/info3",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        },
+        "next": "/",
+        "prev": "/route2"
+    }
+]

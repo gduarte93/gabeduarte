@@ -9,7 +9,8 @@ var React        = require('react'),
     CONSTANTS    = require('common-constants'),
     PAGE_TYPES   = CONSTANTS.PAGE_TYPES,
     MENU         = PAGE_TYPES.MENU,
-    INFO         = PAGE_TYPES.INFO;
+    INFO         = PAGE_TYPES.INFO,
+    SLIDE        = PAGE_TYPES.SLIDE;
 
 require('./Shell.css');
 
@@ -17,8 +18,19 @@ class Shell extends Component {
     constructor(props) {
         super(props);
 
+        this.state = {
+            pageType      : '',
+            menuUrl       : '',
+            backUrl       : '',
+            prevUrl       : '',
+            nextUrl       : '',
+            toMenu        : '',
+            transitioning : ''
+        };
+
         this.connectToServer  = this.connectToServer.bind(this);
         this.setBackUrl       = this.setBackUrl.bind(this);
+        this.setSlideUrls     = this.setSlideUrls.bind(this);
         this.setPageType      = this.setPageType.bind(this);
         this.onRouteChange    = this.onRouteChange.bind(this);
         this.setTransitioning = this.setTransitioning.bind(this);
@@ -63,12 +75,19 @@ class Shell extends Component {
         }
     }
 
+    setSlideUrls(prev, next) {
+        var me = this;
+
+        me.setState({ prevUrl: prev, nextUrl: next });
+    }
+
     getChildContext() {
         var me = this;
 
         return {
-            setPageType   : me.setPageType,
-            setBackUrl    : me.setBackUrl
+            setPageType  : me.setPageType,
+            setBackUrl   : me.setBackUrl,
+            setSlideUrls : me.setSlideUrls
         }
     }
 
@@ -127,7 +146,7 @@ class Shell extends Component {
             }
         };
 
-        me.setState({toMenu}, me.redirect.bind(me, link))
+        me.setState({ toMenu }, me.redirect.bind(me, link))
     }
 
     handleBackClick(url, e) {
@@ -155,11 +174,15 @@ class Shell extends Component {
             pageType          = state && state.pageType,
             isMenu            = pageType === MENU,
             isInfo            = pageType === INFO,
+            isSlide           = pageType === SLIDE,
             isMenuButtonClass = isMenu ? 'Link__menu--isMenu' : '',
             showBack          = isInfo,
+            showSlideNav      = isSlide,
             backUrl           = state && state.backUrl,
             menuUrl           = state && state.menuUrl,
-            toggleBack        = showBack && backUrl ? 'Link__back--show' : 'Link__back--hide',
+            prevUrl           = state && state.prevUrl,
+            nextUrl           = state && state.nextUrl,
+            toggleBack        = showBack && backUrl ? 'Link__button--show' : 'Link__button--hide',
             menuLink          = isMenu ? menuUrl || '/' : '/menu';
 
         return (
@@ -185,11 +208,28 @@ class Shell extends Component {
                         :
                         null
                 }
-                <Link className={`Link__back--button ${toggleBack}`} to={backUrl} onClick={me.handleBackClick.bind(me, backUrl)}>
-                    <div className="Arrow--left">
+                <Link className={`Link__button Link__button--back ${toggleBack}`} to={backUrl} onClick={me.handleBackClick.bind(me, backUrl)}>
+                    <div className="Arrow Arrow--left">
                         <div className="Arrow__line" />
                     </div>
                 </Link>
+                {
+                    showSlideNav ?
+                        <React.Fragment>
+                            {/* TODO: handle slide nav clicks like menu (only if not transitioning) */}
+                            <Link className={`Link__button Link__button--prev`} to={prevUrl}>
+                                <div className="Arrow Arrow--up">
+                                    <div className="Arrow__line" />
+                                </div>
+                            </Link>
+                            <Link className={`Link__button Link__button--next`} to={nextUrl}>
+                                <div className="Arrow Arrow--down">
+                                    <div className="Arrow__line" />
+                                </div>
+                            </Link>
+                        </React.Fragment>
+                        : null
+                }
                 <Routing location={location} state={state} />
             </div>
         );
@@ -200,7 +240,8 @@ Shell.displayName = 'Shell';
 
 Shell.childContextTypes = {
     setPageType   : PropTypes.func,
-    setBackUrl    : PropTypes.func
+    setBackUrl    : PropTypes.func,
+    setSlideUrls  : PropTypes.func
 }
 
 module.exports = withRouter(Shell);

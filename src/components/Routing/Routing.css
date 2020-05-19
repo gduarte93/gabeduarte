@@ -51,3 +51,26 @@
 .page--slide.page-enter, .page--slide.page-enter-active, .page--slide.page-exit {
     transform: translate(0, 0);
 }
+
+/* Prev Transition: */
+/* TODO: Next Transition and use :not(.page--fromMenu) notation like for menu button */
+/*
+.page--slide.page-enter {
+    transform: translate(0, -100%) !important;
+}
+
+.page--slide.page-enter-active {
+    transform: translate(0, 0) !important;
+    transition: transform 500ms linear;
+    z-index: 2;
+}
+
+.page--slide.page-exit {
+    transform: translate(0, 0) !important;
+}
+
+.page--slide.page-exit-active {
+    transform: translate(0, 100%) !important;
+    transition: transform 500ms linear;
+}
+*/

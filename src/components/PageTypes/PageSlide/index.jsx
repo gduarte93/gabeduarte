@@ -1,7 +1,6 @@
 var React      = require('react'),
     PropTypes  = require('prop-types'),
     Component  = React.Component,
-    data       = require('./mockData.json'),
     Link       = require('react-router-dom').Link,
     Parallax   = require('parallax-js'),
 
@@ -21,18 +20,28 @@ class PageSlide extends Component {
     }
 
     componentDidMount() {
-        var me          = this,
-            context     = me && me.context,
-            setPageType = context && context.setPageType;
+        var me           = this,
+            props        = me && me.props,
+            state        = props && props.state,
+            content      = state && state.content,
+            prev         = content && content.prev,
+            next         = content && content.next,
+            context      = me && me.context,
+            setPageType  = context && context.setPageType,
+            setSlideUrls = context && context.setSlideUrls;
 
         if (typeof setPageType === 'function') {
             setPageType(SLIDE);
         }
 
+        if (typeof setSlideUrls === 'function') {
+            setSlideUrls(prev, next);
+        }
         pInstance = new Parallax(me.scene.current);
     }
 
     componentWillUnmount() {
+        // TODO: Remove? Maybe don't need and it messes up Slide Transition
         if (pInstance && pInstance.element) {
             // garbage collection
             pInstance.destroy();
@@ -40,15 +49,20 @@ class PageSlide extends Component {
     }
 
     render() {
-        var title               = data && data.title,
-            background          = data && data.background,
-            overlayColor        = data && data.overlayColor,
-            info                = data && data.info,
+        var me                  = this,
+            props               = me && me.props,
+            state               = props && props.state,
+            content             = state && state.content,
+            title               = content && content.title,
+            background          = content && content.background,
+            overlayColor        = content && content.overlayColor,
+            info                = content && content.info,
             infoColor           = info && info.color,
             primary             = infoColor && infoColor.primary,
             secondary           = infoColor && infoColor.secondary,
             infoTitle           = info && info.title,
             infoSub             = info && info.subtitle,
+            infoUrl             = info && info.url,
             desc                = info && info.description,
             backgroundStyle     = {
                 backgroundImage: `url(${background})`
@@ -73,7 +87,7 @@ class PageSlide extends Component {
                             <div className="PageSlide__info">
                                 <div className="PageSlide__title" style={primaryColorStyle}>{infoTitle}</div>
                                 <div className="PageSlide__subtitle" style={secondaryColorStyle}>{infoSub}</div>
-                                <Link className="Link__info--button" to="/info">
+                                <Link className="Link__info--button" to={infoUrl}>
                                     <div className="Threedots">
                                         <div className="Threedots__dot" />
                                         <div className="Threedots__dot" />
@@ -96,7 +110,8 @@ class PageSlide extends Component {
 PageSlide.displayName = 'PageSlide';
 
 PageSlide.contextTypes = {
-    setPageType: PropTypes.func
+    setPageType  : PropTypes.func,
+    setSlideUrls : PropTypes.func
 };
 
 module.exports = PageSlide;

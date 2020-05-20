@@ -47,11 +47,6 @@
     z-index: 2;
 }
 
-/* Slide Page (non) Transitions */
-// .page--slide.page-enter, .page--slide.page-enter-active, .page--slide.page-exit {
-//     transform: translate(0, 0);
-// }
-
 /* Prev Transition */
 /* TODO: Next Transition and use :not(.page--fromMenu) notation like for menu button */
 .page--slide.page-enter.page--prev {

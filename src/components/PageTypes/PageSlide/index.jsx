@@ -79,6 +79,7 @@ class PageSlide extends Component {
             secondary           = infoColor && infoColor.secondary,
             infoTitle           = info && info.title,
             infoSub             = info && info.subtitle,
+            infoLocation        = info && info.location,
             infoUrl             = info && info.url,
             desc                = info && info.description,
 
@@ -108,6 +109,13 @@ class PageSlide extends Component {
                             <div className="PageSlide__info">
                                 <div className="PageSlide__title" style={primaryColorStyle}>{infoTitle}</div>
                                 <div className="PageSlide__subtitle" style={secondaryColorStyle}>{infoSub}</div>
+                                {
+                                    infoLocation ?
+                                        <div className="PageSlide__location" style={primaryColorStyle}>
+                                            <i className="fas fa-map-pin"></i>{infoLocation}
+                                        </div>
+                                        : null
+                                }
                                 <Link className="Link__info--button" to={infoUrl} onClick={me.handleInfoClick.bind(me, infoUrl)}>
                                     <div className="Threedots">
                                         <div className="Threedots__dot" />

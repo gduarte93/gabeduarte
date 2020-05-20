@@ -39,11 +39,17 @@ function Routes(props) {
                                 <Route exact path='/' render={(props) => <PageSlide {...props} state={Object.assign({}, state, { content: routingData[0] })}/>}/>
                                 <Route path='/info' render={(props) => <PageInfo {...props} state={state}/>}/>
 
-                                <Route exact path='/route2' render={(props) => <PageSlide {...props} state={Object.assign({}, state, { content: routingData[1] })}/>}/>
-                                <Route path='/info2' render={(props) => <PageInfo {...props} state={state}/>}/>
+                                <Route exact path='/uf' render={(props) => <PageSlide {...props} state={Object.assign({}, state, { content: routingData[1] })}/>}/>
+                                <Route path='/uf/info' render={(props) => <PageInfo {...props} state={state}/>}/>
 
-                                <Route exact path='/route3' render={(props) => <PageSlide {...props} state={Object.assign({}, state, { content: routingData[2] })}/>}/>
-                                <Route path='/info3' render={(props) => <PageInfo {...props} state={state}/>}/>
+                                <Route exact path='/pixelsupply' render={(props) => <PageSlide {...props} state={Object.assign({}, state, { content: routingData[2] })}/>}/>
+                                <Route path='/pixelsupply/info' render={(props) => <PageInfo {...props} state={state}/>}/>
+                                
+                                <Route exact path='/espn' render={(props) => <PageSlide {...props} state={Object.assign({}, state, { content: routingData[3] })}/>}/>
+                                <Route path='/espn/info' render={(props) => <PageInfo {...props} state={state}/>}/>
+
+                                <Route exact path='/disney' render={(props) => <PageSlide {...props} state={Object.assign({}, state, { content: routingData[4] })}/>}/>
+                                <Route path='/disney/info' render={(props) => <PageInfo {...props} state={state}/>}/>
                                
                                 <Route path='/menu' render={(props) => <PageMenu {...props} state={state}/>}/>
                                

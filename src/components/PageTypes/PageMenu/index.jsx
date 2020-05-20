@@ -47,10 +47,10 @@ class PageMenu extends Component {
                     <div className="Contact__right">
                         <div className="Contact__name">Gabriel Duarte</div>
                         <div className="Contact__linkedin Contact__link">
-                            <a href="https://www.linkedin.com/in/gabeduarte" target="_blank"><i class="fab fa-linkedin"></i><span>linkedin.com/in/gabeduarte</span></a>
+                            <a href="https://www.linkedin.com/in/gabeduarte" target="_blank"><i className="fab fa-linkedin"></i><span>linkedin.com/in/gabeduarte</span></a>
                         </div>
                         <div className="Contact__github Contact__link">
-                            <a href="https://github.com/gduarte93" target="_blank"><i class="fab fa-github"></i><span>github.com/gduarte93</span></a>
+                            <a href="https://github.com/gduarte93" target="_blank"><i className="fab fa-github"></i><span>github.com/gduarte93</span></a>
                         </div>
                     </div>
                 </div>

@@ -10,7 +10,11 @@ var React        = require('react'),
     PAGE_TYPES   = CONSTANTS.PAGE_TYPES,
     MENU         = PAGE_TYPES.MENU,
     INFO         = PAGE_TYPES.INFO,
-    SLIDE        = PAGE_TYPES.SLIDE;
+    SLIDE        = PAGE_TYPES.SLIDE,
+
+    SLIDE_NAV    = CONSTANTS.SLIDE_NAV,
+    PREV         = SLIDE_NAV.PREV,
+    NEXT         = SLIDE_NAV.NEXT;
 
 require('./Shell.css');
 
@@ -24,19 +28,22 @@ class Shell extends Component {
             backUrl       : '',
             prevUrl       : '',
             nextUrl       : '',
-            toMenu        : '',
-            transitioning : ''
+            toMenu        : false,
+            transitioning : false,
+            direction     : undefined
         };
 
-        this.connectToServer  = this.connectToServer.bind(this);
-        this.setBackUrl       = this.setBackUrl.bind(this);
-        this.setSlideUrls     = this.setSlideUrls.bind(this);
-        this.setPageType      = this.setPageType.bind(this);
-        this.onRouteChange    = this.onRouteChange.bind(this);
-        this.setTransitioning = this.setTransitioning.bind(this);
-        this.handleMenuClick  = this.handleMenuClick.bind(this);
-        this.redirect         = this.redirect.bind(this);
-        this.handleBackClick  = this.handleBackClick.bind(this);
+        this.connectToServer     = this.connectToServer.bind(this);
+        this.setBackUrl          = this.setBackUrl.bind(this);
+        this.setSlideUrls        = this.setSlideUrls.bind(this);
+        this.setPageType         = this.setPageType.bind(this);
+        this.onRouteChange       = this.onRouteChange.bind(this);
+        this.setTransitioning    = this.setTransitioning.bind(this);
+        this.handleMenuClick     = this.handleMenuClick.bind(this);
+        this.handleSlideNavClick = this.handleSlideNavClick.bind(this);
+        this.redirect            = this.redirect.bind(this);
+        this.handleBackClick     = this.handleBackClick.bind(this);
+        this.resetSlideDirection = this.resetSlideDirection.bind(this);
     }
 
     connectToServer() {
@@ -85,9 +92,10 @@ class Shell extends Component {
         var me = this;
 
         return {
-            setPageType  : me.setPageType,
-            setBackUrl   : me.setBackUrl,
-            setSlideUrls : me.setSlideUrls
+            setPageType         : me.setPageType,
+            setBackUrl          : me.setBackUrl,
+            setSlideUrls        : me.setSlideUrls,
+            resetSlideDirection : me.resetSlideDirection
         }
     }
 
@@ -95,11 +103,12 @@ class Shell extends Component {
         var me           = this,
             props        = me && me.props,
             location     = props && props.location,
-            prevLocation = prevProps && prevProps.location;
+            prevLocation = prevProps && prevProps.location,
+            locState     = location && location.state,
+            direction    = locState && locState.direction;
 
         if (location !== prevLocation) {
-            me.setState({toMenu: false});
-            me.onRouteChange(prevLocation);
+            me.setState({ toMenu: false, direction: direction }, me.onRouteChange.bind(me, prevLocation));
         }
     }
 
@@ -146,7 +155,7 @@ class Shell extends Component {
             }
         };
 
-        me.setState({ toMenu }, me.redirect.bind(me, link))
+        me.setState({ toMenu, direction: undefined }, me.redirect.bind(me, link))
     }
 
     handleBackClick(url, e) {
@@ -160,10 +169,43 @@ class Shell extends Component {
         isInfo && me.redirect(url);
     }
 
+    handleSlideNavClick(url, direction, e) {
+        e.preventDefault();
+
+        var me            = this,
+            state         = me && me.state,
+            transitioning = state && state.transitioning,
+            link          = {};
+
+        // prevent clicking menu while page is transitioning
+        if (transitioning) {
+            return;
+        }
+
+        link = {
+            pathname : url,
+            state    : {
+                direction
+            }
+        };
+
+        me.setState({ direction }, me.redirect.bind(me, link))
+    }
+
     redirect(url) {
         var me = this;
 
         me.props.history.push(url);
+    }
+
+    resetSlideDirection(url) {
+        var me = this;
+
+        if (url) {
+            me.setState({ direction: undefined }, me.redirect.bind(me, url));
+        } else {
+            me.setState({ direction: undefined });
+        }
     }
 
     render() {
@@ -217,12 +259,12 @@ class Shell extends Component {
                     showSlideNav ?
                         <React.Fragment>
                             {/* TODO: handle slide nav clicks like menu (only if not transitioning) */}
-                            <Link className={`Link__button Link__button--prev`} to={prevUrl}>
+                            <Link className={`Link__button Link__button--prev`} to={prevUrl} onClick={me.handleSlideNavClick.bind(me, prevUrl, PREV)}>
                                 <div className="Arrow Arrow--up">
                                     <div className="Arrow__line" />
                                 </div>
                             </Link>
-                            <Link className={`Link__button Link__button--next`} to={nextUrl}>
+                            <Link className={`Link__button Link__button--next`} to={nextUrl} onClick={me.handleSlideNavClick.bind(me, nextUrl, NEXT)}>
                                 <div className="Arrow Arrow--down">
                                     <div className="Arrow__line" />
                                 </div>
@@ -239,9 +281,10 @@ class Shell extends Component {
 Shell.displayName = 'Shell';
 
 Shell.childContextTypes = {
-    setPageType   : PropTypes.func,
-    setBackUrl    : PropTypes.func,
-    setSlideUrls  : PropTypes.func
+    setPageType         : PropTypes.func,
+    setBackUrl          : PropTypes.func,
+    setSlideUrls        : PropTypes.func,
+    resetSlideDirection : PropTypes.func
 }
 
 module.exports = withRouter(Shell);

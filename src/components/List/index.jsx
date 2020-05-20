@@ -12,11 +12,11 @@ function List() {
             <div className="List__title">{title}</div>
             <div className="List__list">
                 {
-                    items && items.map(item => {
+                    items && items.map((item, idx) => {
                         var title       = item && item.title,
                             proficiency = item && item.proficiency;
                         return (
-                            <React.Fragment>
+                            <React.Fragment key={idx}>
                                 <div className="List__item--title">{title}</div>
                                 <Proficiency proficiency={proficiency} />
                             </React.Fragment>
@@ -36,7 +36,7 @@ function Proficiency(props) {
     for (var i = 1; i < 11; i++) {
         proficient = proficiency >= i;
 
-        dots.push(<div className={`List__dot ${proficient ? 'List__dot--active' : ''}`} />)
+        dots.push(<div key={i} className={`List__dot ${proficient ? 'List__dot--active' : ''}`} />)
     }
 
     return (

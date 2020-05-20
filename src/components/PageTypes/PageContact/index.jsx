@@ -27,7 +27,7 @@ class PageContact extends Component {
         return (
             <div className="PageContact page page--contact">
                 <div className="PageContact__container">
-                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf46yybT7-TPYqbbh1yy__B2-pyIyqr1A_6vD791xX4QEQ14g/viewform?embedded=true" width="100%" height="1000px" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf46yybT7-TPYqbbh1yy__B2-pyIyqr1A_6vD791xX4QEQ14g/viewform?embedded=true" width="100%" height="1000px" frameBorder="0" marginHeight="0" marginWidth="0">Loading…</iframe>
                 </div>
             </div>
         )

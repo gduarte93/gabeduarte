@@ -17,6 +17,8 @@ class PageSlide extends Component {
         super(props);
 
         this.scene = React.createRef();
+
+        this.handleInfoClick = this.handleInfoClick.bind(this);
     }
 
     componentDidMount() {
@@ -41,22 +43,37 @@ class PageSlide extends Component {
     }
 
     componentWillUnmount() {
-        // TODO: Remove? Maybe don't need and it messes up Slide Transition
-        if (pInstance && pInstance.element) {
-            // garbage collection
-            pInstance.destroy();
+        // Commenting out for now since it is messing up slide transition animation prev/next, and may not need?
+        
+        /* garbage collection */
+        // if (pInstance && pInstance.element) {
+        //     pInstance.destroy();
+        // }
+    }
+
+    handleInfoClick(url, e) {
+        e.preventDefault();
+
+        var me                  = this,
+            context             = me && me.context,
+            resetSlideDirection = context && context.resetSlideDirection;
+        
+        if (resetSlideDirection && typeof resetSlideDirection === 'function') {
+            resetSlideDirection(url);
         }
     }
 
     render() {
         var me                  = this,
             props               = me && me.props,
-            state               = props && props.state,
-            content             = state && state.content,
+            appState            = props && props.state,
+
+            content             = appState && appState.content,
             title               = content && content.title,
             background          = content && content.background,
             overlayColor        = content && content.overlayColor,
             info                = content && content.info,
+
             infoColor           = info && info.color,
             primary             = infoColor && infoColor.primary,
             secondary           = infoColor && infoColor.secondary,
@@ -64,6 +81,10 @@ class PageSlide extends Component {
             infoSub             = info && info.subtitle,
             infoUrl             = info && info.url,
             desc                = info && info.description,
+
+            direction           = appState && appState.direction,
+            navSlideClass       = direction ? `page--${direction}` : '',
+
             backgroundStyle     = {
                 backgroundImage: `url(${background})`
             },
@@ -78,7 +99,7 @@ class PageSlide extends Component {
             };
 
         return (
-            <div className="PageSlide page page--slide" ref={this.scene}>
+            <div className={`PageSlide page page--slide ${navSlideClass}`} ref={this.scene}>
                 <div className="PageSlide__background" style={backgroundStyle} data-depth="0.1"></div>
                 <div className="PageSlide__overlay" data-depth="0">
                     <div className="PageSlide__overlay--background" style={overlayStyle}>
@@ -87,7 +108,7 @@ class PageSlide extends Component {
                             <div className="PageSlide__info">
                                 <div className="PageSlide__title" style={primaryColorStyle}>{infoTitle}</div>
                                 <div className="PageSlide__subtitle" style={secondaryColorStyle}>{infoSub}</div>
-                                <Link className="Link__info--button" to={infoUrl}>
+                                <Link className="Link__info--button" to={infoUrl} onClick={me.handleInfoClick.bind(me, infoUrl)}>
                                     <div className="Threedots">
                                         <div className="Threedots__dot" />
                                         <div className="Threedots__dot" />
@@ -110,8 +131,9 @@ class PageSlide extends Component {
 PageSlide.displayName = 'PageSlide';
 
 PageSlide.contextTypes = {
-    setPageType  : PropTypes.func,
-    setSlideUrls : PropTypes.func
+    setPageType         : PropTypes.func,
+    setSlideUrls        : PropTypes.func,
+    resetSlideDirection : PropTypes.func
 };
 
 module.exports = PageSlide;

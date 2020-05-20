@@ -26,11 +26,13 @@ module.exports = {
     },
     output: {
         filename: 'bundle.js',
-        path: __dirname + '/build'
+        path: __dirname + '/build',
+        publicPath: '/'
     },
     plugins: [HTMLWebpackPluginConfig],
     devServer: {
         host: '0.0.0.0',
-        port: '8080'
+        port: '8080',
+        historyApiFallback: true
     }
 };

@@ -12,7 +12,7 @@ function Showcase(props) {
         leftImage            = imagePosition === LEFT,
         backgroundImage      = data && data.backgroundImage,
         backgroundColor      = data && data.backgroundColor,
-        imageComp            = images.map(src => <img src={src} className="Showcase__image"/>),
+        imageComp            = images.map((src, idx) => <img key={idx} src={src} className="Showcase__image"/>),
         descComp             = <div className="Showcase__description" dangerouslySetInnerHTML={{__html: description}}/>,
         imageContainerClass  = 'Showcase__image--container',
         backgroundImageStyle = backgroundImage && {

@@ -72,12 +72,12 @@ function Header() {
                             </div>
                             <div className="Header__blurbs">
                                 {
-                                    blurbs.map(item => {
+                                    blurbs.map((item, idx) => {
                                         var title = item && item.title,
                                             desc  = item && item.description;
 
                                         return (
-                                            <React.Fragment>
+                                            <React.Fragment key={idx}>
                                                 <div className="Header__blurbs--title" style={primaryColorStyle}>{title}</div>
                                                 <div className="Header__blurbs--description" style={primaryColorStyle}>{desc}</div>
                                                 <div className="Header__blurbs--border" style={primaryColorBackground} />

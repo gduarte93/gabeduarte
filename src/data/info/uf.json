@@ -1,0 +1,79 @@
+{
+    "id": "uf",
+    "header": {
+        "title": "Title 2",
+        "subtitle": "This is the subtitle",
+        "background": "http://imgcy.trivago.com/c_limit,d_dummy.jpeg,f_auto,h_1300,q_auto,w_2000/itemimages/17/62/1762715_v3.jpeg",
+        "backgroundColor": "#3a8499",
+        "overlayColor": "rgba(93, 172, 194, 0.9)",
+        "info": {
+            "color": {
+                "primary": "#ffffff",
+                "secondary": "#cde5ec",
+                "tertiary": "#bada55"
+            },
+            "title": "Test",
+            "description": "Follow the journeys of 4 bears navigating the heart of Yellowstone, as seen from the bears’ own point of view. This groundbreaking research that attaches cameras to bears gives us a lens into the never before seen lives of one of the animal kingdom’s most fearsome beasts.",
+            "story": {
+                "column1": "Ever wonder what it would be like to be a bear living in the wild – foraging to bulk up for the winter months, shaking off after a dip in a cool stream, hunting and being hunted, being spied on by curious tourists, and seeing some of the best views not accessible by humans? For the first time ever, National Geographic has those answers.<br><br>Following two grizzlies and two black bears equipped with special camera collars in Yellowstone National Park, researchers and Nat Geo readers are getting an unprecedented view into the life of a bear – from the bear’s eye-view. We see the remarkable journeys of these 4 bears as they cover great distances, encounter predators, their own kind, and even people. We discover what they eat and how they use the beautiful and expansive landscape of Yellowstone.",
+                "column2": "Working with National Geographic’s team of editors, journalists, producers, and researchers, we’ve gathered this incredible footage into an engaging online narrative focused on the distinct paths that each bear roamed. Utilizing the geo-coordinate data captured with every 20-seconds of footage, we’re able to pinpoint the bears to the exact geography of Yellowstone. Combined with expert analysis from researchers Kerry Gunther and Nate Bowers, delivered as intermittent audio captions, we gain a deeper understanding of the bears’ activity as uncovered by the POV footage and their unique characteristics. And, of course, Hello Monday couldn’t resist adding the extra hand-touch with watercolor illustrations and pencil-drawn portraits depicting the beautiful, mysterious life of each bear."
+            }
+        },
+        "blurbs": [
+            {
+                "title": "Project 1",
+                "description": "Did this and that for this project."
+            },
+            {
+                "title": "Project 2",
+                "description": "Did alot more stuff this this project, like this and that and then this other thing."
+            },
+            {
+                "title": "Project 3",
+                "description": "blah blah"
+            }
+        ]
+    },
+    "content": [
+        {
+            "type": "showcase",
+            "data": {
+                "images": [
+                    "https://cdn.vox-cdn.com/thumbor/3vTa9l1iezGcJvIlKoUzc9n5FUI=/0x0:2400x1800/920x613/filters:focal(695x619:1079x1003):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/61963615/espn_plus_paywall_iphone_2400.0.jpg"
+                ],
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            }
+        },
+        {
+            "type": "showcase",
+            "data": {
+                "images": [
+                    "https://cdn.vox-cdn.com/thumbor/3vTa9l1iezGcJvIlKoUzc9n5FUI=/0x0:2400x1800/920x613/filters:focal(695x619:1079x1003):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/61963615/espn_plus_paywall_iphone_2400.0.jpg",
+                    "https://cdn.vox-cdn.com/thumbor/3vTa9l1iezGcJvIlKoUzc9n5FUI=/0x0:2400x1800/920x613/filters:focal(695x619:1079x1003):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/61963615/espn_plus_paywall_iphone_2400.0.jpg",
+                    "https://cdn.vox-cdn.com/thumbor/3vTa9l1iezGcJvIlKoUzc9n5FUI=/0x0:2400x1800/920x613/filters:focal(695x619:1079x1003):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/61963615/espn_plus_paywall_iphone_2400.0.jpg"
+                ],
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            }
+        },
+        {
+            "type": "list",
+            "data": {
+                "title": "Skills",
+                "items": [
+                    {
+                        "title": "English",
+                        "proficiency": 10
+                    },
+                    {
+                        "title": "Spanish",
+                        "proficiency": 7
+                    },
+                    {
+                        "title": "Typing",
+                        "proficiency": 8
+                    }
+                ]
+            }
+        }
+    ]
+}

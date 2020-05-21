@@ -23,10 +23,13 @@ class PageInfo extends Component {
         var me          = this,
             context     = me && me.context,
             setBackUrl  = context && context.setBackUrl,
-            setPageType = context && context.setPageType;
+            setPageType = context && context.setPageType,
+            props       = me && me.props,
+            appState    = props && props.state,
+            backUrl     = appState && appState.backUrl || '/';
 
         if (typeof setBackUrl === 'function') {
-            setBackUrl('/');
+            setBackUrl(backUrl);
         }
 
         if (typeof setPageType === 'function') {
@@ -44,15 +47,21 @@ class PageInfo extends Component {
             fromMenu     = locState && locState.fromMenu,
             navMenuClass = toMenu ? 'page--toMenu' 
                             : fromMenu ? 'page--fromMenu' 
-                            : '';
+                            : '',
+            data         = appState && appState.content,
+            headerData   = data && data.header,
+            contentData  = data && data.content;
 
         return (
             <div className={`PageInfo page page--info ${navMenuClass}`}>
-                <Header />
+                <Header data={headerData} />
+
+                {/* TODO: loop through contentData array and create showcase/list/other modules based on type/data from each */}
                 <Showcase imgPos="left" data={showcaseMock2} />
                 <Showcase imgPos="right" data={showcaseMock1} />
                 <List />
-                {/* // TODO: Bulletedlist Component */}
+                
+                {/* // TODO: Bulletedlist Component ?*/}
             </div>
         )
     }

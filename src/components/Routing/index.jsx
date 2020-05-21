@@ -11,7 +11,9 @@ var React                = require('react'),
     ReactTransitionGroup = require('react-transition-group'),
     TransitionGroup      = ReactTransitionGroup.TransitionGroup,
     CSSTransition        = ReactTransitionGroup.CSSTransition,
-    routingData          = require('./routingData.json');
+
+    slidesData           = require('../../data/slide/slides.json'),
+    infoDataMap          = require('../../data/info/data.js');
 
 require('./Routing.css');
 
@@ -22,7 +24,25 @@ function Routes(props) {
     return (
         <Route
             render={() => {
-                var pathname = location && location.pathname;
+                var pathname    = location && location.pathname,
+                    slideRoutes = slidesData.map((slide, idx) => {
+                        var path = slide && slide.path;
+    
+                        return (
+                            <Route key={idx} exact path={path} render={(props) => <PageSlide {...props} state={Object.assign({}, state, { content: slide })}/>}/>
+                        )
+                    }),
+                    infoRoutes = slidesData.map((slide, idx) => {
+                        var path     = slide && slide.path
+                            info     = slide && slide.info,
+                            infoPath = info && info.url,
+                            id       = slide && slide.id,
+                            infoData = infoDataMap[id];
+    
+                        return (
+                            <Route key={idx} path={infoPath} render={(props) => <PageInfo {...props} state={Object.assign({}, state, { content: infoData, backUrl: path })}/>}/>
+                        )
+                    });
 
                 return (
                     <TransitionGroup>
@@ -36,20 +56,16 @@ function Routes(props) {
                             }}
                         >
                             <Switch>
-                                <Route exact path='/' render={(props) => <PageSlide {...props} state={Object.assign({}, state, { content: routingData[0] })}/>}/>
-                                <Route path='/info' render={(props) => <PageInfo {...props} state={state}/>}/>
+                                { slideRoutes }
 
-                                <Route exact path='/uf' render={(props) => <PageSlide {...props} state={Object.assign({}, state, { content: routingData[1] })}/>}/>
-                                <Route path='/uf/info' render={(props) => <PageInfo {...props} state={state}/>}/>
+                                {/* { infoRoutes } */}
 
-                                <Route exact path='/pixelsupply' render={(props) => <PageSlide {...props} state={Object.assign({}, state, { content: routingData[2] })}/>}/>
-                                <Route path='/pixelsupply/info' render={(props) => <PageInfo {...props} state={state}/>}/>
-                                
-                                <Route exact path='/espn' render={(props) => <PageSlide {...props} state={Object.assign({}, state, { content: routingData[3] })}/>}/>
-                                <Route path='/espn/info' render={(props) => <PageInfo {...props} state={state}/>}/>
-
-                                <Route exact path='/disney' render={(props) => <PageSlide {...props} state={Object.assign({}, state, { content: routingData[4] })}/>}/>
-                                <Route path='/disney/info' render={(props) => <PageInfo {...props} state={state}/>}/>
+                                {/* TODO: Figure out why infoRoutes map doesn't work (it always has infoData of last obj (disney)) */}
+                                <Route path={'/info'} render={(props) => <PageInfo {...props} state={Object.assign({}, state, { content: infoDataMap['index'], backUrl: '/' })}/>}/>
+                                <Route path={'/uf/info'} render={(props) => <PageInfo {...props} state={Object.assign({}, state, { content: infoDataMap['uf'], backUrl: '/uf' })}/>}/>
+                                <Route path={'/pixelsupply/info'} render={(props) => <PageInfo {...props} state={Object.assign({}, state, { content: infoDataMap['pixelsupply'], backUrl: '/pixelsupply' })}/>}/>
+                                <Route path={'/espn/info'} render={(props) => <PageInfo {...props} state={Object.assign({}, state, { content: infoDataMap['espn'], backUrl: '/espn' })}/>}/>
+                                <Route path={'/disney/info'} render={(props) => <PageInfo {...props} state={Object.assign({}, state, { content: infoDataMap['disney'], backUrl: '/disney' })}/>}/>
                                
                                 <Route path='/menu' render={(props) => <PageMenu {...props} state={state}/>}/>
                                

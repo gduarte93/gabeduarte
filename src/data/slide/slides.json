@@ -1,5 +1,6 @@
 [
     {
+        "id": "index",
         "title": "Gabriel Duarte",
         "background": "https://marketplace.canva.com/MADQ4wrzgQ8/1/screen/canva-drone-view-of-the-beach%2C-fort-lauderdale%2C-florida%2C-usa-MADQ4wrzgQ8.jpg",
         "backgroundColor": "#e4Ceb9",
@@ -15,10 +16,12 @@
             "url": "/info",
             "description": "Front End Engineer with exposure to both small and large scale web application development. Experience collaborating with other developers, product managers, and design teams. Currently on the Site Development team at Walt Disney Direct-to-Consumer & International, where I work on front end projects across Disney's brands using Node, React, and MobX."
         },
+        "path": "/",
         "next": "/uf",
         "prev": "/disney"
     },
     {
+        "id": "uf",
         "title": "University of Florida",
         "background": "https://i.pinimg.com/originals/52/e8/0f/52e80f4bb8df01f0a1c28ea5d7c2fc1b.jpg",
         "backgroundColor": "#fa4616",
@@ -34,10 +37,12 @@
             "url": "/uf/info",
             "description": "I attended the University of Florida, where I graduated with a Bachelors of Science in Computer Science."
         },
+        "path": "/uf",
         "next": "/pixelsupply",
         "prev": "/"
     },
     {
+        "id": "pixelsupply",
         "title": "Pixel Supply Co",
         "background": "https://marketplace.canva.com/f0Ixo/MAD1Ohf0Ixo/1/s2/canva-coral-gables-cityscape-MAD1Ohf0Ixo.jpg",
         "backgroundColor": "#ffdab9",
@@ -53,10 +58,12 @@
             "url": "/pixelsupply/info",
             "description": "I started as an intern at Pixel Supply. After college I went on to work there full-time."
         },
+        "path": "/pixelsupply",
         "next": "/espn",
         "prev": "/uf"
     },
     {
+        "id": "espn",
         "title": "ESPN",
         "background": "https://www.wnpr.org/sites/wnpr/files/styles/x_large/public/201405/espn.jpg",
         "backgroundColor": "#ffdab9",
@@ -72,10 +79,12 @@
             "url": "/espn/info",
             "description": "My journey with ESPN began on the Product Engineering team where I worked on maintaining multiple consumer facing sites including espn.com, secsports.com, and espnfc.com."
         },
+        "path": "/espn",
         "next": "/disney",
         "prev": "/pixelsupply"
     },
     {
+        "id": "disney",
         "title": "Walt Disney DTCI",
         "background": "https://i.ibb.co/r2MPTYz/dtci-slide.png",
         "backgroundColor": "#ffdab9",
@@ -91,6 +100,7 @@
             "url": "/disney/info",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
         },
+        "path": "/disney",
         "next": "/",
         "prev": "/espn"
     }

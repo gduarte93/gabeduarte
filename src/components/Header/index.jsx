@@ -1,10 +1,10 @@
-var React = require('react'),
-    data  = require('./mockData.json');
+var React = require('react');
 
 require('./Header.css');
 
-function Header() {
-    var title               = data && data.title,
+function Header(props) {
+    var data                = props && props.data,
+        title               = data && data.title,
         subtitle            = data && data.subtitle,
         background          = data && data.background,
         backgroundColor     = data && data.backgroundColor,

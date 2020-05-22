@@ -1,10 +1,10 @@
-var React = require('react'),
-    data  = require('./mockData.json');
+var React = require('react');
 
 require('./List.css');
 
-function List() {
-    var title = data && data.title,
+function List(props) {
+    var data  = props && props.data,
+        title = data && data.title,
         items = data && data.items;
 
     return(

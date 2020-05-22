@@ -10,7 +10,8 @@ var React         = require('react'),
 
     CONSTANTS     = require('common-constants'),
     PAGE_TYPES    = CONSTANTS.PAGE_TYPES,
-    INFO          = PAGE_TYPES.INFO;
+    INFO          = PAGE_TYPES.INFO,
+    COMPONENTS    = CONSTANTS.COMPONENTS;
 
 require('./PageInfo.css')
 
@@ -56,12 +57,16 @@ class PageInfo extends Component {
             <div className={`PageInfo page page--info ${navMenuClass}`}>
                 <Header data={headerData} />
 
-                {/* TODO: loop through contentData array and create showcase/list/other modules based on type/data from each */}
-                <Showcase imgPos="left" data={showcaseMock2} />
-                <Showcase imgPos="right" data={showcaseMock1} />
-                <List />
-                
-                {/* // TODO: Bulletedlist Component ?*/}
+                {
+                    contentData.map((comp, idx) => {
+                        var type      = comp && comp.type,
+                            data      = comp && comp.data,
+                            Component = COMPONENTS[type];
+
+                        return <Component key={idx} data={data} />;
+                    })
+                }
+
             </div>
         )
     }

@@ -5,8 +5,8 @@ var React = require('react'),
 require('./Showcase.css');
 
 function Showcase(props) {
-    var imagePosition        = props && props.imgPos,
-        data                 = props && props.data,
+    var data                 = props && props.data,
+        imagePosition        = data && data.imgPos,
         images               = data && data.images,
         description          = data && data.description,
         leftImage            = imagePosition === LEFT,

@@ -38,6 +38,7 @@
         {
             "type": "showcase",
             "data": {
+                "imgPos": "left",
                 "images": [
                     "https://cdn.vox-cdn.com/thumbor/3vTa9l1iezGcJvIlKoUzc9n5FUI=/0x0:2400x1800/920x613/filters:focal(695x619:1079x1003):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/61963615/espn_plus_paywall_iphone_2400.0.jpg"
                 ],
@@ -47,6 +48,7 @@
         {
             "type": "showcase",
             "data": {
+                "imgPos": "right",
                 "images": [
                     "https://cdn.vox-cdn.com/thumbor/3vTa9l1iezGcJvIlKoUzc9n5FUI=/0x0:2400x1800/920x613/filters:focal(695x619:1079x1003):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/61963615/espn_plus_paywall_iphone_2400.0.jpg",
                     "https://cdn.vox-cdn.com/thumbor/3vTa9l1iezGcJvIlKoUzc9n5FUI=/0x0:2400x1800/920x613/filters:focal(695x619:1079x1003):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/61963615/espn_plus_paywall_iphone_2400.0.jpg",
@@ -66,7 +68,7 @@
                     },
                     {
                         "title": "Spanish",
-                        "proficiency": 7
+                        "proficiency": 4
                     },
                     {
                         "title": "Typing",

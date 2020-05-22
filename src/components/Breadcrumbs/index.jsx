@@ -2,6 +2,10 @@ var React = require('react');
 
 require('./Breadcrumbs.css');
 
+// TODO:
+// - create from props
+// - make anchor tags
+// - make sure anchor tags nav with the transition depending on forward/back
 function Breadcrumbs(props) {
     return (
         <div className="Breadcrumbs">

@@ -1,0 +1,48 @@
+.Breadcrumbs {
+    position: fixed;
+    z-index: 10;
+    color: white;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+    font-family: sans-serif;
+    font-size: 12px;
+
+    &__crumb {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        height: 10px;
+
+        &:not(last-child) {
+            margin-bottom: 5px;
+        }
+    }
+
+    &__dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 100%;
+        background-color: rgba(0, 0, 0, 0.2);
+        margin-left: 5px;
+        cursor: pointer;
+
+        &--active {
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+
+        &:hover + .Breadcrumbs__text {
+            opacity: 1;
+        }
+    }
+
+    &__text {
+        background-color: rgba(0, 0, 0, 0.2);
+        padding: 2px 8px;
+        border-radius: 10px;
+        opacity: 0;
+        
+        user-select: none;
+        -moz-user-select: none;
+    }
+}

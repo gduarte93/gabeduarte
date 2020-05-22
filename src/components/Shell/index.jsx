@@ -5,6 +5,7 @@ var React        = require('react'),
     reactRouter  = require('react-router-dom'),
     Link         = reactRouter.Link,
     withRouter   = reactRouter.withRouter,
+    Breadcrumbs  = require('../Breadcrumbs/index.jsx'),
 
     CONSTANTS    = require('common-constants'),
     PAGE_TYPES   = CONSTANTS.PAGE_TYPES,
@@ -219,7 +220,6 @@ class Shell extends Component {
             isSlide           = pageType === SLIDE,
             isMenuButtonClass = isMenu ? 'Link__menu--isMenu' : '',
             showBack          = isInfo,
-            showSlideNav      = isSlide,
             backUrl           = state && state.backUrl,
             menuUrl           = state && state.menuUrl,
             prevUrl           = state && state.prevUrl,
@@ -256,9 +256,9 @@ class Shell extends Component {
                     </div>
                 </Link>
                 {
-                    showSlideNav ?
+                    isSlide ?
                         <React.Fragment>
-                            {/* TODO: handle slide nav clicks like menu (only if not transitioning) */}
+                            <Breadcrumbs />
                             <Link className={`Link__button Link__button--prev`} to={prevUrl} onClick={me.handleSlideNavClick.bind(me, prevUrl, PREV)}>
                                 <div className="Arrow Arrow--up">
                                     <div className="Arrow__line" />

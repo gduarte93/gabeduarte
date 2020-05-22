@@ -65,7 +65,7 @@ body {
         &--container {
             font-size: 30px;
             font-weight: bold;
-            width: 30vw;
+            max-width: 580px;
             margin-left: 25vw;
             margin-top: 3vh;
         }

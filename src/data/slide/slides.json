@@ -45,7 +45,7 @@
         "id": "pixelsupply",
         "title": "Pixel Supply Co",
         "background": "https://marketplace.canva.com/f0Ixo/MAD1Ohf0Ixo/1/s2/canva-coral-gables-cityscape-MAD1Ohf0Ixo.jpg",
-        "backgroundColor": "#ffdab9",
+        "backgroundColor": "rgba(195, 205, 208, 1)",
         "overlayColor": "rgba(195, 205, 208, 0.9)",
         "info": {
             "color": {
@@ -66,7 +66,7 @@
         "id": "espn",
         "title": "ESPN",
         "background": "https://www.wnpr.org/sites/wnpr/files/styles/x_large/public/201405/espn.jpg",
-        "backgroundColor": "#ffdab9",
+        "backgroundColor": "rgba(214, 30, 38, 1)",
         "overlayColor": "rgba(214, 30, 38, 0.9)",
         "info": {
             "color": {
@@ -86,8 +86,8 @@
     {
         "id": "disney",
         "title": "Walt Disney DTCI",
-        "background": "https://i.ibb.co/r2MPTYz/dtci-slide.png",
-        "backgroundColor": "#ffdab9",
+        "background": "https://i.ibb.co/42r2rw9/dtci-slide.png",
+        "backgroundColor": "#ffffff",
         "overlayColor": "rgba(164, 222, 249, 0.9)",
         "info": {
             "color": {

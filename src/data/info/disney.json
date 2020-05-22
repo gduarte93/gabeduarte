@@ -1,19 +1,19 @@
 {
     "id": "disney",
     "header": {
-        "title": "Title 5",
-        "subtitle": "This is the subtitle",
-        "background": "http://imgcy.trivago.com/c_limit,d_dummy.jpeg,f_auto,h_1300,q_auto,w_2000/itemimages/17/62/1762715_v3.jpeg",
-        "backgroundColor": "#3a8499",
-        "overlayColor": "rgba(93, 172, 194, 0.9)",
+        "title": "Direct-to-Consumer & International",
+        "subtitle": "2018 - present",
+        "background": "https://i.ibb.co/42r2rw9/dtci-slide.png",
+        "backgroundColor": "rgba(164, 222, 249, 1)",
+        "overlayColor": "rgba(164, 222, 249, 0.9)",
         "info": {
             "color": {
-                "primary": "#ffffff",
-                "secondary": "#cde5ec",
-                "tertiary": "#bada55"
+                "primary": "#444444",
+                "secondary": "#ffffff",
+                "tertiary": "#444444"
             },
             "title": "Test",
-            "description": "Follow the journeys of 4 bears navigating the heart of Yellowstone, as seen from the bears’ own point of view. This groundbreaking research that attaches cameras to bears gives us a lens into the never before seen lives of one of the animal kingdom’s most fearsome beasts.",
+            "description": "Software Engineer II - Front End",
             "story": {
                 "column1": "Ever wonder what it would be like to be a bear living in the wild – foraging to bulk up for the winter months, shaking off after a dip in a cool stream, hunting and being hunted, being spied on by curious tourists, and seeing some of the best views not accessible by humans? For the first time ever, National Geographic has those answers.<br><br>Following two grizzlies and two black bears equipped with special camera collars in Yellowstone National Park, researchers and Nat Geo readers are getting an unprecedented view into the life of a bear – from the bear’s eye-view. We see the remarkable journeys of these 4 bears as they cover great distances, encounter predators, their own kind, and even people. We discover what they eat and how they use the beautiful and expansive landscape of Yellowstone.",
                 "column2": "Working with National Geographic’s team of editors, journalists, producers, and researchers, we’ve gathered this incredible footage into an engaging online narrative focused on the distinct paths that each bear roamed. Utilizing the geo-coordinate data captured with every 20-seconds of footage, we’re able to pinpoint the bears to the exact geography of Yellowstone. Combined with expert analysis from researchers Kerry Gunther and Nate Bowers, delivered as intermittent audio captions, we gain a deeper understanding of the bears’ activity as uncovered by the POV footage and their unique characteristics. And, of course, Hello Monday couldn’t resist adding the extra hand-touch with watercolor illustrations and pencil-drawn portraits depicting the beautiful, mysterious life of each bear."
@@ -21,12 +21,12 @@
         },
         "blurbs": [
             {
-                "title": "Project 1",
-                "description": "Did this and that for this project."
+                "title": "Location",
+                "description": "Bristol, CT"
             },
             {
-                "title": "Project 2",
-                "description": "Did alot more stuff this this project, like this and that and then this other thing."
+                "title": "Team",
+                "description": "Site Development"
             },
             {
                 "title": "Project 3",

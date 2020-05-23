@@ -1,28 +1,44 @@
-var React = require('react');
+var React        = require('react'),
+    reactRouter  = require('react-router-dom'),
+    Link         = reactRouter.Link,
+
+    CONSTANTS    = require('common-constants'),
+    SLIDE_NAV    = CONSTANTS.SLIDE_NAV,
+    PREV         = SLIDE_NAV.PREV,
+    NEXT         = SLIDE_NAV.NEXT;
 
 require('./Breadcrumbs.css');
 
-// TODO:
-// - create from props
-// - make anchor tags
-// - make sure anchor tags nav with the transition depending on forward/back
 function Breadcrumbs(props) {
+    var data             = props && props.data,
+        breadCrumbs      = data && data.breadCrumbs,
+        currentSlide     = data && data.currentSlide,
+        handleCrumbClick = props && props.handleCrumbClick;
+
     return (
         <div className="Breadcrumbs">
-            <div className="Breadcrumbs__crumb">
-                <div className="Breadcrumbs__dot Breadcrumbs__dot--active" />
-                <div className="Breadcrumbs__text Breadcrumbs__text--highlighted">1st link</div>
-            </div>
+            {
+                breadCrumbs.map((crumb, idx) => {
+                    var id     = crumb && crumb.id,
+                        title  = crumb && crumb.title,
+                        path   = crumb && crumb.path,
+                        active = crumb && crumb.active,
+                        direction;
 
-            <div className="Breadcrumbs__crumb">
-                <div className="Breadcrumbs__dot" />
-                <div className="Breadcrumbs__text">2nd link</div>
-            </div>
+                    if (id > currentSlide) {
+                        direction = NEXT;
+                    } else if (id < currentSlide) {
+                        direction = PREV;
+                    }
 
-            <div className="Breadcrumbs__crumb">
-                <div className="Breadcrumbs__dot" />
-                <div className="Breadcrumbs__text">3rd link</div>
-            </div>
+                    return (
+                        <Link key={idx} className="Breadcrumbs__crumb" to={path} onClick={(e) => handleCrumbClick(path, direction, e)}>
+                            <div className={`Breadcrumbs__dot ${ active && 'Breadcrumbs__dot--active' }`} />
+                            <div className="Breadcrumbs__text">{title}</div>
+                        </Link>
+                    );
+                })
+            }
         </div>
     );
 }

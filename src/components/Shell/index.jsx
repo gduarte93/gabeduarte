@@ -6,6 +6,7 @@ var React        = require('react'),
     Link         = reactRouter.Link,
     withRouter   = reactRouter.withRouter,
     Breadcrumbs  = require('../Breadcrumbs/index.jsx'),
+    slidesData   = require('../../data/slide/slides.json'),
 
     CONSTANTS    = require('common-constants'),
     PAGE_TYPES   = CONSTANTS.PAGE_TYPES,
@@ -23,6 +24,18 @@ class Shell extends Component {
     constructor(props) {
         super(props);
 
+        var breadCrumbs = slidesData.map((slide, idx) => {
+            var title = slide && slide.title,
+                path  = slide && slide.path;
+
+            return {
+                id: idx,
+                title,
+                path,
+                active: false
+            }
+        });
+
         this.state = {
             pageType      : '',
             menuUrl       : '',
@@ -31,7 +44,8 @@ class Shell extends Component {
             nextUrl       : '',
             toMenu        : false,
             transitioning : false,
-            direction     : undefined
+            direction     : undefined,
+            breadCrumbs   : breadCrumbs
         };
 
         this.connectToServer     = this.connectToServer.bind(this);
@@ -45,6 +59,7 @@ class Shell extends Component {
         this.redirect            = this.redirect.bind(this);
         this.handleBackClick     = this.handleBackClick.bind(this);
         this.resetSlideDirection = this.resetSlideDirection.bind(this);
+        this.updateBreadCrumbs   = this.updateBreadCrumbs.bind(this);
     }
 
     connectToServer() {
@@ -54,8 +69,11 @@ class Shell extends Component {
     componentDidMount() {
         this.connectToServer();
 
-        var hasIcons = document.querySelector('#icons'),
+        var me       = this,
+            hasIcons = document.querySelector('#icons'),
             script;
+
+        me.updateBreadCrumbs();
 
         if (!hasIcons) {
             script = document.createElement('script');    
@@ -119,6 +137,7 @@ class Shell extends Component {
 
         me.setTransitioning(true);
         me.setBackUrl(backUrl, MENU);
+        me.updateBreadCrumbs();
 
         setTimeout(() => me.setTransitioning(false), 600);
     }
@@ -178,7 +197,7 @@ class Shell extends Component {
             transitioning = state && state.transitioning,
             link          = {};
 
-        // prevent clicking menu while page is transitioning
+        // prevent clicking while page is transitioning
         if (transitioning) {
             return;
         }
@@ -190,7 +209,7 @@ class Shell extends Component {
             }
         };
 
-        me.setState({ direction }, me.redirect.bind(me, link))
+        me.setState({ direction }, direction && me.redirect.bind(me, link))
     }
 
     redirect(url) {
@@ -209,6 +228,34 @@ class Shell extends Component {
         }
     }
 
+    updateBreadCrumbs() {
+        var me                = this,
+            state             = me && me.state,
+            breadCrumbs       = state && state.breadCrumbs,
+            props             = me && me.props,
+            location          = props && props.location,
+            pathname          = location && location.pathname,
+            parsedPath        = pathname.replace(/\//g, '');
+
+        breadCrumbs.map(crumb => {
+            var newCrumb        = crumb,
+                path            = crumb && crumb.path,
+                parsedCrumbPath = path.replace(/\//g, ''),
+                id              = crumb && crumb.id;
+
+            if (parsedCrumbPath === parsedPath) {
+                newCrumb.active = true;
+
+                me.setState({ currentSlide:  id });
+            } else {
+                newCrumb.active = false;
+            }
+            
+            
+            return newCrumb;
+        });
+    }
+
     render() {
         var me                = this,
             props             = me && me.props,
@@ -225,7 +272,19 @@ class Shell extends Component {
             prevUrl           = state && state.prevUrl,
             nextUrl           = state && state.nextUrl,
             toggleBack        = showBack && backUrl ? 'Link__button--show' : 'Link__button--hide',
-            menuLink          = isMenu ? menuUrl || '/' : '/menu';
+            menuLink          = isMenu ? menuUrl || '/' : '/menu',
+            breadCrumbs       = state && state.breadCrumbs,
+            currentSlide      = state && state.currentSlide,
+            breadCrumbData    = {
+                breadCrumbs,
+                currentSlide
+            }
+
+        console.log("isMenu::")
+        console.log(isMenu)
+
+        console.log("menuLink:::")
+        console.log(menuLink)
 
         return (
             <div id='shell' className={pageType}>
@@ -258,7 +317,7 @@ class Shell extends Component {
                 {
                     isSlide ?
                         <React.Fragment>
-                            <Breadcrumbs />
+                            <Breadcrumbs data={breadCrumbData} handleCrumbClick={me.handleSlideNavClick} />
                             <Link className={`Link__button Link__button--prev`} to={prevUrl} onClick={me.handleSlideNavClick.bind(me, prevUrl, PREV)}>
                                 <div className="Arrow Arrow--up">
                                     <div className="Arrow__line" />

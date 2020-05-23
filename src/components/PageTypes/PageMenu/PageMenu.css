@@ -57,8 +57,7 @@ body {
             a {
                 color: white;
                 text-decoration: none;
-                transition: all 0.2 ease-in-out;
-                -webkit-transition: all 0.2s ease-in-out;
+                transition: all 200ms ease-in-out;
 
                 &:hover {
                     padding-left: 10px;
@@ -113,8 +112,7 @@ body {
             }
 
             i {
-                transition: all 0.2s ease-in-out;
-                -webkit-transition: all 0.2s ease-in-out;
+                transition: all 200ms ease-in-out;
                 margin-right: 5px;
                 font-size: 18px;
                 width: 18px;

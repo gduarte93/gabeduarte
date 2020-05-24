@@ -31,6 +31,7 @@ function Breadcrumbs(props) {
                         direction = PREV;
                     }
 
+                    // todo display non -> block opacity transition
                     return (
                         <Link key={idx} className="Breadcrumbs__crumb" to={path} onClick={(e) => handleCrumbClick(path, direction, e)}>
                             <div className={`Breadcrumbs__dot ${ active && 'Breadcrumbs__dot--active' }`} />

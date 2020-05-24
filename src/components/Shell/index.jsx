@@ -278,13 +278,7 @@ class Shell extends Component {
             breadCrumbData    = {
                 breadCrumbs,
                 currentSlide
-            }
-
-        console.log("isMenu::")
-        console.log(isMenu)
-
-        console.log("menuLink:::")
-        console.log(menuLink)
+            };
 
         return (
             <div id='shell' className={pageType}>

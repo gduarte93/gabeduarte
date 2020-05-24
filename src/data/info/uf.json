@@ -12,11 +12,11 @@
                 "secondary": "#fa4616",
                 "tertiary": "#80be63"
             },
-            "title": "Test",
+            "title": "Courses",
             "description": "Bachelors of Science in Computer Science",
             "story": {
-                "column1": "Ever wonder what it would be like to be a bear living in the wild – foraging to bulk up for the winter months, shaking off after a dip in a cool stream, hunting and being hunted, being spied on by curious tourists, and seeing some of the best views not accessible by humans? For the first time ever, National Geographic has those answers.<br><br>Following two grizzlies and two black bears equipped with special camera collars in Yellowstone National Park, researchers and Nat Geo readers are getting an unprecedented view into the life of a bear – from the bear’s eye-view. We see the remarkable journeys of these 4 bears as they cover great distances, encounter predators, their own kind, and even people. We discover what they eat and how they use the beautiful and expansive landscape of Yellowstone.",
-                "column2": "Working with National Geographic’s team of editors, journalists, producers, and researchers, we’ve gathered this incredible footage into an engaging online narrative focused on the distinct paths that each bear roamed. Utilizing the geo-coordinate data captured with every 20-seconds of footage, we’re able to pinpoint the bears to the exact geography of Yellowstone. Combined with expert analysis from researchers Kerry Gunther and Nate Bowers, delivered as intermittent audio captions, we gain a deeper understanding of the bears’ activity as uncovered by the POV footage and their unique characteristics. And, of course, Hello Monday couldn’t resist adding the extra hand-touch with watercolor illustrations and pencil-drawn portraits depicting the beautiful, mysterious life of each bear."
+                "column1": "Applications of Discrete Structures<br/><i>3100</i><br/><br/>Computational Linear Algebra<br/><i>3114</i><br/><br/>Computer Organization<br/><i>3101</i><br/><br/>Data Structures and Algorithms<br/><i>3530</i><br/><br/>Digital Logic & Computer Systems<br/><i>3701</i><br/><br/>Information Systems and Databases I<br/><i>4301</i>",
+                "column2": "Introduction to Numerical Analysis<br/><i>4401</i><br/><br/>Operating Systems<br/><i>4600</i><br/><br/>Programming for CIS Majors I (Java)<br/><i>3502</i><br/><br/>Programming for CIS Majors II (Java)<br/><i>3503</i><br/><br/>Programming using C<br/><i>3275</i><br/><br/>Senior Project<br/><i>4914</i>"
             }
         },
         "blurbs": [

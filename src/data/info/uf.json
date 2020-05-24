@@ -15,8 +15,8 @@
             "title": "Courses",
             "description": "Bachelors of Science in Computer Science",
             "story": {
-                "column1": "Applications of Discrete Structures<br/><i>3100</i><br/><br/>Computational Linear Algebra<br/><i>3114</i><br/><br/>Computer Organization<br/><i>3101</i><br/><br/>Data Structures and Algorithms<br/><i>3530</i><br/><br/>Digital Logic & Computer Systems<br/><i>3701</i><br/><br/>Information Systems and Databases I<br/><i>4301</i>",
-                "column2": "Introduction to Numerical Analysis<br/><i>4401</i><br/><br/>Operating Systems<br/><i>4600</i><br/><br/>Programming for CIS Majors I (Java)<br/><i>3502</i><br/><br/>Programming for CIS Majors II (Java)<br/><i>3503</i><br/><br/>Programming using C<br/><i>3275</i><br/><br/>Senior Project<br/><i>4914</i>"
+                "column1": "Applications of Discrete Structures<br/><i>COT 3100</i><br/><br/>Computational Linear Algebra<br/><i>MAS 3114</i><br/><br/>Computer Organization<br/><i>CDA 3101</i><br/><br/>Data Structures and Algorithms<br/><i>COP 3530</i><br/><br/>Digital Logic & Computer Systems<br/><i>EEL 3701C</i><br/><br/>Information Systems and Databases I<br/><i>CIS 4301</i><br/><br/>Introduction to Numerical Analysis<br/><i>MAD 4401</i>",
+                "column2": "Introduction to Software Engineering<br/><i>CEN 3031</i><br/><br/>Operating Systems<br/><i>COP 4600</i><br/><br/>Programming for CIS Majors I (Java)<br/><i>COP 3502</i><br/><br/>Programming for CIS Majors II (Java)<br/><i>COP 3503</i><br/><br/>Programming using C<br/><i>COP 3275</i><br/><br/>Senior Project<br/><i>CIS 4914</i>"
             }
         },
         "blurbs": [
@@ -25,12 +25,16 @@
                 "description": "Gainesville, FL"
             },
             {
-                "title": "Project 2",
-                "description": "Did alot more stuff this this project, like this and that and then this other thing."
+                "title": "CEN 3031",
+                "description": "Worked in a team of 4 to develop a scheduling web app for a local business"
             },
             {
-                "title": "Project 3",
-                "description": "blah blah"
+                "title": "CIS 4301",
+                "description": "Worked in a team of 4 to develop a temporary social media app using web technologies"
+            },
+            {
+                "title": "CIS 4914",
+                "description": "Created an online music locker desktop application for windows using C# and AWS"
             }
         ]
     },

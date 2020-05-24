@@ -33,9 +33,14 @@ function Breadcrumbs(props) {
 
                     // todo display non -> block opacity transition
                     return (
-                        <Link key={idx} className="Breadcrumbs__crumb" to={path} onClick={(e) => handleCrumbClick(path, direction, e)}>
+                        <Link
+                            key={idx}
+                            className="Breadcrumbs__crumb"
+                            to={path}
+                            onClick={(e) => handleCrumbClick(path, direction, e)}
+                        >
                             <div className={`Breadcrumbs__dot ${ active && 'Breadcrumbs__dot--active' }`} />
-                            <div className="Breadcrumbs__text">{title}</div>
+                            <div className="Breadcrumbs__text" onClick={(e) => { e.stopPropagation();e.preventDefault(); }}>{title}</div>
                         </Link>
                     );
                 })

@@ -23,7 +23,7 @@
     {
         "id": "disney",
         "title": "Walt Disney DTCI",
-        "background": "https://i.ibb.co/42r2rw9/dtci-slide.png",
+        "background": "https://res.cloudinary.com/dwkr3rvtr/image/upload/w_1900,c_scale,dpr_auto/dtci_slide_jnxk6t.png",
         "backgroundColor": "#ffffff",
         "overlayColor": "rgba(164, 222, 249, 0.9)",
         "info": {

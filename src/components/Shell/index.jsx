@@ -9,6 +9,7 @@ var React             = require('react'),
     slidesData        = require('../../data/slide/slides.json'),
     Cloudinary        = require('cloudinary-react'),
     CloudinaryContext = Cloudinary.CloudinaryContext,
+    ImageLightbox     = require('../ImageLightbox/index.jsx'),
 
     CONSTANTS         = require('common-constants'),
     PAGE_TYPES        = CONSTANTS.PAGE_TYPES,
@@ -20,7 +21,10 @@ var React             = require('react'),
     PREV              = SLIDE_NAV.PREV,
     NEXT              = SLIDE_NAV.NEXT,
 
-    CLOUD_NAME        = CONSTANTS.CLOUDINARY_CLOUD_NAME;
+    CLOUD_NAME        = CONSTANTS.CLOUDINARY_CLOUD_NAME,
+
+    ufData            = require('../../data/info/uf.json'),
+    lightboxData      = ufData.content[2].data.images;
 
 require('./Shell.css');
 
@@ -329,6 +333,7 @@ class Shell extends Component {
                             </React.Fragment>
                             : null
                     }
+                    <ImageLightbox data={lightboxData}/>
                     <Routing location={location} state={state} />
                 </div>
             </CloudinaryContext>

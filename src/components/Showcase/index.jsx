@@ -31,8 +31,8 @@ function Showcase(props) {
 
             if (publicId) {
                 return (
-                    <Image key={idx} publicId={publicId} alt={alt} className="Showcase__image">
-                        <Transformation width="500" crop="scale" dpr="auto"/>
+                    <Image key={idx} publicId={publicId} loading="lazy" alt={alt} className="Showcase__image">
+                        <Transformation width="500" crop="scale" dpr="auto" fetchFormat="auto"/>
                     </Image>
                 );
             } else {

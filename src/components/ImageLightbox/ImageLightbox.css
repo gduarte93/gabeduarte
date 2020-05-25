@@ -26,6 +26,7 @@
 
     &__image {
         width: 100%;
+        user-select: none;
     }
 
     &__title {
@@ -42,6 +43,7 @@
         width: 50px;
         text-align: center;
         cursor: pointer;
+        transition: all 200ms ease-in-out;
 
         &--close {
             position: absolute;
@@ -51,6 +53,7 @@
 
         &--hide {
             opacity: 0;
+            z-index: -1;
             cursor: default;
         }
     }

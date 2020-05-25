@@ -21,10 +21,7 @@ var React             = require('react'),
     PREV              = SLIDE_NAV.PREV,
     NEXT              = SLIDE_NAV.NEXT,
 
-    CLOUD_NAME        = CONSTANTS.CLOUDINARY_CLOUD_NAME,
-
-    ufData            = require('../../data/info/uf.json'),
-    lightboxData      = ufData.content[2].data.images;
+    CLOUD_NAME        = CONSTANTS.CLOUDINARY_CLOUD_NAME;
 
 require('./Shell.css');
 
@@ -53,7 +50,8 @@ class Shell extends Component {
             toMenu        : false,
             transitioning : false,
             direction     : undefined,
-            breadCrumbs   : breadCrumbs
+            breadCrumbs   : breadCrumbs,
+            lightbox      : undefined
         };
 
         this.connectToServer     = this.connectToServer.bind(this);
@@ -68,6 +66,8 @@ class Shell extends Component {
         this.handleBackClick     = this.handleBackClick.bind(this);
         this.resetSlideDirection = this.resetSlideDirection.bind(this);
         this.updateBreadCrumbs   = this.updateBreadCrumbs.bind(this);
+        this.openLightbox        = this.openLightbox.bind(this);
+        this.closeLightbox       = this.closeLightbox.bind(this);
     }
 
     connectToServer() {
@@ -122,7 +122,8 @@ class Shell extends Component {
             setPageType         : me.setPageType,
             setBackUrl          : me.setBackUrl,
             setSlideUrls        : me.setSlideUrls,
-            resetSlideDirection : me.resetSlideDirection
+            resetSlideDirection : me.resetSlideDirection,
+            openLightbox        : me.openLightbox
         }
     }
 
@@ -264,6 +265,22 @@ class Shell extends Component {
         });
     }
 
+    openLightbox(data, idx) {
+        var me = this;
+
+        me.setState({ lightbox: { images: data, idx } });
+    }
+
+    closeLightbox(e) {
+        e.preventDefault();
+        
+        var me = this;
+
+        if (e.target === e.currentTarget) {
+            me.setState({ lightbox: undefined });
+        }
+    }
+
     render() {
         var me                = this,
             props             = me && me.props,
@@ -283,6 +300,7 @@ class Shell extends Component {
             menuLink          = isMenu ? menuUrl || '/' : '/menu',
             breadCrumbs       = state && state.breadCrumbs,
             currentSlide      = state && state.currentSlide,
+            lightbox          = state && state.lightbox,
             breadCrumbData    = {
                 breadCrumbs,
                 currentSlide
@@ -333,7 +351,9 @@ class Shell extends Component {
                             </React.Fragment>
                             : null
                     }
-                    <ImageLightbox data={lightboxData}/>
+
+                    { lightbox ? <ImageLightbox {...lightbox} closeLightbox={me.closeLightbox} /> : null }
+
                     <Routing location={location} state={state} />
                 </div>
             </CloudinaryContext>
@@ -347,7 +367,8 @@ Shell.childContextTypes = {
     setPageType         : PropTypes.func,
     setBackUrl          : PropTypes.func,
     setSlideUrls        : PropTypes.func,
-    resetSlideDirection : PropTypes.func
+    resetSlideDirection : PropTypes.func,
+    openLightbox        : PropTypes.func
 }
 
 module.exports = withRouter(Shell);

@@ -16,11 +16,12 @@ class ImageLightbox extends Component {
     constructor(props) {
         super(props);
 
-        var images = props && props.data;
+        var images = props && props.images,
+            idx    = props && props.idx || 0;
 
         this.state = {
             images,
-            currentIdx: 0
+            currentIdx: idx
         }
 
         this.handleNavigate = this.handleNavigate.bind(this);
@@ -41,16 +42,18 @@ class ImageLightbox extends Component {
     }
 
     render() {
-        var me = this,
-            state = me && me.state,
-            images = state && state.images,
-            currentIdx = state && state.currentIdx,
-            currentImage = images[currentIdx],
-            publicId     = currentImage.publicId,
-            title        = currentImage.alt,
-            src          = typeof currentImage === "string" ? currentImage : currentImage.src,
-            isFirstImage = currentIdx === 0,
-            isLastImage  = currentIdx === images.length - 1,
+        var me            = this,
+            props         = me && me.props,
+            closeLightbox = props && props.closeLightbox || (() => { console.error("ERROR: Close function not provided") }),
+            state         = me && me.state,
+            images        = state && state.images,
+            currentIdx    = state && state.currentIdx,
+            currentImage  = images[currentIdx],
+            publicId      = currentImage.publicId,
+            title         = currentImage.alt,
+            src           = typeof currentImage === "string" ? currentImage : currentImage.src,
+            isFirstImage  = currentIdx === 0,
+            isLastImage   = currentIdx === images.length - 1,
             image;
 
         if (publicId) {
@@ -65,8 +68,8 @@ class ImageLightbox extends Component {
 
         return (
             <div className="ImageLightbox">
-                <div className="ImageLightbox__background">
-                    <div className="ImageLightbox__nav ImageLightbox__nav--close">{"x"}</div>
+                <div className="ImageLightbox__background" onClick={closeLightbox.bind(this)}>
+                    <div className="ImageLightbox__nav ImageLightbox__nav--close" onClick={closeLightbox.bind(this)}>{"x"}</div>
                     <div
                         className={`ImageLightbox__nav ImageLightbox__nav--prev ${ isFirstImage ? 'ImageLightbox__nav--hide' : '' }`}
                         onClick={me.handleNavigate.bind(me, !isFirstImage && PREV)}

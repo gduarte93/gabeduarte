@@ -69,23 +69,31 @@ class ImageLightbox extends Component {
         return (
             <div className="ImageLightbox">
                 <div className="ImageLightbox__background" onClick={closeLightbox.bind(this)}>
-                    <div className="ImageLightbox__nav ImageLightbox__nav--close" onClick={closeLightbox.bind(this)}>{"x"}</div>
-                    <div
-                        className={`ImageLightbox__nav ImageLightbox__nav--prev ${ isFirstImage ? 'ImageLightbox__nav--hide' : '' }`}
+                    <button className="ImageLightbox__button ImageLightbox__button--close" onClick={closeLightbox.bind(this)}>{"x"}</button>
+
+                    <button
+                        className={`ImageLightbox__button ImageLightbox__button--prev ${ isFirstImage ? 'ImageLightbox__button--hide' : '' }`}
                         onClick={me.handleNavigate.bind(me, !isFirstImage && PREV)}
                     >
-                        {"<"}
-                    </div>
+                        <div className="Lightbox___Arrow Lightbox___Arrow--left">
+                            <div className="Lightbox___Arrow--line" />
+                        </div>
+                    </button>
+
                     <div className="ImageLightbox__imageWrapper">
                         { image }
                         { title ? <div className="ImageLightbox__title">{ title }</div> : null }
                     </div>
-                    <div
-                        className={`ImageLightbox__nav ImageLightbox__nav--next ${ isLastImage ? 'ImageLightbox__nav--hide' : '' }`}
+
+                    <button
+                        className={`ImageLightbox__button ImageLightbox__button--next ${ isLastImage ? 'ImageLightbox__button--hide' : '' }`}
                         onClick={me.handleNavigate.bind(me, !isLastImage && NEXT)}
                     >
-                        {">"}
-                    </div>
+                        <div className="Lightbox___Arrow Lightbox___Arrow--right">
+                            <div className="Lightbox___Arrow--line" />
+                        </div>
+                    </button>
+
                 </div>
             </div>
         )

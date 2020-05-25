@@ -1,6 +1,6 @@
 .Showcase {
-    width: 100vw;
-    height: 100vh; /* don't make full height? */
+    width: 100%;
+    min-height: 100vh; /* don't make full height? */
     background-color: #f3f3f5;
     display: flex;
     align-items: center;

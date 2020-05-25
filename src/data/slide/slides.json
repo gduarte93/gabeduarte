@@ -86,7 +86,7 @@
     {
         "id": "uf",
         "title": "University of Florida",
-        "background": "https://i.pinimg.com/originals/52/e8/0f/52e80f4bb8df01f0a1c28ea5d7c2fc1b.jpg",
+        "background": "https://res.cloudinary.com/dwkr3rvtr/image/upload/w_2048,c_scale,dpr_auto/TheSwamp_pm3lwa.jpg",
         "backgroundColor": "#fa4616",
         "overlayColor": "rgba(0, 33, 165, 0.9)",
         "info": {

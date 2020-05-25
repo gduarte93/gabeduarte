@@ -1,22 +1,26 @@
-var React        = require('react'),
-    PropTypes    = require('prop-types'),
-    Component    = React.Component,
-    Routing      = require('../Routing/index.jsx'),
-    reactRouter  = require('react-router-dom'),
-    Link         = reactRouter.Link,
-    withRouter   = reactRouter.withRouter,
-    Breadcrumbs  = require('../Breadcrumbs/index.jsx'),
-    slidesData   = require('../../data/slide/slides.json'),
+var React             = require('react'),
+    PropTypes         = require('prop-types'),
+    Component         = React.Component,
+    Routing           = require('../Routing/index.jsx'),
+    reactRouter       = require('react-router-dom'),
+    Link              = reactRouter.Link,
+    withRouter        = reactRouter.withRouter,
+    Breadcrumbs       = require('../Breadcrumbs/index.jsx'),
+    slidesData        = require('../../data/slide/slides.json'),
+    Cloudinary        = require('cloudinary-react'),
+    CloudinaryContext = Cloudinary.CloudinaryContext,
 
-    CONSTANTS    = require('common-constants'),
-    PAGE_TYPES   = CONSTANTS.PAGE_TYPES,
-    MENU         = PAGE_TYPES.MENU,
-    INFO         = PAGE_TYPES.INFO,
-    SLIDE        = PAGE_TYPES.SLIDE,
+    CONSTANTS         = require('common-constants'),
+    PAGE_TYPES        = CONSTANTS.PAGE_TYPES,
+    MENU              = PAGE_TYPES.MENU,
+    INFO              = PAGE_TYPES.INFO,
+    SLIDE             = PAGE_TYPES.SLIDE,
 
-    SLIDE_NAV    = CONSTANTS.SLIDE_NAV,
-    PREV         = SLIDE_NAV.PREV,
-    NEXT         = SLIDE_NAV.NEXT;
+    SLIDE_NAV         = CONSTANTS.SLIDE_NAV,
+    PREV              = SLIDE_NAV.PREV,
+    NEXT              = SLIDE_NAV.NEXT,
+
+    CLOUD_NAME        = CONSTANTS.CLOUDINARY_CLOUD_NAME;
 
 require('./Shell.css');
 
@@ -281,52 +285,53 @@ class Shell extends Component {
             };
 
         return (
-            <div id='shell' className={pageType}>
-                <Link className={`Link__menu--button ${isMenuButtonClass}`} to={menuLink} onClick={me.handleMenuClick.bind(me, menuLink)}>
+            <CloudinaryContext cloudName={CLOUD_NAME}>
+                <div id='shell' className={pageType}>
+                    <Link className={`Link__menu--button ${isMenuButtonClass}`} to={menuLink} onClick={me.handleMenuClick.bind(me, menuLink)}>
+                        {
+                            isMenu ?
+                                <div className="Menu__close"><span>+</span></div>
+                                :
+                                <div className="Threelines">
+                                    <div className="Threelines__line" />
+                                    <div className="Threelines__line" />
+                                    <div className="Threelines__line" />
+                                </div>
+                        }
+                    </Link>
                     {
-                        isMenu ?
-                            <div className="Menu__close"><span>+</span></div>
-                            :
-                            <div className="Threelines">
-                                <div className="Threelines__line" />
-                                <div className="Threelines__line" />
-                                <div className="Threelines__line" />
+                        !isMenu ?
+                            <div className="Link__menu--text">
+                                Menu
                             </div>
-                            
+                            :
+                            null
                     }
-                </Link>
-                {
-                    !isMenu ?
-                        <div className="Link__menu--text">
-                            Menu
+                    <Link className={`Link__button Link__button--back ${toggleBack}`} to={backUrl} onClick={me.handleBackClick.bind(me, backUrl)}>
+                        <div className="Arrow Arrow--left">
+                            <div className="Arrow__line" />
                         </div>
-                        :
-                        null
-                }
-                <Link className={`Link__button Link__button--back ${toggleBack}`} to={backUrl} onClick={me.handleBackClick.bind(me, backUrl)}>
-                    <div className="Arrow Arrow--left">
-                        <div className="Arrow__line" />
-                    </div>
-                </Link>
-                {
-                    isSlide ?
-                        <React.Fragment>
-                            <Breadcrumbs data={breadCrumbData} handleCrumbClick={me.handleSlideNavClick} />
-                            <Link className={`Link__button Link__button--prev`} to={prevUrl} onClick={me.handleSlideNavClick.bind(me, prevUrl, PREV)}>
-                                <div className="Arrow Arrow--up">
-                                    <div className="Arrow__line" />
-                                </div>
-                            </Link>
-                            <Link className={`Link__button Link__button--next`} to={nextUrl} onClick={me.handleSlideNavClick.bind(me, nextUrl, NEXT)}>
-                                <div className="Arrow Arrow--down">
-                                    <div className="Arrow__line" />
-                                </div>
-                            </Link>
-                        </React.Fragment>
-                        : null
-                }
-                <Routing location={location} state={state} />
-            </div>
+                    </Link>
+                    {
+                        isSlide ?
+                            <React.Fragment>
+                                <Breadcrumbs data={breadCrumbData} handleCrumbClick={me.handleSlideNavClick} />
+                                <Link className={`Link__button Link__button--prev`} to={prevUrl} onClick={me.handleSlideNavClick.bind(me, prevUrl, PREV)}>
+                                    <div className="Arrow Arrow--up">
+                                        <div className="Arrow__line" />
+                                    </div>
+                                </Link>
+                                <Link className={`Link__button Link__button--next`} to={nextUrl} onClick={me.handleSlideNavClick.bind(me, nextUrl, NEXT)}>
+                                    <div className="Arrow Arrow--down">
+                                        <div className="Arrow__line" />
+                                    </div>
+                                </Link>
+                            </React.Fragment>
+                            : null
+                    }
+                    <Routing location={location} state={state} />
+                </div>
+            </CloudinaryContext>
         );
     }
 }

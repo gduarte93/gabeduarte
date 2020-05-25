@@ -1,6 +1,9 @@
-var React = require('react'),
+var React          = require('react'),
+    Cloudinary     = require('cloudinary-react'),
+    Image          = Cloudinary.Image,
+    Transformation = Cloudinary.Transformation,
 
-    LEFT  = 'left';
+    LEFT           = 'left';
 
 require('./Showcase.css');
 
@@ -13,7 +16,29 @@ function Showcase(props) {
         leftImage            = imagePosition === LEFT,
         backgroundImage      = data && data.backgroundImage,
         backgroundColor      = data && data.backgroundColor,
-        imageComp            = images.map((src, idx) => <img key={idx} src={src} className="Showcase__image"/>),
+        imageComp            = images.map((image, idx) => {
+            var src = "",
+                alt = "",
+                publicId;
+
+            if (typeof image === "string") {
+                src = image;
+            } else {
+                src = image && image.src;
+                alt = image && image.alt;
+                publicId = image && image.publicId;
+            }
+
+            if (publicId) {
+                return (
+                    <Image key={idx} publicId={publicId} alt={alt} className="Showcase__image">
+                        <Transformation width="500" crop="scale" dpr="auto"/>
+                    </Image>
+                );
+            } else {
+                return <img key={idx} src={src} alt={alt} className="Showcase__image"/>;
+            }
+        }),
         descComp             = <div className="Showcase__description" dangerouslySetInnerHTML={{__html: description}}/>,
         titleComp            = title ? <div className="Showcase__title">{title}</div> : null,
         titleAndDescComp     = <React.Fragment>{titleComp}{descComp}</React.Fragment>,

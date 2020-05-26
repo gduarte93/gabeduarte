@@ -41,6 +41,14 @@ class ImageLightbox extends Component {
         me.setState({ currentIdx })
     }
 
+    componentDidMount() {
+        document.body.classList.add('lightbox--open');
+    }
+
+    componentWillUnmount() {
+        document.body.classList.remove('lightbox--open');
+    }
+
     render() {
         var me            = this,
             props         = me && me.props,

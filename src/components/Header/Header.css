@@ -2,6 +2,10 @@
 
 body {
     overflow-x: hidden;
+
+    &.lightbox--open {
+        overflow-y: hidden;
+    }
 }
 
 .Header {

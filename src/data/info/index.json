@@ -21,16 +21,20 @@
         },
         "blurbs": [
             {
-                "title": "Project 1",
-                "description": "Did this and that for this project."
+                "title": "Location",
+                "description": "Hartford, CT"
             },
             {
-                "title": "Project 2",
-                "description": "Did alot more stuff this this project, like this and that and then this other thing."
+                "title": "Checkers",
+                "description": "Checkers app using React"
             },
             {
-                "title": "Project 3",
-                "description": "blah blah"
+                "title": "Chart",
+                "description": "Plotting chart of soccer players of 2018 World Cup"
+            },
+            {
+                "title": "Site Health Checker",
+                "description": "Checks multiple urls and returns whether they error or not"
             }
         ]
     },

@@ -54,7 +54,7 @@ class Showcase extends Component {
                         </Image>
                     );
                 } else {
-                    return <img key={idx} src={src} alt={alt} className="Showcase__image"/>;
+                    return <img key={idx} src={src} alt={alt} className="Showcase__image" onClick={openLightbox.bind(this, images, idx)}/>;
                 }
             }),
             descComp             = <div className="Showcase__description" dangerouslySetInnerHTML={{__html: description}}/>,

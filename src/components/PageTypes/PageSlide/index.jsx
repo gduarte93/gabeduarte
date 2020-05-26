@@ -126,7 +126,7 @@ class PageSlide extends Component {
                                 <div className="Link__info--text">
                                     See more
                                 </div>
-                                <div className="PageSlide__description" style={primaryColorStyle}>{desc}</div>
+                                <div className="PageSlide__description" style={primaryColorStyle} dangerouslySetInnerHTML={{__html: desc}} />
                             </div>
                         </div>
                     </div>

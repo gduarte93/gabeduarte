@@ -13,7 +13,6 @@
         top: -5vh !important;
         background-repeat: no-repeat;
         background-size: cover;
-        background-position: center;
     }
 
     &__overlay {

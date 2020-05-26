@@ -8,6 +8,7 @@ function Header(props) {
         subtitle            = data && data.subtitle,
         background          = data && data.background,
         backgroundColor     = data && data.backgroundColor,
+        backgroundPosition  = data && data.backgroundPosition || "center",
         overlayColor        = data && data.overlayColor,
         info                = data && data.info,
         infoDesc            = info && info.description,
@@ -21,7 +22,8 @@ function Header(props) {
         col2                = infoStory.column2,
         blurbs              = data && data.blurbs,
         backgroundStyle     = {
-            backgroundImage: `url(${background})`
+            backgroundImage    : `url(${background})`,
+            backgroundPosition : backgroundPosition
         },
         backgroundColorStyle = {
             backgroundColor: backgroundColor

@@ -71,6 +71,7 @@ class PageSlide extends Component {
             content             = appState && appState.content,
             title               = content && content.title,
             background          = content && content.background,
+            backgroundPosition  = content && content.backgroundPosition || 'center',
             overlayColor        = content && content.overlayColor,
             info                = content && content.info,
 
@@ -87,7 +88,8 @@ class PageSlide extends Component {
             navSlideClass       = direction ? `page--${direction}` : '',
 
             backgroundStyle     = {
-                backgroundImage: `url(${background})`
+                backgroundImage    : `url(${background})`,
+                backgroundPosition : backgroundPosition
             },
             overlayStyle        = {
                 backgroundColor: overlayColor

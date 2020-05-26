@@ -65,19 +65,20 @@
     {
         "id": "pixelsupply",
         "title": "Pixel Supply Co",
-        "background": "https://marketplace.canva.com/f0Ixo/MAD1Ohf0Ixo/1/s2/canva-coral-gables-cityscape-MAD1Ohf0Ixo.jpg",
-        "backgroundColor": "rgba(195, 205, 208, 1)",
-        "overlayColor": "rgba(195, 205, 208, 0.9)",
+        "background": "https://res.cloudinary.com/dwkr3rvtr/image/upload/w_2048,c_scale,dpr_auto/miracle_mile_vilvft.jpg",
+        "backgroundColor": "rgba(224, 197, 136, 1)",
+        "overlayColor": "rgba(224, 197, 136, 0.9)",
+        "backgroundPosition": "bottom",
         "info": {
             "color": {
-                "primary": "#494d1b",
-                "secondary": "#8e9264"
+                "primary": "#053E1F",
+                "secondary": "#D91515"
             },
             "title": "Web Developer",
             "subtitle": "2014 - 2016",
             "location": "Miami, FL",
             "url": "/pixelsupply/info",
-            "description": "I started as an intern at Pixel Supply. After college I went on to work there full-time."
+            "description": "I started with Pixel Supply as an intern sophomore year, and then was hired on full-time after I graduated. While there, I worked on many different e-commerce websites for our clients on the Shopify platform. I also built the company’s first Shopify app, UrPic, using Ruby on Rails."
         },
         "path": "/pixelsupply",
         "next": "/uf",

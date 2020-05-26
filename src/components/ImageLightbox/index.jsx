@@ -69,7 +69,9 @@ class ImageLightbox extends Component {
         return (
             <div className="ImageLightbox">
                 <div className="ImageLightbox__background" onClick={closeLightbox.bind(this)}>
-                    <button className="ImageLightbox__button ImageLightbox__button--close" onClick={closeLightbox.bind(this)}>{"x"}</button>
+                    <button className="ImageLightbox__button ImageLightbox__button--close" onClick={closeLightbox.bind(this)}>
+                        <span onClick={closeLightbox.bind(this)}>+</span>
+                    </button>
 
                     <button
                         className={`ImageLightbox__button ImageLightbox__button--prev ${ isFirstImage ? 'ImageLightbox__button--hide' : '' }`}

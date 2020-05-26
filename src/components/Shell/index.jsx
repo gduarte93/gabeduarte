@@ -272,8 +272,6 @@ class Shell extends Component {
     }
 
     closeLightbox(e) {
-        e.preventDefault();
-        
         var me = this;
 
         if (e.target === e.currentTarget) {

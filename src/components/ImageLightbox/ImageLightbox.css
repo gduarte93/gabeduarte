@@ -22,6 +22,8 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin-left: 10px;
+        margin-right: 10px;
     }
 
     &__image {
@@ -39,19 +41,35 @@
         padding: 2px 8px;
     }
 
+    &__button:not(.ImageLightbox__button--close) {
+        background-color: #000000;
+        border-radius: 100%;;
+    }
+
     &__button {
-        width: 50px;
-        height: 50px;
+        width: 48px;
+        height: 48px;
         text-align: center;
         cursor: pointer;
         transition: all 200ms ease-in-out;
         border: none;
         background: transparent;
+        display: block;
 
         &--close {
             position: absolute;
             top: 50px;
             right: 50px;
+
+            span {
+                display: block;
+                font-size: 80px;
+                line-height: 48px;
+                text-align: center;
+                transform: rotate(45deg);
+                color: #ffffff;
+                margin-top: -20px;
+            }
         }
 
         &--hide {
@@ -60,28 +78,45 @@
             cursor: default;
         }
 
-        .Lightbox___Arrow--line {
-            transition: 200ms;
-            height: 16px;
-            width: 16px;
-        }
-
-        .Lightbox___Arrow--left {
-            border-left: 2px solid white;
-            border-top: 2px solid white;        
-            transform: rotate(-45deg);
-            margin-left: 8px;
-            width: 16px;
-            height: 16px;
-        }
+        .Lightbox___Arrow {
+            &--line {
+                transition: 200ms;
+                height: 16px;
+                width: 16px;
+                transform: rotate(-45deg);
+            }
     
-        .Lightbox___Arrow--right {
-            border-right: 2px solid white;
-            border-bottom: 2px solid white;        
-            transform: rotate(-45deg);
-            margin-top: 8px;
-            width: 16px;
-            height: 16px;
+            &--left {
+                .Lightbox___Arrow--line {
+                    border-left: 2px solid white;
+                    border-top: 2px solid white; 
+                    margin-left: 10px;
+                }
+            }
+        
+            &--right {
+                .Lightbox___Arrow--line {
+                    border-right: 2px solid white;
+                    border-bottom: 2px solid white;
+                    margin-left: 4px;
+                }
+            }
+        }
+    }
+
+    &__button:hover {
+        .Lightbox___Arrow {
+            &--left {
+                .Lightbox___Arrow--line {
+                    margin-left: 6px;
+                }
+            }
+        
+            &--right {
+                .Lightbox___Arrow--line {
+                    margin-left: 8px;
+                }
+            }
         }
     }
 }

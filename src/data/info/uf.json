@@ -30,7 +30,7 @@
             },
             {
                 "title": "CIS 4301",
-                "description": "Worked in a team of 4 to develop a temporary social media app using web technologies"
+                "description": "Worked in a team of 4 to develop a temporary social media app using PostgreSQL and web technologies"
             },
             {
                 "title": "CIS 4914",
@@ -176,7 +176,7 @@
                     }
                 ],
                 "title": "CIS 4914",
-                "description": "Created an online music locker to be able to listed to your music collection wherever you have access to the internet, as well as free up hard drive space.<br/><br/>The app is a Microsoft Windows desktop application built using C# with Visual Studio, PostgreSQL, and stored on AWS.<br/><br/>Users are able to register for an account and log in. They are able to upload songs, play songs, create playlists, delete playlists, remove songs from a playlist, and delete songs from their library. They are also able to sort songs by name, artist, album, and length as well as search via a search bar."
+                "description": "Created an online music locker to be able to listen to your music collection wherever you have access to the internet, as well as free up hard drive space.<br/><br/>The app is a Microsoft Windows desktop application built using C# with Visual Studio, PostgreSQL, and stored on AWS.<br/><br/>Users are able to register for an account and log in. They are able to upload songs, play songs, create playlists, delete playlists, remove songs from a playlist, and delete songs from their library. They are also able to sort songs by name, artist, album, and length as well as search via a search bar."
             }
         }
     ]

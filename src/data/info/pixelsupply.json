@@ -80,7 +80,7 @@
 
                 ],
                 "title": "UrPic",
-                "description": "A Shopify app built on Ruby on Rails.<br/><br/>Allows shop owners to link their Instagram accounts to their Shopify stores. Provides them an admin dashboard to curate which posts to show on the site, and an interface to link product pages to relevant posts. As well as allowing for automatic page linking via hashtags while on “autopilot” mode.<br/><br/>Once the set up work is completed, provide an easy embed script which can be placed anywhere on the site to allow shoppers to see their promoted posts. These posts can be displayed in a gallery or grid view, both with infinite scroll options."
+                "description": "A Shopify app built on Ruby on Rails.<br/><br/>Allows shop owners to link their Instagram accounts to their Shopify stores. Provides them an admin dashboard to curate which posts to show on the site, and an interface to link product pages to relevant posts. As well as allowing for automatic page linking via hashtags while on “autopilot” mode.<br/><br/>Once the set up work is completed, provide an easy embed script which can be placed anywhere on the site to allow shoppers to see their promoted posts. These posts can be displayed in a slide or grid view, both with infinite scroll options."
             }
         }
     ]

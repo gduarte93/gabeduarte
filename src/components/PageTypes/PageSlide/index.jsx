@@ -3,6 +3,7 @@ var React      = require('react'),
     Component  = React.Component,
     Link       = require('react-router-dom').Link,
     Parallax   = require('parallax-js'),
+    Helmet     = require('react-helmet').Helmet,
 
     CONSTANTS  = require('common-constants'),
     PAGE_TYPES = CONSTANTS.PAGE_TYPES,
@@ -71,6 +72,7 @@ class PageSlide extends Component {
             content             = appState && appState.content,
             title               = content && content.title,
             background          = content && content.background,
+            backgroundColor     = content && content.backgroundColor,
             backgroundPosition  = content && content.backgroundPosition || 'center',
             overlayColor        = content && content.overlayColor,
             info                = content && content.info,
@@ -102,38 +104,49 @@ class PageSlide extends Component {
             };
 
         return (
-            <div className={`PageSlide page page--slide ${navSlideClass}`} ref={this.scene}>
-                <div className="PageSlide__background" style={backgroundStyle} data-depth="0.1"></div>
-                <div className="PageSlide__overlay" data-depth="0">
-                    <div className="PageSlide__overlay--background" style={overlayStyle}>
-                        <div className="PageSlide__overlay--contents">
-                            <div className="PageSlide__name" style={primaryColorStyle}>{title}</div>
-                            <div className="PageSlide__info">
-                                <div className="PageSlide__title" style={primaryColorStyle}>{infoTitle}</div>
-                                <div className="PageSlide__subtitle" style={secondaryColorStyle}>{infoSub}</div>
-                                {
-                                    infoLocation ?
-                                        <div className="PageSlide__location" style={primaryColorStyle}>
-                                            <i className="fas fa-map-pin"></i>{infoLocation}
+            <React.Fragment>
+                <Helmet>
+                    <style>
+                        {`
+                            body {
+                                background-color: ${backgroundColor};
+                            }
+                        `}
+                    </style>
+                </Helmet>
+                <div className={`PageSlide page page--slide ${navSlideClass}`} ref={this.scene}>
+                    <div className="PageSlide__background" style={backgroundStyle} data-depth="0.1"></div>
+                    <div className="PageSlide__overlay" data-depth="0">
+                        <div className="PageSlide__overlay--background" style={overlayStyle}>
+                            <div className="PageSlide__overlay--contents">
+                                <div className="PageSlide__name" style={primaryColorStyle}>{title}</div>
+                                <div className="PageSlide__info">
+                                    <div className="PageSlide__title" style={primaryColorStyle}>{infoTitle}</div>
+                                    <div className="PageSlide__subtitle" style={secondaryColorStyle}>{infoSub}</div>
+                                    {
+                                        infoLocation ?
+                                            <div className="PageSlide__location" style={primaryColorStyle}>
+                                                <i className="fas fa-map-pin"></i>{infoLocation}
+                                            </div>
+                                            : null
+                                    }
+                                    <Link className="Link__info--button" to={infoUrl} onClick={me.handleInfoClick.bind(me, infoUrl)}>
+                                        <div className="Threedots">
+                                            <div className="Threedots__dot" />
+                                            <div className="Threedots__dot" />
+                                            <div className="Threedots__dot" />
                                         </div>
-                                        : null
-                                }
-                                <Link className="Link__info--button" to={infoUrl} onClick={me.handleInfoClick.bind(me, infoUrl)}>
-                                    <div className="Threedots">
-                                        <div className="Threedots__dot" />
-                                        <div className="Threedots__dot" />
-                                        <div className="Threedots__dot" />
+                                    </Link>
+                                    <div className="Link__info--text">
+                                        See more
                                     </div>
-                                </Link>
-                                <div className="Link__info--text">
-                                    See more
+                                    <div className="PageSlide__description" style={primaryColorStyle} dangerouslySetInnerHTML={{__html: desc}} />
                                 </div>
-                                <div className="PageSlide__description" style={primaryColorStyle} dangerouslySetInnerHTML={{__html: desc}} />
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </React.Fragment>
         );
     } 
 }

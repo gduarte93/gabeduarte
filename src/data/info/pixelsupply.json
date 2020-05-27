@@ -3,7 +3,7 @@
     "header": {
         "title": "Pixel Supply Co",
         "subtitle": "2014 - 2016",
-        "background": "https://res.cloudinary.com/dwkr3rvtr/image/upload/w_2048,c_scale,dpr_auto/miracle_mile_vilvft.jpg",
+        "background": "https://res.cloudinary.com/dwkr3rvtr/image/upload/w_2048,c_limit,dpr_auto/miracle_mile_vilvft.jpg",
         "backgroundColor": "#e0c588",
         "overlayColor": "rgba(224, 197, 136, 0.9)",
         "backgroundPosition": "bottom",
@@ -16,7 +16,7 @@
             "title": "",
             "description": "Web Developer",
             "story": {
-                "column1": "I joined Pixel Supply towards the end of my sophomore year, as an intern. After graduating, I joined them full-time, working in Coral Gables on Miracle Mile. They are certified Shopify experts, who specialize in setting up online stores for businesses.<br/><br/>Being a small company, with a start up mentality, I was allowed to see and touch many aspects of the business. I was there when clients walked in to discuss their vision for the site. I saw that vision gradually turn into page mockups. And then, in what became my main role, I turned those mocks into fully functioning and responsive websites using HTML, CSS, JavaScript, and Liquid.",
+                "column1": "I joined Pixel Supply towards the end of my sophomore year, as an intern. After graduating, I joined them full-time, working in Coral Gables on Miracle Mile. They are certified Shopify experts, who specialize in setting up online stores for businesses.<br/><br/>Being a small company, with a start-up mentality, I was allowed to see and touch many aspects of the business. I was there when clients walked in to discuss their vision for the site. I saw that vision gradually turn into page mockups. And then, in what became my main role, I turned those mocks into fully functioning and responsive websites using HTML, CSS, JavaScript, and Liquid.",
                 "column2": "Another big part of my role at Pixel Supply, was app development. I was the lead full stack developer on UrPic, a Ruby on Rails app for the Shopify app store. UrPic allows store owners to sell products on their Instagram accounts by linking them to their store. I wrote the front-end, backend, implemented a PostreSQL database, integrated it with Instagram’s API, and hosted it on Heroku."
             }
         },

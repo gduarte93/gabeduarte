@@ -3,7 +3,7 @@
     "header": {
         "title": "ESPN",
         "subtitle": "2016 - 2018",
-        "background": "https://www.wnpr.org/sites/wnpr/files/styles/x_large/public/201405/espn.jpg",
+        "background": "https://res.cloudinary.com/dwkr3rvtr/image/upload/w_2048,c_limit,dpr_auto/espn_dgaqr1.jpg",
         "backgroundColor": "rgba(214, 30, 38, 1)",
         "overlayColor": "rgba(214, 30, 38, 0.9)",
         "info": {
@@ -12,11 +12,11 @@
                 "secondary": "#000000",
                 "tertiary": "#ffffff"
             },
-            "title": "Test",
+            "title": "",
             "description": "Software Engineer - Front End",
             "story": {
-                "column1": "Ever wonder what it would be like to be a bear living in the wild – foraging to bulk up for the winter months, shaking off after a dip in a cool stream, hunting and being hunted, being spied on by curious tourists, and seeing some of the best views not accessible by humans? For the first time ever, National Geographic has those answers.<br><br>Following two grizzlies and two black bears equipped with special camera collars in Yellowstone National Park, researchers and Nat Geo readers are getting an unprecedented view into the life of a bear – from the bear’s eye-view. We see the remarkable journeys of these 4 bears as they cover great distances, encounter predators, their own kind, and even people. We discover what they eat and how they use the beautiful and expansive landscape of Yellowstone.",
-                "column2": "Working with National Geographic’s team of editors, journalists, producers, and researchers, we’ve gathered this incredible footage into an engaging online narrative focused on the distinct paths that each bear roamed. Utilizing the geo-coordinate data captured with every 20-seconds of footage, we’re able to pinpoint the bears to the exact geography of Yellowstone. Combined with expert analysis from researchers Kerry Gunther and Nate Bowers, delivered as intermittent audio captions, we gain a deeper understanding of the bears’ activity as uncovered by the POV footage and their unique characteristics. And, of course, Hello Monday couldn’t resist adding the extra hand-touch with watercolor illustrations and pencil-drawn portraits depicting the beautiful, mysterious life of each bear."
+                "column1": "The team I joined at ESPN went through many names, ultimately settling on the Product Engineering team. We were responsible for maintaining multiple consumer facing sites including espn.com, secsports.com, espnfc.us, espncricinfo.com.<br/><br/>This included triaging tickets coming in, making sure they were tagged appropriately as minor, major, or critical and handling them appropriately. If it was a front-end issue I would find the problem and fix it. If it ended up being something else, such as an API issue or a mobile app issue I would contact the appropriate team and hand the ticket off. Part of this was also being on an on call rotation.<br/><br/>Being a part of such an important team, one that touches virtually all of ESPN’s products and that acts as a first response to an array of issues was a great experience. I got exposure to different technologies I otherwise wouldn’t have if I was on a more niche team, which was ideal for me early in my career.",
+                "column2": "In addition to the triage and ticket handling, we also got a chance to work on new projects. One of these was building an internal tool from the ground up, the Issues Tool. This is a dashboard where our editors can create new tickets for bugs, check on their progress, and leave comments. It integrates with the Jira API, so that it is always synced, but it provides a more user friendly interface and autofills some of the ticket fields, so that they are consistent and easier to track. The app was created with React and Redux. It was one of my first experiences with React, definitely my first major project with it. Coming from working with jQuery and Backbone it was a refreshing change.<br/><br/>As ESPN slowly transitioned away from older technology to use more React, the experience I received on that project would prove to be invaluable. One of the last things I got to do, and one in which React was a big part, was that I was able to work with the Watch team on the release of ESPN+. I was responsible for the schedule page and implementing page tracking. Knowing that I had a hand in our biggest product release in years, is something I am very proud of."
             }
         },
         "blurbs": [
@@ -25,12 +25,16 @@
                 "description": "Bristol, CT"
             },
             {
-                "title": "Project 2",
-                "description": "Did alot more stuff this this project, like this and that and then this other thing."
+                "title": "ESPN.com",
+                "description": "Worked on maintaining ESPN's consumer facing sites using multiple tech stacks - React, Backbone, jQuery, Tea"
             },
             {
-                "title": "Project 3",
-                "description": "blah blah"
+                "title": "Internal Tools",
+                "description": "Worked with a small team to develop the Issues Tool using React and Redux"
+            },
+            {
+                "title": "ESPN+",
+                "description": "Worked with the Watch team on features such as the schedule page and analytics"
             }
         ]
     },
@@ -40,41 +44,34 @@
             "data": {
                 "imgPos": "left",
                 "images": [
-                    "https://cdn.vox-cdn.com/thumbor/3vTa9l1iezGcJvIlKoUzc9n5FUI=/0x0:2400x1800/920x613/filters:focal(695x619:1079x1003):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/61963615/espn_plus_paywall_iphone_2400.0.jpg"
-                ],
-                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-            }
-        },
-        {
-            "type": "showcase",
-            "data": {
-                "imgPos": "right",
-                "images": [
-                    "https://cdn.vox-cdn.com/thumbor/3vTa9l1iezGcJvIlKoUzc9n5FUI=/0x0:2400x1800/920x613/filters:focal(695x619:1079x1003):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/61963615/espn_plus_paywall_iphone_2400.0.jpg",
-                    "https://cdn.vox-cdn.com/thumbor/3vTa9l1iezGcJvIlKoUzc9n5FUI=/0x0:2400x1800/920x613/filters:focal(695x619:1079x1003):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/61963615/espn_plus_paywall_iphone_2400.0.jpg",
-                    "https://cdn.vox-cdn.com/thumbor/3vTa9l1iezGcJvIlKoUzc9n5FUI=/0x0:2400x1800/920x613/filters:focal(695x619:1079x1003):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/61963615/espn_plus_paywall_iphone_2400.0.jpg"
-                ],
-                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-            }
-        },
-        {
-            "type": "list",
-            "data": {
-                "title": "Skills",
-                "items": [
                     {
-                        "title": "English",
-                        "proficiency": 10
+                        "publicId": "espn_homepage_d8n8xw",
+                        "src": "https://res.cloudinary.com/dwkr3rvtr/image/upload/v1590553453/espn_homepage_d8n8xw.png",
+                        "alt": "espn.com"
                     },
                     {
-                        "title": "Spanish",
-                        "proficiency": 7
+                        "publicId": "espnfc_ett0vx",
+                        "src": "https://res.cloudinary.com/dwkr3rvtr/image/upload/v1590553395/espnfc_ett0vx.jpg",
+                        "alt": "espnfc.us"
                     },
                     {
-                        "title": "Typing",
-                        "proficiency": 8
+                        "publicId": "secsports_homepage_glmppv",
+                        "src": "https://res.cloudinary.com/dwkr3rvtr/image/upload/v1590553455/secsports_homepage_glmppv.png",
+                        "alt": "secsports.com"
+                    },
+                    {
+                        "publicId": "cricinfo_homepage_qy8uhc",
+                        "src": "https://res.cloudinary.com/dwkr3rvtr/image/upload/v1590553454/cricinfo_homepage_qy8uhc.png",
+                        "alt": "espncricinfo.com"
+                    },
+                    {
+                        "publicId": "espnplus_pqciit",
+                        "src": "https://res.cloudinary.com/dwkr3rvtr/image/upload/v1590553395/espnplus_pqciit.png",
+                        "alt": "ESPN+"
                     }
-                ]
+                ],
+                "title": "",
+                "description": "Some of the sites and products I worked on - espn, espnfc, secsports, espncricinfo, and ESPN+"
             }
         }
     ]

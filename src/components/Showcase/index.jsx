@@ -50,7 +50,7 @@ class Showcase extends Component {
                             className="Showcase__image"
                             onClick={openLightbox.bind(this, images, idx)}
                         >
-                            <Transformation width="500" crop="scale" dpr="auto" fetchFormat="auto"/>
+                            <Transformation width="500" crop="limit" dpr="auto" fetchFormat="auto"/>
                         </Image>
                     );
                 } else {

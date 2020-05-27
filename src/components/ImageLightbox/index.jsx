@@ -67,7 +67,7 @@ class ImageLightbox extends Component {
         if (publicId) {
             image = (
                 <Image publicId={publicId} alt={title} className="ImageLightbox__image">
-                    <Transformation width="1280" crop="scale" dpr="auto" fetchFormat="auto"/>
+                    <Transformation width="1280" crop="limit" dpr="auto" fetchFormat="auto"/>
                 </Image>
             );
         } else {

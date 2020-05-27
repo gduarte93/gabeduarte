@@ -23,7 +23,7 @@
     {
         "id": "disney",
         "title": "Walt Disney DTCI",
-        "background": "https://res.cloudinary.com/dwkr3rvtr/image/upload/w_1900,c_scale,dpr_auto/dtci_slide_jnxk6t.png",
+        "background": "https://res.cloudinary.com/dwkr3rvtr/image/upload/w_2048,c_limit,dpr_auto/dtci_slide_jnxk6t.png",
         "backgroundColor": "#ffffff",
         "overlayColor": "rgba(164, 222, 249, 0.9)",
         "info": {
@@ -44,7 +44,7 @@
     {
         "id": "espn",
         "title": "ESPN",
-        "background": "https://www.wnpr.org/sites/wnpr/files/styles/x_large/public/201405/espn.jpg",
+        "background": "https://res.cloudinary.com/dwkr3rvtr/image/upload/w_2048,c_limit,dpr_auto/espn_dgaqr1.jpg",
         "backgroundColor": "rgba(214, 30, 38, 1)",
         "overlayColor": "rgba(214, 30, 38, 0.9)",
         "info": {
@@ -65,7 +65,7 @@
     {
         "id": "pixelsupply",
         "title": "Pixel Supply Co",
-        "background": "https://res.cloudinary.com/dwkr3rvtr/image/upload/w_2048,c_scale,dpr_auto/miracle_mile_vilvft.jpg",
+        "background": "https://res.cloudinary.com/dwkr3rvtr/image/upload/w_2048,c_limit,dpr_auto/miracle_mile_vilvft.jpg",
         "backgroundColor": "rgba(224, 197, 136, 1)",
         "overlayColor": "rgba(224, 197, 136, 0.9)",
         "backgroundPosition": "bottom",
@@ -87,7 +87,7 @@
     {
         "id": "uf",
         "title": "University of Florida",
-        "background": "https://res.cloudinary.com/dwkr3rvtr/image/upload/w_2048,c_scale,dpr_auto/TheSwamp_pm3lwa.jpg",
+        "background": "https://res.cloudinary.com/dwkr3rvtr/image/upload/w_2048,c_limit,dpr_auto/TheSwamp_pm3lwa.jpg",
         "backgroundColor": "#fa4616",
         "overlayColor": "rgba(0, 33, 165, 0.9)",
         "info": {

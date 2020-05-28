@@ -90,7 +90,7 @@ class ImageLightbox extends Component {
                         </div>
                     </button>
 
-                    <div className="ImageLightbox__imageWrapper">
+                    <div className="ImageLightbox__imageWrapper" onClick={closeLightbox.bind(this)}>
                         { image }
                         { title ? <div className="ImageLightbox__title">{ title }</div> : null }
                     </div>

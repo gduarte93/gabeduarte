@@ -12,11 +12,11 @@
                 "secondary": "#ffffff",
                 "tertiary": "#444444"
             },
-            "title": "Test",
+            "title": "",
             "description": "Software Engineer II - Front End",
             "story": {
-                "column1": "Ever wonder what it would be like to be a bear living in the wild – foraging to bulk up for the winter months, shaking off after a dip in a cool stream, hunting and being hunted, being spied on by curious tourists, and seeing some of the best views not accessible by humans? For the first time ever, National Geographic has those answers.<br><br>Following two grizzlies and two black bears equipped with special camera collars in Yellowstone National Park, researchers and Nat Geo readers are getting an unprecedented view into the life of a bear – from the bear’s eye-view. We see the remarkable journeys of these 4 bears as they cover great distances, encounter predators, their own kind, and even people. We discover what they eat and how they use the beautiful and expansive landscape of Yellowstone.",
-                "column2": "Working with National Geographic’s team of editors, journalists, producers, and researchers, we’ve gathered this incredible footage into an engaging online narrative focused on the distinct paths that each bear roamed. Utilizing the geo-coordinate data captured with every 20-seconds of footage, we’re able to pinpoint the bears to the exact geography of Yellowstone. Combined with expert analysis from researchers Kerry Gunther and Nate Bowers, delivered as intermittent audio captions, we gain a deeper understanding of the bears’ activity as uncovered by the POV footage and their unique characteristics. And, of course, Hello Monday couldn’t resist adding the extra hand-touch with watercolor illustrations and pencil-drawn portraits depicting the beautiful, mysterious life of each bear."
+                "column1": "<b>What I Do</b><br/><br/>With the transition from ESPN to DTCI, I got the opportunity to join the Site Development team. This team is focused on creating new features and products. And, because we are now part of DTCI, that means we have access to not just ESPN products, but to all of Disney’s global brands.<br/><br/><b>Early On</b><br/><br/>One of my first projects here was in helping with the migration of ESPN from our old servers to AWS. This included updating our routes in haproxy with lua and regex, as well as adding test coverage for those new rules. I worked with other teams to help validate the new routes by running automated tests, allowing for rapid turn around.<br/><br/><b>The Shift</b><br/><br/>After that project, my focus shifted away from ESPN, and towards other brands. It became more and more apparent that we were now a part of a much larger Disney organization.",
+                "column2": "<br/><br/>At ESPN we created our own front-end framework based around Node, React, and MobX. A large goal for us was to migrate our other properties to the same stack. Getting everyone to use the same technology would allow for the ability to share code and components between brands.<br/><br/>As part of this effort, I worked on migrating the ABC local news sites, abc.com, and disneynow.com, as well as helping with the migrations of National Geographic TV and FX.<br/><br/><b>Recently</b><br/><br/>Most recently, I worked on the new redesigned version of ESPN Watch, using our latest React framework. There, I worked on the listings page, the roadblock page, the schedule page, and integrating analytics for page and video tracking.<br/><br/><b>Currently</b><br/><br/>Working on creating more magic..."
             }
         },
         "blurbs": [
@@ -25,12 +25,12 @@
                 "description": "Bristol, CT"
             },
             {
-                "title": "Team",
-                "description": "Site Development"
+                "title": "Brand Migrations",
+                "description": "Worked on migrating legacy sites for ABC, Disneynow, Nat Geo TV, and FX to our new tech stack"
             },
             {
-                "title": "Project 3",
-                "description": "blah blah"
+                "title": "ESPN Watch",
+                "description": "Was on the team responsible for the redesigned Watch web experience"
             }
         ]
     },
@@ -40,9 +40,30 @@
             "data": {
                 "imgPos": "left",
                 "images": [
-                    "https://cdn.vox-cdn.com/thumbor/3vTa9l1iezGcJvIlKoUzc9n5FUI=/0x0:2400x1800/920x613/filters:focal(695x619:1079x1003):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/61963615/espn_plus_paywall_iphone_2400.0.jpg"
+                    {
+                        "publicId": "abc_local_stations_lzq8hn",
+                        "src": "https://res.cloudinary.com/dwkr3rvtr/image/upload/v1590642025/abc_local_stations_lzq8hn.png",
+                        "alt": "ABC local news stations"
+                    },
+                    {
+                        "publicId": "disneynow_s3wdxm",
+                        "src": "https://res.cloudinary.com/dwkr3rvtr/image/upload/v1590642017/disneynow_s3wdxm.png",
+                        "alt": "disneynow.com"
+                    },
+                    {
+                        "publicId": "abc_mzfzbg",
+                        "src": "https://res.cloudinary.com/dwkr3rvtr/image/upload/v1590642017/abc_mzfzbg.png",
+                        "alt": "abc.com"
+                    },
+                    {
+                        "publicId": "natgeo_tv_s4xdpb",
+                        "src": "https://res.cloudinary.com/dwkr3rvtr/image/upload/v1590642003/natgeo_tv_s4xdpb.png",
+                        "alt": "National Geographic TV"
+                    }
+
                 ],
-                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                "title": "Brand Migrations",
+                "description": "For the ABC local news sites, I created React components based on their legacy HTML and CSS.<br/><br/>On disneynow.com, I added lazy loading to tile groups, worked on profile personalization, and implemented Adobe Primetime Authentication for streaming video content.<br/><br/>On abc.com, I worked with the video player team to get live video running, implemented geo location detection, and rewrote our in-house telemetry analytics code so that it could be standardized and brand agnostic."
             }
         },
         {
@@ -50,31 +71,29 @@
             "data": {
                 "imgPos": "right",
                 "images": [
-                    "https://cdn.vox-cdn.com/thumbor/3vTa9l1iezGcJvIlKoUzc9n5FUI=/0x0:2400x1800/920x613/filters:focal(695x619:1079x1003):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/61963615/espn_plus_paywall_iphone_2400.0.jpg",
-                    "https://cdn.vox-cdn.com/thumbor/3vTa9l1iezGcJvIlKoUzc9n5FUI=/0x0:2400x1800/920x613/filters:focal(695x619:1079x1003):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/61963615/espn_plus_paywall_iphone_2400.0.jpg",
-                    "https://cdn.vox-cdn.com/thumbor/3vTa9l1iezGcJvIlKoUzc9n5FUI=/0x0:2400x1800/920x613/filters:focal(695x619:1079x1003):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/61963615/espn_plus_paywall_iphone_2400.0.jpg"
-                ],
-                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-            }
-        },
-        {
-            "type": "list",
-            "data": {
-                "title": "Skills",
-                "items": [
                     {
-                        "title": "English",
-                        "proficiency": 10
+                        "publicId": "watch_redesign_home_wtfciw",
+                        "src": "https://res.cloudinary.com/dwkr3rvtr/image/upload/v1590640391/watch_redesign_home_wtfciw.png",
+                        "alt": "Redesigned Watch for web"
                     },
                     {
-                        "title": "Spanish",
-                        "proficiency": 7
+                        "publicId": "watch_redesign_listing_f2hjm4",
+                        "src": "https://res.cloudinary.com/dwkr3rvtr/image/upload/v1590639930/watch_redesign_listing_f2hjm4.png",
+                        "alt": "A listing page"
                     },
                     {
-                        "title": "Typing",
-                        "proficiency": 8
+                        "publicId": "watch_redesign_schedule_n4yq1x",
+                        "src": "https://res.cloudinary.com/dwkr3rvtr/image/upload/v1590639928/watch_redesign_schedule_n4yq1x.png",
+                        "alt": "The schedule page"
+                    },
+                    {
+                        "publicId": "watch_redesign_roadblock_xrtnoh",
+                        "src": "https://res.cloudinary.com/dwkr3rvtr/image/upload/v1590639929/watch_redesign_roadblock_xrtnoh.png",
+                        "alt": "The roadblock page"
                     }
-                ]
+                ],
+                "title": "Watch Web Redesign",
+                "description": "Goals for this project were to migrate Watch to use our new tech stack, as well as to update the UI to match our Mobile and OTT apps.<br/><br/>I worked on the listings page, the roadblock page, the schedule page, and integrating page and video analytics."
             }
         }
     ]

@@ -1,11 +1,11 @@
-var indexData       = require('./index.json'),
+var meData          = require('./me.json'),
     ufData          = require('./uf.json'),
     pixelsupplyData = require('./pixelsupply.json'),
     espnData        = require('./espn.json'),
     disneyData      = require('./disney.json'),
 
     infoDataMap     = [
-        indexData,
+        meData,
         ufData,
         pixelsupplyData,
         espnData,

@@ -14,7 +14,7 @@
             "subtitle": "Front End",
             "location": "Hartford, CT",
             "url": "/info",
-            "description": "Front End Engineer with exposure to both small and large scale web application development. Experience collaborating with other developers, product managers, and design teams. Currently on the Site Development team at Walt Disney Direct-to-Consumer & International, where I work on front end projects across Disney's brands using Node, React, and MobX."
+            "description": "I’m a front-end software engineer, working at Walt Disney Direct-to-Consumer & International. There, I work on front-end projects across Disney's brands using Node, React, and MobX. When I’m not working, you can usually find me browsing reddit, playing games, or learning new things."
         },
         "path": "/",
         "next": "/disney",
@@ -35,7 +35,7 @@
             "subtitle": "2018 - present",
             "location": "Bristol, CT",
             "url": "/disney/info",
-            "description": "In 2018, with Disney consolidating their multiple technology groups under one umbrella, ESPN Technology became part of Walt Disney Direct-to-Consumer & Interactive. Because of this, in addition to working on products for the Worldwide Leader in Sports, I now also contribute to our other brands including ABC, Disney, FX, and National Geographic."
+            "description": "In 2018, with Disney consolidating their multiple technology groups under one umbrella, ESPN Technology became part of Walt Disney Direct-to-Consumer & International. Because of this, in addition to working on products for the Worldwide Leader in Sports, I now also contribute to our other brands including ABC, Disney, FX, and National Geographic."
         },
         "path": "/disney",
         "next": "/espn",

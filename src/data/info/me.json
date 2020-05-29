@@ -1,0 +1,167 @@
+{
+    "id": "index",
+    "header": {
+        "title": "Gabriel Duarte ",
+        "subtitle": "Software Engineer - Front End",
+        "background": "http://imgcy.trivago.com/c_limit,d_dummy.jpeg,f_auto,h_1300,q_auto,w_2000/itemimages/17/62/1762715_v3.jpeg",
+        "backgroundColor": "#3a8499",
+        "overlayColor": "rgba(93, 172, 194, 0.9)",
+        "info": {
+            "color": {
+                "primary": "#ffffff",
+                "secondary": "#cde5ec",
+                "tertiary": "#bada55"
+            },
+            "title": "About Me",
+            "description": "At Walt Disney Direct-to-Consumer & International",
+            "story": {
+                "column1": "Born and raised in Miami, Florida. I went to college at the University of Florida, where I received my Bachelors degree in Computer Science. From there, I worked at a start-up in South Florida, Pixel Supply Co. After a year, I moved to Connecticut to work for the Worldwide Leader in Sports. In 2018, ESPN Technology was merged into Walt Disney Direct-to-Consumer & International. Now, I get to work on front-end projects across all of our global brands.",
+                "column2": ""
+            }
+        },
+        "blurbs": [
+            {
+                "title": "Location",
+                "description": "Hartford, CT"
+            },
+            {
+                "title": "Checkers",
+                "description": "Game of checkers built with React"
+            },
+            {
+                "title": "Page Status Checker",
+                "description": "A Go API that hits urls and returns their response status codes"
+            },
+            {
+                "title": "World Cup Chart",
+                "description": "Interactive chart of the 2018 FIFA World Cup, using vanilla ES6"
+            }
+        ]
+    },
+    "content": [
+        {
+            "type": "skills",
+            "expert": [
+                {
+                    "frontend": [
+                        "javascript",
+                        "html",
+                        "css"
+                    ],
+                    "backend": [
+                        "node"
+                    ]
+                }
+            ],
+            "familiar": [
+                {
+                    "backend": [
+                        "ruby",
+                        "python",
+                        "java",
+                        "go"
+                    ],
+                    "database": [
+                        "mongo",
+                        "postgres"
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "divider",
+            "data": {
+                "text": "Recent Projects",
+                "link": ""
+            }
+        },
+        {
+            "type": "showcase",
+            "data": {
+                "imgPos": "left",
+                "images": [
+                    {
+                        "publicId": "checkers_initialState_mgygpd",
+                        "src": "https://res.cloudinary.com/dwkr3rvtr/image/upload/v1590719416/checkers_initialState_mgygpd.png",
+                        "alt": "Checkers - Initial State"
+                    },
+                    {
+                        "publicId": "checkers_showingMoves_kzkkwh",
+                        "src": "https://res.cloudinary.com/dwkr3rvtr/image/upload/v1590719416/checkers_showingMoves_kzkkwh.png",
+                        "alt": "Showing possible moves on hover"
+                    },
+                    {
+                        "publicId": "checkers_queened_rhxwzh",
+                        "src": "https://res.cloudinary.com/dwkr3rvtr/image/upload/v1590719416/checkers_queened_rhxwzh.png",
+                        "alt": "Red receiving a queen"
+                    },
+                    {
+                        "publicId": "checkers_redWins_gxedzz",
+                        "src": "https://res.cloudinary.com/dwkr3rvtr/image/upload/v1590719416/checkers_redWins_gxedzz.png",
+                        "alt": "Red victory screen"
+                    },
+                    {
+                        "publicId": "checkers_whiteWins_qdiloq",
+                        "src": "https://res.cloudinary.com/dwkr3rvtr/image/upload/v1590719416/checkers_whiteWins_qdiloq.png",
+                        "alt": "White victory screen"
+                    }
+                ],
+                "title": "Checkers",
+                "description": "Created a checkers game in React.<br/><br/>- Implemented a rudimentary AI for the CPU opponent<br/>- On piece hover, highlight possible moves<br/>- Can drag and drop to move<br/>- After reaching the end of the board that piece becomes a queen<br/>- Stats above the board show:<br/>&nbsp;&nbsp;&nbsp;&nbsp;- how much time has passed<br/>&nbsp;&nbsp;&nbsp;&nbsp;- whose turn it is<br/>&nbsp;&nbsp;&nbsp;&nbsp;- the amount of moves made by both players<br/>- Ability to undo the last move<br/>- Ability to restart the game<br/>- Stores current state in local storage, so nothing is lost on refresh or browser close<br/>- Display victory screen for the winner<br/><br/><a target=\"_blank\" href=\"https://gduarte93.github.io/checkers/\">Play Now</a>"
+            }
+        },
+        {
+            "type": "showcase",
+            "data": {
+                "imgPos": "right",
+                "images": [
+                    {
+                        "publicId": "status_checker_mqsfqn",
+                        "src": "https://res.cloudinary.com/dwkr3rvtr/image/upload/v1590720885/status_checker_mqsfqn.png",
+                        "alt": "Page checker showing 200, 404, and down statuses"
+                    }
+                ],
+                "title": "Page Status Checker",
+                "description": "Created a page status checker using the server-side programming language Go. Creates an api that hits each url in an array in parallel, and then returns the status code. On the front-end I make the request to that api using fetch, and then color code the responses.<br/><br/><a target=\"_blank\" href=\"https://github.com/gduarte93/page-status-checker\">Check it out on github</a>"
+            }
+        },
+        {
+            "type": "showcase",
+            "data": {
+                "imgPos": "left",
+                "images": [
+                    {
+                        "publicId": "worldCup_initial_wbitj7",
+                        "src": "https://res.cloudinary.com/dwkr3rvtr/image/upload/v1590721353/worldCup_initial_wbitj7.png",
+                        "alt": "Initial state, showing the Groups stage - height in cm"
+                    },
+                    {
+                        "publicId": "worldCup_feet_s9egb8",
+                        "src": "https://res.cloudinary.com/dwkr3rvtr/image/upload/v1590721354/worldCup_feet_s9egb8.png",
+                        "alt": "Changed units to feet and hovering over a player"
+                    },
+                    {
+                        "publicId": "worldCup_semifinals_fuupdq",
+                        "src": "https://res.cloudinary.com/dwkr3rvtr/image/upload/v1590721352/worldCup_semifinals_fuupdq.png",
+                        "alt": "Viewing the players left in the semifinals"
+                    },
+                    {
+                        "publicId": "worldCup_winner_uctcrn",
+                        "src": "https://res.cloudinary.com/dwkr3rvtr/image/upload/v1590721352/worldCup_winner_uctcrn.png",
+                        "alt": "Viewing the players on the winning team"
+                    }
+                ],
+                "title": "2018 World Cup Player Height Plot",
+                "description": "Created a box and whisker chart comparing all of the players’ heights in the 2018 FIFA World Cup.<br/><br/>- Used native ES6, no external libraries<br/>- Allow for switching between units of measurement (feet and cm)<br/>- Color code the players based on their country<br/>- On hovering over a point in the graph, show info about that player<br/>- Clicking on different stages of the tournament removes players whose teams were eliminated and re-calculates the box and whiskers<br/><br/><a target=\"_blank\" href=\"https://gduarte93.github.io/World-Cup-Chart/\">Check it out</a>"
+            }
+
+        },
+        {
+            "type": "divider",
+            "data": {
+                "text": "View More Projects",
+                "link": "/projects"
+            }
+        }
+    ]
+}

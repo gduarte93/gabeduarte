@@ -58,7 +58,11 @@ class PageInfo extends Component {
                             data      = comp && comp.data,
                             Component = COMPONENTS[type];
 
-                        return <Component key={idx} data={data} />;
+                        if (Component) {
+                            return <Component key={idx} data={data} />;
+                        } else {
+                            console.error(`No ${type} Component found`);
+                        }
                     })
                 }
             </div>

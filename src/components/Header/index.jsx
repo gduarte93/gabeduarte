@@ -68,8 +68,15 @@ function Header(props) {
                             <div className="Header__story" style={primaryColorStyle}>
                                 <div className="Header__story--title">{infoTitle}</div>
                                 <div className="Header__story--container">
-                                    <div className="Header__story--col1" dangerouslySetInnerHTML={{__html: col1}} />
-                                    <div className="Header__story--col2" dangerouslySetInnerHTML={{__html: col2}} />
+                                    {
+                                        col1 && col2 ?
+                                            <React.Fragment>
+                                                <div className="Header__story--col1" dangerouslySetInnerHTML={{__html: col1}} />
+                                                <div className="Header__story--col2" dangerouslySetInnerHTML={{__html: col2}} />
+                                            </React.Fragment>
+                                            :
+                                            <div className="Header__story--col0" dangerouslySetInnerHTML={{__html: col1}} />
+                                    }
                                 </div>
                             </div>
                             <div className="Header__blurbs">

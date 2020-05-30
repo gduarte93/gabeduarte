@@ -3,6 +3,8 @@ var React          = require('react'),
     Cloudinary     = require('cloudinary-react'),
     Image          = Cloudinary.Image,
     Transformation = Cloudinary.Transformation,
+    LeftArrow      = require('../Arrows/left.jsx'),
+    RightArrow     = require('../Arrows/right.jsx'),
 
     CONSTANTS      = require('common-constants'),
     SLIDE_NAV      = CONSTANTS.SLIDE_NAV,
@@ -85,9 +87,7 @@ class ImageLightbox extends Component {
                         className={`ImageLightbox__button ImageLightbox__button--prev ${ isFirstImage ? 'ImageLightbox__button--hide' : '' }`}
                         onClick={me.handleNavigate.bind(me, !isFirstImage && PREV)}
                     >
-                        <div className="Lightbox___Arrow Lightbox___Arrow--left">
-                            <div className="Lightbox___Arrow--line" />
-                        </div>
+                        <LeftArrow className="Lightbox___Arrow Lightbox___Arrow--left" />
                     </button>
 
                     <div className="ImageLightbox__imageWrapper" onClick={closeLightbox.bind(this)}>
@@ -99,9 +99,7 @@ class ImageLightbox extends Component {
                         className={`ImageLightbox__button ImageLightbox__button--next ${ isLastImage ? 'ImageLightbox__button--hide' : '' }`}
                         onClick={me.handleNavigate.bind(me, !isLastImage && NEXT)}
                     >
-                        <div className="Lightbox___Arrow Lightbox___Arrow--right">
-                            <div className="Lightbox___Arrow--line" />
-                        </div>
+                        <RightArrow className="Lightbox___Arrow Lightbox___Arrow--right" />
                     </button>
 
                 </div>

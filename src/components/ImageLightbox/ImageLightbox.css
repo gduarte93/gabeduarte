@@ -84,27 +84,19 @@
         }
 
         .Lightbox___Arrow {
-            &--line {
-                transition: 200ms;
-                height: 16px;
-                width: 16px;
-                transform: rotate(-45deg);
-            }
-    
-            &--left {
-                .Lightbox___Arrow--line {
-                    border-left: 2px solid white;
-                    border-top: 2px solid white; 
-                    margin-left: 10px;
-                }
+            &--left, &--right {
+                transition: 100ms;
+                fill: white;
+                stroke: white;
+                margin-top: 3px;
             }
         
+            &--left {
+                margin-right: 3px;
+            }
+
             &--right {
-                .Lightbox___Arrow--line {
-                    border-right: 2px solid white;
-                    border-bottom: 2px solid white;
-                    margin-left: 4px;
-                }
+                margin-left: 3px;
             }
         }
     }
@@ -112,15 +104,11 @@
     &__button:hover {
         .Lightbox___Arrow {
             &--left {
-                .Lightbox___Arrow--line {
-                    margin-left: 6px;
-                }
+                margin-right: 10px;
             }
         
             &--right {
-                .Lightbox___Arrow--line {
-                    margin-left: 8px;
-                }
+                margin-left: 10px;
             }
         }
     }

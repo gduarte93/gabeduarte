@@ -10,6 +10,7 @@ function SvgComponent(props) {
       xmlSpace="preserve"
       {...props}
     >
+      <title>{"Go"}</title>
       <style>{".prefix__st4{fill:#00acd7}"}</style>
       <path
         className="prefix__st4"

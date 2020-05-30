@@ -1,0 +1,83 @@
+.Skills {
+    background-color: #ffffff;
+    font-family: sans-serif;
+
+    &__table {
+        width: 100%;
+
+        tr > td {
+            width: 26.66%;
+            padding: 20px 0px;
+
+            &:first-child {
+                width: 20%;
+                text-align: center;
+                color: #353148;
+                font-size: 20px;
+            }
+
+            &:nth-child(2n + 2) {
+                background-color: #ededef;
+            }
+        }
+
+        tr:nth-child(2) {
+            td {
+                border-top: 1px solid #e8e8e8;
+            }
+        }
+
+        thead {
+            background-color: #353148;
+
+            th {
+                color: #ffffff;
+                font-weight: 400;
+                font-size: 16px;
+                letter-spacing: 1.1px;
+                height: 60px;
+            }
+        }
+
+        tbody {
+            background-color: #f3f3f5;
+        }
+    }
+
+    &__logo {
+        width: 50%;
+        float: left;
+        text-align: center;
+        position: relative;
+
+        &--solo {
+            width: 100%;
+        }
+
+        &--icon {
+            max-width: 100px;
+            height: 50px;
+
+            &:hover + .Skills__logo--title {
+                opacity: 1;
+            }
+        }
+
+        &--title {
+            font-size: 12px;
+            position: absolute;
+            width: 100%;
+            opacity: 0;
+
+            span {
+                background-color: rgba(0, 0, 0, 0.1);
+                border-radius: 10px;
+                padding: 2px 10px;
+            }
+        }
+
+        &:nth-child(n+3) {
+            margin-top: 20px;
+        }
+    }
+}

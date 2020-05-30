@@ -15,7 +15,7 @@
             "title": "About Me",
             "description": "At Walt Disney Direct-to-Consumer & International",
             "story": {
-                "column1": "Born and raised in Miami, Florida. I went to college at the University of Florida, where I received my Bachelors degree in Computer Science. From there, I worked at a start-up in South Florida, Pixel Supply Co. After a year, I moved to Connecticut to work for the Worldwide Leader in Sports. In 2018, ESPN Technology was merged into Walt Disney Direct-to-Consumer & International. Now, I get to work on front-end projects across all of our global brands.",
+                "column1": "Born and raised in Miami, Florida. I went to college at the University of Florida, where I received my Bachelors degree in Computer Science. From there, I worked at a start-up in South Florida, Pixel Supply Co. After a year, I moved to Connecticut to work for the Worldwide Leader in Sports. In 2018, ESPN Technology was merged into Walt Disney Direct-to-Consumer & International. Now, I get to work on front end projects across all of our global brands.",
                 "column2": ""
             }
         },
@@ -41,32 +41,33 @@
     "content": [
         {
             "type": "skills",
-            "expert": [
-                {
+            "data": {
+                "expert": {
                     "frontend": [
                         "javascript",
+                        "react",
                         "html",
                         "css"
                     ],
                     "backend": [
                         "node"
-                    ]
-                }
-            ],
-            "familiar": [
-                {
+                    ],
+                    "database": []
+                },
+                "familiar": {
+                    "frontend": [],
                     "backend": [
+                        "go",
                         "ruby",
-                        "python",
                         "java",
-                        "go"
+                        "python"
                     ],
                     "database": [
                         "mongo",
                         "postgres"
                     ]
                 }
-            ]
+            }
         },
         {
             "type": "divider",
@@ -122,7 +123,7 @@
                     }
                 ],
                 "title": "Page Status Checker",
-                "description": "Created a page status checker using the server-side programming language Go. Creates an api that hits each url in an array in parallel, and then returns the status code. On the front-end I make the request to that api using fetch, and then color code the responses.<br/><br/><a target=\"_blank\" href=\"https://github.com/gduarte93/page-status-checker\">Check it out on github</a>"
+                "description": "Created a page status checker using the server-side programming language Go. Creates an api that hits each url in an array in parallel, and then returns the status code. On the front end I make the request to that api using fetch, and then color code the responses.<br/><br/><a target=\"_blank\" href=\"https://github.com/gduarte93/page-status-checker\">Check it out on github</a>"
             }
         },
         {

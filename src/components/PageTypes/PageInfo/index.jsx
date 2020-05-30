@@ -51,7 +51,6 @@ class PageInfo extends Component {
         return (
             <div className={`PageInfo page page--info ${navMenuClass}`}>
                 <Header data={headerData} />
-
                 {
                     contentData.map((comp, idx) => {
                         var type      = comp && comp.type,

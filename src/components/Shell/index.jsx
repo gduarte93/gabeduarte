@@ -10,9 +10,10 @@ var React             = require('react'),
     Cloudinary        = require('cloudinary-react'),
     CloudinaryContext = Cloudinary.CloudinaryContext,
     ImageLightbox     = require('../ImageLightbox/index.jsx'),
-    LeftArrow         = require('../Arrows/left.jsx'),
-    UpArrow           = require('../Arrows/up.jsx'),
-    DownArrow         = require('../Arrows/down.jsx'),
+    LeftArrow         = require('../Icons/Arrows/left.jsx'),
+    UpArrow           = require('../Icons/Arrows/up.jsx'),
+    DownArrow         = require('../Icons/Arrows/down.jsx'),
+    CloseIcon         = require('../Icons/Close/close.jsx'),
 
     CONSTANTS         = require('common-constants'),
     PAGE_TYPES        = CONSTANTS.PAGE_TYPES,
@@ -313,7 +314,7 @@ class Shell extends Component {
                     <Link className={`Link__menu--button ${isMenuButtonClass}`} to={menuLink} onClick={me.handleMenuClick.bind(me, menuLink)}>
                         {
                             isMenu ?
-                                <div className="Menu__close"><span>+</span></div>
+                                <CloseIcon className="Menu__close" />
                                 :
                                 <div className="Threelines">
                                     <div className="Threelines__line" />

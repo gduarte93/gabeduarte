@@ -61,20 +61,14 @@
         z-index: 1;
 
         &--close {
+            width: 36px;
+            height: 36px;
+            fill: #ffffff;
+            stroke: #ffffff;
             position: absolute;
             top: 50px;
             right: 50px;
             user-select: none;
-
-            span {
-                display: block;
-                font-size: 80px;
-                line-height: 48px;
-                text-align: center;
-                transform: rotate(45deg);
-                color: #ffffff;
-                margin-top: -20px;
-            }
         }
 
         &--hide {

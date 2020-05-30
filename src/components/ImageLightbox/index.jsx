@@ -3,8 +3,9 @@ var React          = require('react'),
     Cloudinary     = require('cloudinary-react'),
     Image          = Cloudinary.Image,
     Transformation = Cloudinary.Transformation,
-    LeftArrow      = require('../Arrows/left.jsx'),
-    RightArrow     = require('../Arrows/right.jsx'),
+    LeftArrow      = require('../Icons/Arrows/left.jsx'),
+    RightArrow     = require('../Icons/Arrows/right.jsx'),
+    CloseIcon      = require('../Icons/Close/close.jsx'),
 
     CONSTANTS      = require('common-constants'),
     SLIDE_NAV      = CONSTANTS.SLIDE_NAV,
@@ -79,9 +80,7 @@ class ImageLightbox extends Component {
         return (
             <div className="ImageLightbox">
                 <div className="ImageLightbox__background" onClick={closeLightbox.bind(this)}>
-                    <button className="ImageLightbox__button ImageLightbox__button--close" onClick={closeLightbox.bind(this)}>
-                        <span onClick={closeLightbox.bind(this)}>+</span>
-                    </button>
+                    <CloseIcon className="ImageLightbox__button ImageLightbox__button--close" onClick={closeLightbox.bind(this)} />
 
                     <button
                         className={`ImageLightbox__button ImageLightbox__button--prev ${ isFirstImage ? 'ImageLightbox__button--hide' : '' }`}

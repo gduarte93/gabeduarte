@@ -15,6 +15,11 @@
             border-radius: 100%;
             position: fixed;
             z-index: 10;
+
+            &.Link__menu--isMenu {
+                width: 36px;
+                height: 36px;
+            }
             
             &:not(.Link__menu--isMenu) {
                 background-color: rgba(255, 255, 255, 0.25);
@@ -50,6 +55,9 @@
         &--isMenu {
             .Menu {
                 &__close {
+                    fill: #ffffff;
+                    stroke : #ffffff;
+
                     span {
                         display: inline-block;
                         width: 100%;

@@ -10,6 +10,9 @@ var React             = require('react'),
     Cloudinary        = require('cloudinary-react'),
     CloudinaryContext = Cloudinary.CloudinaryContext,
     ImageLightbox     = require('../ImageLightbox/index.jsx'),
+    LeftArrow         = require('../Arrows/left.jsx'),
+    UpArrow           = require('../Arrows/up.jsx'),
+    DownArrow         = require('../Arrows/down.jsx'),
 
     CONSTANTS         = require('common-constants'),
     PAGE_TYPES        = CONSTANTS.PAGE_TYPES,
@@ -328,23 +331,17 @@ class Shell extends Component {
                             null
                     }
                     <Link className={`Link__button Link__button--back ${toggleBack}`} to={backUrl} onClick={me.handleBackClick.bind(me, backUrl)}>
-                        <div className="Arrow Arrow--left">
-                            <div className="Arrow__line" />
-                        </div>
+                        <LeftArrow className="Arrow Arrow--left" />
                     </Link>
                     {
                         isSlide ?
                             <React.Fragment>
                                 <Breadcrumbs data={breadCrumbData} handleCrumbClick={me.handleSlideNavClick} />
                                 <Link className={`Link__button Link__button--prev`} to={prevUrl} onClick={me.handleSlideNavClick.bind(me, prevUrl, PREV)}>
-                                    <div className="Arrow Arrow--up">
-                                        <div className="Arrow__line" />
-                                    </div>
+                                    <UpArrow className="Arrow Arrow--up" />
                                 </Link>
                                 <Link className={`Link__button Link__button--next`} to={nextUrl} onClick={me.handleSlideNavClick.bind(me, nextUrl, NEXT)}>
-                                    <div className="Arrow Arrow--down">
-                                        <div className="Arrow__line" />
-                                    </div>
+                                    <DownArrow className="Arrow Arrow--down" />
                                 </Link>
                             </React.Fragment>
                             : null

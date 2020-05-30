@@ -84,46 +84,16 @@
             top: 40px;
             left: 40px;
             transition: 400ms ease-in-out;
-
-            &:hover {
-                .Arrow {
-                    &--left {
-                        .Arrow__line {
-                            margin-left: 0;
-                        }
-                    }
-                }
-            }
         }
 
         &--prev {
             bottom: 73px;
             right: 20px;
-
-            &:hover {
-                .Arrow {
-                    &--up {
-                        .Arrow__line {
-                            margin-top: 0;
-                        }
-                    }
-                }
-            }
         }
 
         &--next {
             bottom: 20px;
             right: 20px;
-
-            &:hover {
-                .Arrow {
-                    &--down {
-                        .Arrow__line {
-                            margin-bottom: 0;
-                        }
-                    }
-                }
-            }
         }
 
         &--show {
@@ -136,36 +106,46 @@
             left: 40px;
             opacity: 0.0;
         }
+
+        &:hover {
+            .Arrow {
+                &--up {
+                    margin-bottom: 10px;
+                }
+
+                &--down {
+                    margin-top: 10px;
+                }
+
+                &--left {
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}
+
+.Arrow {
+    &--up, &--down, &--left {
+        transition: 100ms;
+        fill: white;
+        stroke: white;
+    }
+
+    &--up {
+        margin-bottom: 3px;
+    }
+
+    &--down {
+        margin-top: 3px;
+    }
+
+    &--left {
+        margin-right: 3px;
     }
 }
 
 
-.Arrow__line {
-    transition: 200ms;
-    height: 16px;
-    width: 16px;
-
-    .Arrow--left & {
-        border-left: 2px solid white;
-        border-top: 2px solid white;        
-        transform: rotate(-45deg);
-        margin-left: 8px;
-    }
-
-    .Arrow--up & {
-        border-right: 2px solid white;
-        border-top: 2px solid white;        
-        transform: rotate(-45deg);
-        margin-top: 8px;
-    }
-
-    .Arrow--down & {
-        border-left: 2px solid white;
-        border-bottom: 2px solid white;        
-        transform: rotate(-45deg);
-        margin-bottom: 8px;
-    }
-}
 
 .Threelines {
     display: flex;

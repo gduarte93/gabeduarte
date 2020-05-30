@@ -27,23 +27,23 @@ function renderLogos(_skills) {
 }
 
 function Skills(props) {
-    var data             = props && props.data,
+    var data               = props && props.data,
         
-        expert           = data && data.expert,
-        expertFrontend   = expert && expert.frontend || [],
-        expertBackend    = expert && expert.backend || [],
-        expertDatabase   = expert && expert.database || [],
-        exFrontendLogos  = renderLogos(expertFrontend),
-        exBackendLogos   = renderLogos(expertBackend),
-        exDatabaseLogos  = renderLogos(expertDatabase),
+        expert             = data && data.expert,
+        expertFrontend     = expert && expert.frontend || [],
+        expertBackend      = expert && expert.backend || [],
+        expertDatabase     = expert && expert.database || [],
+        exFrontendLogos    = renderLogos(expertFrontend),
+        exBackendLogos     = renderLogos(expertBackend),
+        exDatabaseLogos    = renderLogos(expertDatabase),
         
-        familiar         = data && data.familiar,
-        familiarFrontend = familiar && familiar.frontend || [],
-        familiarBackend  = familiar && familiar.backend || [],
-        familiarDatabase = familiar && familiar.database || [],
-        faFrontendLogos  = renderLogos(familiarFrontend),    
-        faBackendLogos   = renderLogos(familiarBackend),    
-        faDatabaseLogos  = renderLogos(familiarDatabase);
+        proficient         = data && data.proficient,
+        proficientFrontend = proficient && proficient.frontend || [],
+        proficientBackend  = proficient && proficient.backend || [],
+        proficientDatabase = proficient && proficient.database || [],
+        proFrontendLogos   = renderLogos(proficientFrontend),
+        proBackendLogos    = renderLogos(proficientBackend),
+        proDatabaseLogos   = renderLogos(proficientDatabase);
 
     return(
         <div className="Skills">
@@ -72,13 +72,13 @@ function Skills(props) {
                     <tr>
                         <td>Proficient</td>
                         <td>
-                            { faFrontendLogos }
+                            { proFrontendLogos }
                         </td>
                         <td>
-                            { faBackendLogos }
+                            { proBackendLogos }
                         </td>
                         <td>
-                            { faDatabaseLogos }
+                            { proDatabaseLogos }
                         </td>
                     </tr>
                 </tbody>

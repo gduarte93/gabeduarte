@@ -70,13 +70,6 @@
             }
         },
         {
-            "type": "divider",
-            "data": {
-                "text": "Recent Projects",
-                "link": ""
-            }
-        },
-        {
             "type": "showcase",
             "data": {
                 "imgPos": "left",

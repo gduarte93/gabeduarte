@@ -7,7 +7,7 @@
 
         tr > td {
             width: 26.66%;
-            padding: 20px 0px;
+            padding: 20px 20px;
 
             &:first-child {
                 width: 20%;

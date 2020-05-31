@@ -53,6 +53,11 @@
         }
 
         &--isMenu {
+
+            + .Link__button--back.Link__button--hide {
+                display: none;
+            }
+
             .Menu {
                 &__close {
                     fill: #ffffff;

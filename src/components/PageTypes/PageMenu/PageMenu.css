@@ -50,6 +50,12 @@
                 margin-bottom: 15px;
             }
 
+            &.Menu__link {
+                &--sub {
+                    margin-left: 40px;
+                }
+            }
+
             a {
                 color: white;
                 text-decoration: none;

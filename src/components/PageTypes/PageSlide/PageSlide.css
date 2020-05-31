@@ -96,10 +96,10 @@
         background-color: rgba(255, 255, 255, 0.25);
         border-radius: 100%;
         transition: 200ms;
-        
-        &:hover {
-            transform: rotate(90deg);
-        }
+    }
+
+    &--button:hover, &--home {
+        transform: rotate(90deg);
     }
 
     &--text {
@@ -113,7 +113,7 @@
         transition: 200ms;
     }
 
-    &--button:hover + &--text {
+    &--button:hover + &--text, &--home + &--text {
         opacity: 0.4;
     }
 }

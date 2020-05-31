@@ -13,6 +13,21 @@
         background-color: #ededef;
     }
 
+    &__description {
+        &--link {
+            background-color: #5dacc2;
+            color: white;
+            text-decoration: none;
+            padding: 5px 20px;
+            border-radius: 20px;
+            transition: all 200ms ease-in-out;
+
+            &:hover {
+                background-color: #4194ab;
+            }
+        }
+    }
+
     &__left, &__right {
         flex: 0 0 50%;
         padding: 20px;

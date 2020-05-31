@@ -17,9 +17,14 @@ class PageSlide extends Component {
     constructor(props) {
         super(props);
 
+        this.state = {
+            hasHoveredInfo: false
+        };
+
         this.scene = React.createRef();
 
-        this.handleInfoClick = this.handleInfoClick.bind(this);
+        this.handleInfoClick    = this.handleInfoClick.bind(this);
+        this.handleMouseOutInfo = this.handleMouseOutInfo.bind(this);
     }
 
     componentDidMount() {
@@ -64,10 +69,21 @@ class PageSlide extends Component {
         }
     }
 
+    handleMouseOutInfo() {
+        var me = this;
+
+        me.setState({ hasHoveredInfo: true });
+    }
+
     render() {
         var me                  = this,
+            state               = me && me.state,
+            hasHoveredInfo      = state && state.hasHoveredInfo,
             props               = me && me.props,
+            location            = props && props.location,
+            pathname            = location && location.pathname,
             appState            = props && props.state,
+            isIndex             = pathname === '/',
 
             content             = appState && appState.content,
             title               = content && content.title,
@@ -130,7 +146,7 @@ class PageSlide extends Component {
                                             </div>
                                             : null
                                     }
-                                    <Link className="Link__info--button" to={infoUrl} onClick={me.handleInfoClick.bind(me, infoUrl)}>
+                                    <Link className={`Link__info--button ${isIndex && !hasHoveredInfo && 'Link__info--home'}`} to={infoUrl} onMouseOut={me.handleMouseOutInfo} onClick={me.handleInfoClick.bind(me, infoUrl)}>
                                         <div className="Threedots">
                                             <div className="Threedots__dot" />
                                             <div className="Threedots__dot" />

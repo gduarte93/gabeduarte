@@ -101,7 +101,7 @@
                     }
                 ],
                 "title": "Checkers",
-                "description": "Created a checkers game in React.<br/><br/>- Implemented a rudimentary AI for the CPU opponent<br/>- On piece hover, highlight possible moves<br/>- Can drag and drop to move<br/>- After reaching the end of the board that piece becomes a queen<br/>- Stats above the board show:<br/>&nbsp;&nbsp;&nbsp;&nbsp;- how much time has passed<br/>&nbsp;&nbsp;&nbsp;&nbsp;- whose turn it is<br/>&nbsp;&nbsp;&nbsp;&nbsp;- the amount of moves made by both players<br/>- Ability to undo the last move<br/>- Ability to restart the game<br/>- Stores current state in local storage, so nothing is lost on refresh or browser close<br/>- Display victory screen for the winner<br/><br/><a target=\"_blank\" href=\"https://gduarte93.github.io/checkers/\">Play Now</a>"
+                "description": "Created a checkers game in React.<br/><br/><ul><li>Implemented a rudimentary AI for the CPU opponent</li><li>On piece hover, highlight possible moves</li><li>Can drag and drop to move</li><li>After reaching the end of the board that piece becomes a queen</li><li>Stats above the board show:<ul><li>how much time has passed</li><li>whose turn it is</li><li>the amount of moves made by both players</li></ul></li><li>Ability to undo the last move</li><li>Ability to restart the game</li><li>Stores current state in local storage, so nothing is lost on refresh or browser close</li><li>Display victory screen for the winner</li/></ul><br/><a target=\"_blank\" class=\"Showcase__description--link\" href=\"https://gduarte93.github.io/checkers/\">Play Now</a>"
             }
         },
         {
@@ -116,7 +116,7 @@
                     }
                 ],
                 "title": "Page Status Checker",
-                "description": "Created a page status checker using the server-side programming language Go. Creates an api that hits each url in an array in parallel, and then returns the status code. On the front end I make the request to that api using fetch, and then color code the responses.<br/><br/><a target=\"_blank\" href=\"https://github.com/gduarte93/page-status-checker\">Check it out on github</a>"
+                "description": "Created a page status checker using the server-side programming language Go. Creates an api that hits each url in an array in parallel, and then returns the status code. On the front end I make the request to that api using fetch, and then color code the responses.<br/><br/><a target=\"_blank\" class=\"Showcase__description--link\" href=\"https://github.com/gduarte93/page-status-checker\">View Github</a>"
             }
         },
         {
@@ -146,7 +146,7 @@
                     }
                 ],
                 "title": "2018 World Cup Player Height Plot",
-                "description": "Created a box and whisker chart comparing all of the players’ heights in the 2018 FIFA World Cup.<br/><br/>- Used native ES6, no external libraries<br/>- Allow for switching between units of measurement (feet and cm)<br/>- Color code the players based on their country<br/>- On hovering over a point in the graph, show info about that player<br/>- Clicking on different stages of the tournament removes players whose teams were eliminated and re-calculates the box and whiskers<br/><br/><a target=\"_blank\" href=\"https://gduarte93.github.io/World-Cup-Chart/\">Check it out</a>"
+                "description": "Created a box and whisker chart comparing all of the players’ heights in the 2018 FIFA World Cup.<br/><br/><ul><li>Used native ES6, no external libraries</li><li>Allow for switching between units of measurement (feet and cm)</li><li>Color code the players based on their country</li><li>On hovering over a point in the graph, show info about that player</li><li>Clicking on different stages of the tournament removes players whose teams were eliminated and re-calculates the box and whiskers</li></ul><br/><a target=\"_blank\" class=\"Showcase__description--link\" href=\"https://gduarte93.github.io/World-Cup-Chart/\">View Now</a>"
             }
 
         },

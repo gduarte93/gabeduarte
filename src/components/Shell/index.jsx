@@ -5,6 +5,7 @@ var React             = require('react'),
     reactRouter       = require('react-router-dom'),
     Link              = reactRouter.Link,
     withRouter        = reactRouter.withRouter,
+    ReactGA           = require('react-ga'),
     Breadcrumbs       = require('../Breadcrumbs/index.jsx'),
     slidesData        = require('../../data/slide/slides.json'),
     Cloudinary        = require('cloudinary-react'),
@@ -58,7 +59,6 @@ class Shell extends Component {
             lightbox      : undefined
         };
 
-        this.connectToServer     = this.connectToServer.bind(this);
         this.setBackUrl          = this.setBackUrl.bind(this);
         this.setSlideUrls        = this.setSlideUrls.bind(this);
         this.setPageType         = this.setPageType.bind(this);
@@ -74,18 +74,20 @@ class Shell extends Component {
         this.closeLightbox       = this.closeLightbox.bind(this);
     }
 
-    connectToServer() {
-        fetch('/');
-    }
-
     componentDidMount() {
-        this.connectToServer();
-
         var me       = this,
             hasIcons = document.querySelector('#icons'),
             script;
 
         me.updateBreadCrumbs();
+
+        ReactGA.initialize('UA-55111564-1', {
+            gaOptions: {
+                cookieDomain: 'auto'
+            }
+        });
+
+        ReactGA.pageview(window.location.pathname + window.location.search);
 
         if (!hasIcons) {
             script = document.createElement('script');    
@@ -151,6 +153,8 @@ class Shell extends Component {
         me.setTransitioning(true);
         me.setBackUrl(backUrl, MENU);
         me.updateBreadCrumbs();
+
+        ReactGA.pageview(window.location.pathname + window.location.search);
 
         setTimeout(() => me.setTransitioning(false), 600);
     }

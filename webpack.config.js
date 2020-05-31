@@ -6,6 +6,7 @@ var HTMLWebpackPlugin       = require('html-webpack-plugin'),
     });
 
 module.exports = {
+    mode: 'production',
     entry: __dirname + '/src/index.js',
     module: {
         rules: [
@@ -24,9 +25,21 @@ module.exports = {
             }
         ]
     },
+    optimization: {
+        splitChunks: {
+            cacheGroups: {
+                commons: {
+                    test: /[\\/]node_modules[\\/]/,
+                    name: "vendor",
+                    chunks: "all",
+                }
+            }
+        }
+    },
     output: {
-        filename: 'bundle.js',
         path: __dirname + '/build',
+        filename: 'bundle.js',
+        chunkFilename: '[name].js',
         publicPath: '/'
     },
     plugins: [HTMLWebpackPluginConfig],

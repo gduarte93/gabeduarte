@@ -9,13 +9,6 @@ body {
 }
 
 .Header {
-    &__nav {
-        position: fixed;
-        background-color: white;
-        margin-top: 40px;
-        margin-left: 40px;
-    }
-
     &__background {
         width: 100%;
         height: 100vh;
@@ -144,4 +137,62 @@ body {
             margin-bottom: 10px;
         }
     }
+}
+
+@media only screen and (max-width: 768px) {
+    .Header {
+        &__info {
+            padding: 10px;
+        
+            &--container {
+                padding: 10px;
+            }
+    
+            &--top {
+                height: 20vh;
+            }
+        }
+    
+        &__title {
+            &--container {
+                font-size: 24px;
+                max-width: 100%;
+                margin-left: 0px;
+                margin-top: 0px;
+            }
+        }
+    
+        &__description {
+            font-size: 24px;
+            width: 100%;
+            margin-top: 0px;
+        }
+    
+        &__story {
+            margin-left: 0;
+    
+            &--container {
+                width: 100%;
+                font-weight: 400;
+                flex-direction: column;
+            }
+    
+            &--col0 {
+                width: 100%;
+            }
+    
+            &--col1 {
+                width: 100%;
+                margin-right: 0px;
+            }
+    
+            &--col2 {
+                width: 100%;
+            }
+        }
+    
+        &__blurbs {
+            display: none;
+        }
+    }    
 }

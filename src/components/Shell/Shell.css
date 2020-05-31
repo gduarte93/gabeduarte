@@ -179,3 +179,30 @@
         background-color:rgba(0, 0, 0, 0.5);
     }
 }
+
+@media only screen and (max-width: 768px) {
+    .Link {
+        &__menu {
+            &--button {
+                top: 20px;
+                left: 20px;
+            }
+
+            &--text {
+                top: 39px;
+                left: 75px;
+            }
+        }
+
+        &__button {
+            &--back {
+                top: 20px;
+                left: 20px;
+            }
+
+            &--show {
+                left: 80px
+            }
+        }
+    }
+}

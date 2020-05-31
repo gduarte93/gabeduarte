@@ -1,8 +1,10 @@
 .Skills {
     background-color: #ffffff;
     font-family: sans-serif;
+    overflow: hidden;
 
     &__table {
+        table-layout: fixed;
         width: 100%;
 
         tr > td {
@@ -55,6 +57,7 @@
         }
 
         &--icon {
+            width: 100%;
             max-width: 100px;
             height: 50px;
 
@@ -78,6 +81,37 @@
 
         &:nth-child(n+3) {
             margin-top: 20px;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .Skills {
+        &__table {
+            tr > td {
+                padding: 10px 10px;
+    
+                &:first-child {
+                    color: #353148;
+                    font-size: 16px;
+                }
+            }
+    
+            thead {
+                th {
+                    font-size: 14px;
+                    letter-spacing: 0px;
+                    height: 50px;
+                }
+            }
+        }
+    
+        &__logo {
+            width: 50%;
+    
+            &--icon {
+                height: 40px;
+            }
         }
     }
 }

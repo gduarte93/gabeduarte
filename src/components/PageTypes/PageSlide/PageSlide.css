@@ -132,3 +132,30 @@
         background-color: rgba(0, 0, 0, 0.5);
     }
 }
+
+@media only screen and (max-width: 768px) {
+    .PageSlide {
+        &__name {
+            font-size: 24px;
+        }
+
+        &__overlay {
+            width: 100%;
+            padding: 10px;
+    
+            &--contents {
+                padding: 10px;
+            }
+        }
+    
+        &__title, &__subtitle {
+            font-size: 26px;
+        }
+    
+        &__description {
+            margin-top: 10px;
+            font-weight: 400;
+            width: 88%;
+        }
+    }
+}

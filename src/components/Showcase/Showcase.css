@@ -81,8 +81,12 @@
             padding: 10px;
             font-weight: 400;
         }
-        
+
         &__image {
+            &--container {
+                order: -1;
+            }
+
             .Showcase__imageContainer--duo & {
                 height: calc(100vw * 0.5 * 0.5625 - 5px); /* keep 16:9 aspect ratio */
             }

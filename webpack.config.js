@@ -1,9 +1,16 @@
 var HTMLWebpackPlugin       = require('html-webpack-plugin'),
+    CopyWebpackPlugin       = require('copy-webpack-plugin'),
     HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
         template: __dirname + '/src/index.html',
         filename: 'index.html',
         inject: 'body'
+    }),
+    CopyWebpackPluginConfig = new CopyWebpackPlugin({
+        patterns: [
+            { from: '_redirects' }
+        ]
     });
+
 
 module.exports = {
     mode: 'production',
@@ -42,7 +49,10 @@ module.exports = {
         chunkFilename: '[name].js',
         publicPath: '/'
     },
-    plugins: [HTMLWebpackPluginConfig],
+    plugins: [
+        HTMLWebpackPluginConfig,
+        CopyWebpackPluginConfig
+    ],
     devServer: {
         host: '0.0.0.0',
         port: '8080',

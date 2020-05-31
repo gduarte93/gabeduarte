@@ -34,12 +34,12 @@ function Routes(props) {
                         )
                     }),
                     infoRoutes = slidesData.map((slide, idx) => {
-                        var path     = slide && slide.path
+                        var path     = slide && slide.path,
                             info     = slide && slide.info,
                             infoPath = info && info.url,
                             id       = slide && slide.id,
                             infoData = infoDataMap[id];
-    
+
                         return (
                             <Route key={idx} path={infoPath} render={(props) => <PageInfo {...props} state={Object.assign({}, state, { content: infoData, backUrl: path })}/>}/>
                         )
@@ -59,14 +59,7 @@ function Routes(props) {
                             <Switch>
                                 { slideRoutes }
 
-                                {/* { infoRoutes } */}
-
-                                {/* TODO: Figure out why infoRoutes map doesn't work (it always has infoData of last obj (disney)) */}
-                                <Route path={'/info'} render={(props) => <PageInfo {...props} state={Object.assign({}, state, { content: infoDataMap['index'], backUrl: '/' })}/>}/>
-                                <Route path={'/uf/info'} render={(props) => <PageInfo {...props} state={Object.assign({}, state, { content: infoDataMap['uf'], backUrl: '/uf' })}/>}/>
-                                <Route path={'/pixelsupply/info'} render={(props) => <PageInfo {...props} state={Object.assign({}, state, { content: infoDataMap['pixelsupply'], backUrl: '/pixelsupply' })}/>}/>
-                                <Route path={'/espn/info'} render={(props) => <PageInfo {...props} state={Object.assign({}, state, { content: infoDataMap['espn'], backUrl: '/espn' })}/>}/>
-                                <Route path={'/disney/info'} render={(props) => <PageInfo {...props} state={Object.assign({}, state, { content: infoDataMap['disney'], backUrl: '/disney' })}/>}/>
+                                { infoRoutes }
                                
                                 <Route path='/menu' render={(props) => <PageMenu {...props} state={state}/>}/>
                                

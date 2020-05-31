@@ -21,12 +21,16 @@ class Showcase extends Component {
             props                = me && me.props,
             data                 = props && props.data,
             imagePosition        = data && data.imgPos,
-            images               = data && data.images,
+            images               = data && data.images || [],
             title                = data && data.title,
             description          = data && data.description,
             leftImage            = imagePosition === LEFT,
             backgroundImage      = data && data.backgroundImage,
             backgroundColor      = data && data.backgroundColor,
+            imageLength          = images.length,
+            imgContainerSubClass = imageLength === 1 ? 'Showcase__imageContainer--solo'
+                : imageLength > 1 && imageLength < 6 ? 'Showcase__imageContainer--duo'
+                : 'Showcase__imageContainer--trio',
             imageComp            = images.map((image, idx) => {
                 var src = "",
                     alt = "",
@@ -71,12 +75,12 @@ class Showcase extends Component {
 
         return (
             <div className="Showcase" style={backgroundStyle}>
-                <div className={`Showcase__left ${leftImage && imageContainerClass}`}>
+                <div className={`Showcase__left ${leftImage && imageContainerClass} ${leftImage && imgContainerSubClass}`}>
                     {
                         leftImage ? imageComp : titleAndDescComp
                     }
                 </div>
-                <div className={`Showcase__right ${!leftImage && imageContainerClass}`}>
+                <div className={`Showcase__right ${!leftImage && imageContainerClass} ${!leftImage && imgContainerSubClass}`}>
                     {
                         leftImage ? titleAndDescComp : imageComp
                     }

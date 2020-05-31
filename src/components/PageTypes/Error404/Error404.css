@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif:400,700&display=swap');
+
+.Error404 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Noto Serif', serif;
+
+    &--text {
+        margin-top: 30vh;
+        font-size: 32px;
+    }
+
+    &--subText {
+        font-size: 20px;
+        margin-top: 10px;
+
+        a {
+            text-decoration: underline;
+            color: #666666;
+        }
+
+        &:hover a {
+            color: #888
+        }
+    }
+}

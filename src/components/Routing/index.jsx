@@ -13,7 +13,8 @@ var React                = require('react'),
     CSSTransition        = ReactTransitionGroup.CSSTransition,
 
     slidesData           = require('../../data/slide/slides.json'),
-    infoDataMap          = require('../../data/info/data.js');
+    infoDataMap          = require('../../data/info/data.js'),
+    projectData          = require('../../data/projects/projects.json');
 
 require('./Routing.css');
 
@@ -71,7 +72,7 @@ function Routes(props) {
                                
                                 <Route path='/contact' render={(props) => <PageContact {...props} state={state}/>}/>
                                
-                                <Route path='/projects' render={(props) => <PageProjects {...props} state={state}/>}/>
+                                <Route path='/projects' render={(props) => <PageProjects {...props} state={Object.assign({}, state, { content: projectData })}/>}/>
                                
                                 <Route render={(props) => <Error404 {...props} state={state}/>}/>
                             </Switch>

@@ -25,22 +25,25 @@ class PageProjects extends Component {
     }
 
     render() {
+        var me       = this,
+            props    = me && me.props,
+            appState = props && props.state,
+            content  = appState && appState.content,
+            data     = content && content.data;
+
         return (
             <div className="PageProjects page page--contact">
                 <div className="PageProjects__container">
-                    <Tile image="https://membershipdrive.com/wp-content/uploads/2014/06/placeholder.png" url="https://gduarte93.github.io/checkers/" title="Checkers" subtitle="Sep 10, 2019"></Tile>
-                    <Tile image="" url="" title="Project2"></Tile>
-                    <Tile image="" url="" title="Project3"></Tile>
-                    <Tile image="https://membershipdrive.com/wp-content/uploads/2014/06/placeholder.png" url="" title="Project4"></Tile>
-                    <Tile image="" url="" title="Project5"></Tile>
-                    <Tile image="" url="" title="Project5"></Tile>
-                    <Tile image="" url="" title=""></Tile>
-                    <Tile image="" url="" title=""></Tile>
-                    <Tile image="https://membershipdrive.com/wp-content/uploads/2014/06/placeholder.png" url="" title=""></Tile>
-                    <Tile image="" url="" title=""></Tile>
-                    <Tile image="" url="" title=""></Tile>
-                    <Tile image="" url="" title=""></Tile>
-                    <Tile image="" url="" title=""></Tile>
+                    {
+                        data.map((project, idx) => {
+                            var image    = project && project.image,
+                                url      = project && project.url,
+                                title    = project && project.title,
+                                subtitle = project && project.subtitle;
+
+                            return <Tile key={idx} image={image} url={url} title={title} subtitle={subtitle} />;
+                        })
+                    }
                 </div>
             </div>
         )

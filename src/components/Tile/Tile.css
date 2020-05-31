@@ -9,11 +9,19 @@
     max-width: 33.33%;
     height: 33.33%;
     font-family: 'Noto Serif', serif;
-    background-size: contain;
-    background-position: center;
+    position: relative;
+    overflow: hidden;
 
     &:nth-child(even) {
         background-color: #828282;
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        transition: all 0.2 ease-in-out;
+        -webkit-transition: all 0.2s ease-in-out;
     }
 
     &__overlay {
@@ -29,6 +37,7 @@
         opacity: 0;
         border: 10px solid rgba(255, 255, 255, 0.25);
         box-sizing: border-box;
+        position: absolute;
 
         &--title {
             font-size: 16px;
@@ -41,6 +50,9 @@
     }
 
     &:hover {
+        .Tile__image {
+            transform: scale(1.15);
+        }
         .Tile__overlay {
             opacity: 1;
             background-color: rgba(0, 0, 0, 0.5);

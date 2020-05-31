@@ -1,5 +1,5 @@
 body {
-    background-color: #9c9c9c;
+    background-color: #f3f3f5;
 }
 
 .PageProjects {
@@ -9,5 +9,6 @@ body {
         display: flex;
         flex-wrap: wrap;
         height: 100%;
+        align-content: flex-start;
     }
 }

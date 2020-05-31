@@ -3,14 +3,14 @@
     "header": {
         "title": "Gabriel Duarte ",
         "subtitle": "Software Engineer - Front End",
-        "background": "http://imgcy.trivago.com/c_limit,d_dummy.jpeg,f_auto,h_1300,q_auto,w_2000/itemimages/17/62/1762715_v3.jpeg",
+        "background": "https://res.cloudinary.com/dwkr3rvtr/image/upload/w_2048,c_limit,dpr_auto/miami_beach_tjso4s.jpg",
         "backgroundColor": "#3a8499",
         "overlayColor": "rgba(93, 172, 194, 0.9)",
         "info": {
             "color": {
                 "primary": "#ffffff",
                 "secondary": "#cde5ec",
-                "tertiary": "#bada55"
+                "tertiary": "#e4Ceb9"
             },
             "title": "About Me",
             "description": "At Walt Disney Direct-to-Consumer & International",

@@ -2,9 +2,9 @@
     {
         "id": "index",
         "title": "Gabriel Duarte",
-        "background": "https://marketplace.canva.com/MADQ4wrzgQ8/1/screen/canva-drone-view-of-the-beach%2C-fort-lauderdale%2C-florida%2C-usa-MADQ4wrzgQ8.jpg",
-        "backgroundColor": "#e4Ceb9",
-        "overlayColor": "rgba(40, 172, 225, 0.9)",
+        "background": "https://res.cloudinary.com/dwkr3rvtr/image/upload/w_2048,c_limit,dpr_auto/miami_beach_tjso4s.jpg",
+        "backgroundColor": "rgba(93, 172, 194, 1)",
+        "overlayColor": "rgba(93, 172, 194, 0.9)",
         "info": {
             "color": {
                 "primary": "#ffffff",

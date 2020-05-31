@@ -3,6 +3,9 @@ var React         = require('react'),
     Component     = React.Component,
     Link          = require('react-router-dom').Link,
     slidesData    = require('../../../data/slide/slides.json'),
+    Cloudinary     = require('cloudinary-react'),
+    Image          = Cloudinary.Image,
+    Transformation = Cloudinary.Transformation,
 
     CONSTANTS     = require('common-constants'),
     PAGE_TYPES    = CONSTANTS.PAGE_TYPES,
@@ -55,7 +58,9 @@ class PageMenu extends Component {
                 <div className="Contact">
                     <div className="Contact__left">
                         <div className="Contact__picture">
-                            <img src="https://media-exp1.licdn.com/dms/image/C4E03AQHzI-lGsnlaag/profile-displayphoto-shrink_200_200/0?e=1586390400&v=beta&t=aKPE5jBuBqutKDk5R3nvkPh0OAzEW408BNjGgbu4pow"></img>
+                            <Image publicId="me2_qqm5u3" alt="Profile Picture - Gabriel Duarte">
+                                <Transformation width="620" crop="limit" dpr="auto" fetchFormat="auto"/>
+                            </Image>
                         </div>
                     </div>
                     <div className="Contact__right">

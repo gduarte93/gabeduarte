@@ -9,9 +9,21 @@ var React      = require('react'),
     PAGE_TYPES = CONSTANTS.PAGE_TYPES,
     SLIDE      = PAGE_TYPES.SLIDE,
 
-    pInstance;
+    pInstance,
+    touchPositionY = 0;
 
 require('./PageSlide.css');
+
+function recordTouchStart(e) {
+    var touches = e && e.touches || [],
+        clientY = touches[0] && touches[0].clientY;
+
+    if (clientY) {
+        touchPositionY = clientY;
+    } else {
+        touchPositionY = 0;
+    }
+}
 
 class PageSlide extends Component {
     constructor(props) {
@@ -23,8 +35,11 @@ class PageSlide extends Component {
 
         this.scene = React.createRef();
 
-        this.handleInfoClick    = this.handleInfoClick.bind(this);
-        this.handleMouseOutInfo = this.handleMouseOutInfo.bind(this);
+        this.handleInfoClick       = this.handleInfoClick.bind(this);
+        this.handleMouseOutInfo    = this.handleMouseOutInfo.bind(this);
+        this.attachScrollListeners = this.attachScrollListeners.bind(this);
+        this.detachScrollListeners = this.detachScrollListeners.bind(this);
+        this.handleScroll          = this.handleScroll.bind(this);
     }
 
     componentDidMount() {
@@ -45,10 +60,17 @@ class PageSlide extends Component {
         if (typeof setSlideUrls === 'function') {
             setSlideUrls(prev, next);
         }
+
+        me.attachScrollListeners();
+
         pInstance = new Parallax(me.scene.current);
     }
 
     componentWillUnmount() {
+        var me = this;
+
+        me.detachScrollListeners();
+
         // Commenting out for now since it is messing up slide transition animation prev/next, and may not need?
         
         /* garbage collection */
@@ -57,8 +79,57 @@ class PageSlide extends Component {
         // }
     }
 
+    attachScrollListeners() {
+        var me = this;
+
+        window.addEventListener('wheel', me.handleScroll, { passive: true });
+        window.addEventListener('touchstart', recordTouchStart);
+        window.addEventListener('touchmove', me.handleScroll);
+    }
+
+    detachScrollListeners() {
+        var me = this;
+
+        window.removeEventListener('wheel', me.handleScroll);
+        window.addEventListener('touchstart', recordTouchStart);
+        window.removeEventListener('touchmove', me.handleScroll);
+    }
+
+    /* On scroll up/down or swipe up/down navigate to next or prev slide */
+    handleScroll(e) {
+        var me                  = this,
+            context             = me && me.context,
+            handleSlideNavClick = context && context.handleSlideNavClick,
+            eventType           = e && e.type,
+            props               = me && me.props,
+            state               = props && props.state,
+            content             = state && state.content,
+            deltaY,
+            touches,
+            clientY,
+            direction,
+            url;
+
+        if (eventType === 'wheel') {
+            deltaY = e && e.deltaY;
+            direction = deltaY < -5 ? 'prev' : deltaY > 5 ? 'next' : undefined;
+        } else if (eventType === 'touchmove') {
+            touches = e && e.touches || [];
+            clientY = touches[0] && touches[0].clientY;
+
+            deltaY = clientY - touchPositionY;
+            direction = deltaY < -50 ? 'next' : deltaY > 50 ? 'prev' : undefined;
+        }
+
+        url = direction && content && content[direction];
+
+        if (typeof handleSlideNavClick === 'function' && url && direction) {
+            handleSlideNavClick(url, direction);
+        }
+    }
+
     handleInfoClick(url, e) {
-        e.preventDefault();
+        e && e.preventDefault();
 
         var me                  = this,
             context             = me && me.context,
@@ -170,6 +241,7 @@ class PageSlide extends Component {
 PageSlide.displayName = 'PageSlide';
 
 PageSlide.contextTypes = {
+    handleSlideNavClick : PropTypes.func,
     setPageType         : PropTypes.func,
     setSlideUrls        : PropTypes.func,
     resetSlideDirection : PropTypes.func

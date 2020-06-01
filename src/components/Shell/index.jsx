@@ -125,6 +125,7 @@ class Shell extends Component {
         var me = this;
 
         return {
+            handleSlideNavClick : me.handleSlideNavClick,
             setPageType         : me.setPageType,
             setBackUrl          : me.setBackUrl,
             setSlideUrls        : me.setSlideUrls,
@@ -166,7 +167,7 @@ class Shell extends Component {
     }
 
     handleMenuClick(menuLink, e) {
-        e.preventDefault();
+        e && e.preventDefault();
 
         var me            = this,
             state         = me && me.state,
@@ -196,7 +197,7 @@ class Shell extends Component {
     }
 
     handleBackClick(url, e) {
-        e.preventDefault();
+        e && e.preventDefault();
 
         var me       = this,
             state    = me && me.state,
@@ -207,7 +208,7 @@ class Shell extends Component {
     }
 
     handleSlideNavClick(url, direction, e) {
-        e.preventDefault();
+        e && e.preventDefault();
 
         var me            = this,
             state         = me && me.state,
@@ -364,6 +365,7 @@ class Shell extends Component {
 Shell.displayName = 'Shell';
 
 Shell.childContextTypes = {
+    handleSlideNavClick : PropTypes.func,
     setPageType         : PropTypes.func,
     setBackUrl          : PropTypes.func,
     setSlideUrls        : PropTypes.func,

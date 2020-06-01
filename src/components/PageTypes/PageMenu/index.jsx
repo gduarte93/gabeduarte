@@ -40,18 +40,10 @@ class PageMenu extends Component {
                             slidesData.map((slide, idx) => {
                                 var path      = slide && slide.path,
                                     title     = slide && slide.title,
-                                    subtitle;
+                                    subtitle  = slide && slide.subtitle;
 
                                 if (path === '/') {
                                     title = 'Home';
-                                }
-
-                                if (idx === 0) {
-                                    subtitle = "about me";
-                                }
-
-                                if (idx === 1) {
-                                    subtitle = "professional experience";
                                 }
                                 
                                 return (

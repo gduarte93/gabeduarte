@@ -45,19 +45,45 @@
         li {
             font-size: 30px;
             letter-spacing: 1px;
+            color: #ffffff;
+
+            &.Menu__item {
+                &--subtitle {
+                    font-size: 12px;
+                    margin-bottom: 0px !important;
+
+                    span {
+                        left: 20px;
+                        position: relative;
+                        color: #dddddd;
+
+                        &:before, &:after {
+                            content: "";
+                            width: 16px;
+                            height: 1px;
+                            background-color: #dddddd;
+                            display: block;
+                            position: absolute;
+                            top: 8px;
+                        }
+
+                        &:before {
+                            left: -20px;
+                        }
+
+                        &:after {
+                            right: -20px;
+                        }
+                    }
+                }
+            }
 
             &:not(:last-child) {
                 margin-bottom: 15px;
             }
 
-            &.Menu__link {
-                &--sub {
-                    margin-left: 40px;
-                }
-            }
-
             a {
-                color: white;
+                color: inherit;
                 text-decoration: none;
                 transition: all 200ms ease-in-out;
 

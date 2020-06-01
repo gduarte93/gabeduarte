@@ -36,22 +36,35 @@ class PageMenu extends Component {
 
                 <div className="Right__panel">
                     <ul>
-                        <li><Link to="/contact">Contact</Link></li>
-                        <li><Link to="/projects">Projects</Link></li>
                         {
                             slidesData.map((slide, idx) => {
                                 var path      = slide && slide.path,
                                     title     = slide && slide.title,
-                                    className = 'Menu__link--sub';
+                                    subtitle;
 
                                 if (path === '/') {
                                     title = 'Home';
-                                    className = 'Menu__link--home';
+                                }
+
+                                if (idx === 0) {
+                                    subtitle = "about me";
+                                }
+
+                                if (idx === 1) {
+                                    subtitle = "professional experience";
                                 }
                                 
-                                return <li key={idx} className={className}><Link to={path}>{title}</Link></li>;
+                                return (
+                                    <React.Fragment key={idx}>
+                                        { subtitle && <li className="Menu__item--subtitle"><span>{subtitle}</span></li> }
+                                        <li><Link to={path}>{title}</Link></li>
+                                    </React.Fragment>
+                                );
                             })
                         }
+                        <li className="Menu__item--subtitle"><span>personal</span></li>
+                        <li><Link to="/projects">Projects</Link></li>
+                        <li><Link to="/contact">Contact</Link></li>
                     </ul>
                 </div>
 

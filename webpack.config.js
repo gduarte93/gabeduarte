@@ -33,21 +33,12 @@ module.exports = {
         ]
     },
     optimization: {
-        runtimeChunk: 'single',
         splitChunks: {
-            chunks: 'all',
-            maxInitialRequests: Infinity,
-            minSize: 0,
             cacheGroups: {
-                vendor: {
+                commons: {
                     test: /[\\/]node_modules[\\/]/,
-                    name(module) {
-                        // Get node module name
-                        var packageName = module.context.match(/[\\/]node_modules[\\/](.*?)([\\/]|$)/)[1];
-
-                        // replace @ in url name just in case
-                        return `npm.${packageName.replace('@', '__')}`;
-                    }
+                    name: "vendor",
+                    chunks: "all",
                 }
             }
         }

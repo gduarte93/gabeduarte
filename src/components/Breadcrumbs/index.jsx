@@ -38,6 +38,7 @@ function Breadcrumbs(props) {
                             className="Breadcrumbs__crumb"
                             to={path}
                             onClick={(e) => handleCrumbClick(path, direction, e)}
+                            aria-label={`To ${title} Page`}
                         >
                             <div className={`Breadcrumbs__dot ${ active && 'Breadcrumbs__dot--active' }`} />
                             <div className="Breadcrumbs__text" onClick={(e) => { e.stopPropagation();e.preventDefault(); }}>{title}</div>

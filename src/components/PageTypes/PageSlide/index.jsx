@@ -217,7 +217,7 @@ class PageSlide extends Component {
                                             </div>
                                             : null
                                     }
-                                    <Link className={`Link__info--button ${isIndex && !hasHoveredInfo && 'Link__info--home'}`} to={infoUrl} onMouseOut={me.handleMouseOutInfo} onClick={me.handleInfoClick.bind(me, infoUrl)}>
+                                    <Link className={`Link__info--button ${isIndex && !hasHoveredInfo && 'Link__info--home'}`} to={infoUrl} aria-label='See More' onMouseOut={me.handleMouseOutInfo} onClick={me.handleInfoClick.bind(me, infoUrl)}>
                                         <div className="Threedots">
                                             <div className="Threedots__dot" />
                                             <div className="Threedots__dot" />

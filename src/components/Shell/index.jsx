@@ -316,7 +316,7 @@ class Shell extends Component {
         return (
             <CloudinaryContext cloudName={CLOUD_NAME}>
                 <div id='shell' className={pageType}>
-                    <Link className={`Link__menu--button ${isMenuButtonClass}`} to={menuLink} onClick={me.handleMenuClick.bind(me, menuLink)}>
+                    <Link className={`Link__menu--button ${isMenuButtonClass}`} to={menuLink} aria-label={isMenu ? 'Close Menu' : 'Menu'} onClick={me.handleMenuClick.bind(me, menuLink)}>
                         {
                             isMenu ?
                                 <CloseIcon className="Menu__close" />
@@ -336,17 +336,17 @@ class Shell extends Component {
                             :
                             null
                     }
-                    <Link className={`Link__button Link__button--back ${toggleBack}`} to={backUrl} onClick={me.handleBackClick.bind(me, backUrl)}>
+                    <Link className={`Link__button Link__button--back ${toggleBack}`} to={backUrl} aria-label='Back' onClick={me.handleBackClick.bind(me, backUrl)}>
                         <LeftArrow className="Arrow Arrow--left" />
                     </Link>
                     {
                         isSlide ?
                             <React.Fragment>
                                 <Breadcrumbs data={breadCrumbData} handleCrumbClick={me.handleSlideNavClick} />
-                                <Link className={`Link__button Link__button--prev`} to={prevUrl} onClick={me.handleSlideNavClick.bind(me, prevUrl, PREV)}>
+                                <Link className={`Link__button Link__button--prev`} to={prevUrl} aria-label='Previous Page' onClick={me.handleSlideNavClick.bind(me, prevUrl, PREV)}>
                                     <UpArrow className="Arrow Arrow--up" />
                                 </Link>
-                                <Link className={`Link__button Link__button--next`} to={nextUrl} onClick={me.handleSlideNavClick.bind(me, nextUrl, NEXT)}>
+                                <Link className={`Link__button Link__button--next`} to={nextUrl} aria-label='Next Page' onClick={me.handleSlideNavClick.bind(me, nextUrl, NEXT)}>
                                     <DownArrow className="Arrow Arrow--down" />
                                 </Link>
                             </React.Fragment>

@@ -7,7 +7,8 @@ var HTMLWebpackPlugin       = require('html-webpack-plugin'),
     }),
     CopyWebpackPluginConfig = new CopyWebpackPlugin({
         patterns: [
-            { from: '_redirects' }
+            { from: '_redirects' },
+            { from: 'robots.txt' }
         ]
     });
 

@@ -164,6 +164,16 @@
 }
 
 @media only screen and (max-width: 768px) {
+    .PageMenu {
+        overflow: hidden; /* TODO: make scrollable for mobile horizontal */
+
+        .Menu__triangle {
+            &--left {
+                border-bottom: 500px solid #626262;
+            }
+        }
+    }
+
     .Right__panel {
         margin-left: 0%;
         margin-top: 100px;
@@ -172,6 +182,14 @@
         ul {
             li {
                 font-size: 24px;
+            }
+        }
+    }
+
+    .Contact {
+        &__right {
+            .Contact__link, .Contact__name {
+                color: #ffffff;
             }
         }
     }

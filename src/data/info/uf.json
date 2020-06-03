@@ -3,7 +3,11 @@
     "header": {
         "title": "University of Florida",
         "subtitle": "2012-2015",
-        "background": "https://res.cloudinary.com/dwkr3rvtr/image/upload/w_2048,c_limit,dpr_auto/TheSwamp_pm3lwa.jpg",
+        "background": {
+            "small": "https://res.cloudinary.com/dwkr3rvtr/image/upload/w_1440,c_limit,dpr_auto/TheSwamp_pm3lwa.jpg",
+            "medium": "https://res.cloudinary.com/dwkr3rvtr/image/upload/w_1440,c_limit,dpr_auto/TheSwamp_pm3lwa.jpg",
+            "large": "https://res.cloudinary.com/dwkr3rvtr/image/upload/w_2048,c_limit,dpr_auto/TheSwamp_pm3lwa.jpg"
+        },
         "backgroundColor": "rgba(0, 33, 165, 1)",
         "overlayColor": "rgba(0, 33, 165, 0.9)",
         "info": {

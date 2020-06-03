@@ -6,7 +6,13 @@ function Header(props) {
     var data                = props && props.data,
         title               = data && data.title,
         subtitle            = data && data.subtitle,
+
+        windowWidth         = window && window.innerWidth,
         background          = data && data.background,
+        backgroundUrl       = windowWidth <= 768 ? background.small :
+                              windowWidth <= 1440 ? background.medium :
+                              background.large,
+
         backgroundColor     = data && data.backgroundColor,
         backgroundPosition  = data && data.backgroundPosition || "center",
         overlayColor        = data && data.overlayColor,
@@ -22,7 +28,7 @@ function Header(props) {
         col2                = infoStory.column2,
         blurbs              = data && data.blurbs,
         backgroundStyle     = {
-            backgroundImage    : `url(${background})`,
+            backgroundImage    : `url(${backgroundUrl})`,
             backgroundPosition : backgroundPosition
         },
         backgroundColorStyle = {

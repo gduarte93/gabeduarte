@@ -3,7 +3,11 @@
     "header": {
         "title": "Pixel Supply Co",
         "subtitle": "2014 - 2016",
-        "background": "https://res.cloudinary.com/dwkr3rvtr/image/upload/w_2048,c_limit,dpr_auto/miracle_mile_vilvft.jpg",
+        "background": {
+            "small": "https://res.cloudinary.com/dwkr3rvtr/image/upload/w_1440,c_limit,dpr_auto/miracle_mile_vilvft.jpg",
+            "medium": "https://res.cloudinary.com/dwkr3rvtr/image/upload/w_1440,c_limit,dpr_auto/miracle_mile_vilvft.jpg",
+            "large": "https://res.cloudinary.com/dwkr3rvtr/image/upload/w_2048,c_limit,dpr_auto/miracle_mile_vilvft.jpg"
+        },
         "backgroundColor": "#e0c588",
         "overlayColor": "rgba(224, 197, 136, 0.9)",
         "backgroundPosition": "bottom",

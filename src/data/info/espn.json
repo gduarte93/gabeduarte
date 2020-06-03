@@ -4,9 +4,9 @@
         "title": "ESPN",
         "subtitle": "2016 - 2018",
         "background": {
-            "small": "https://res.cloudinary.com/dwkr3rvtr/image/upload/w_1440,c_limit,dpr_auto/espn_dgaqr1.jpg",
-            "medium": "https://res.cloudinary.com/dwkr3rvtr/image/upload/w_1440,c_limit,dpr_auto/espn_dgaqr1.jpg",
-            "large": "https://res.cloudinary.com/dwkr3rvtr/image/upload/w_2048,c_limit,dpr_auto/espn_dgaqr1.jpg"
+            "small": "https://res.cloudinary.com/dwkr3rvtr/image/upload/w_1440,c_limit,dpr_auto,f_auto/espn_dgaqr1",
+            "medium": "https://res.cloudinary.com/dwkr3rvtr/image/upload/w_1440,c_limit,dpr_auto,f_auto/espn_dgaqr1",
+            "large": "https://res.cloudinary.com/dwkr3rvtr/image/upload/w_2048,c_limit,dpr_auto,f_auto/espn_dgaqr1"
         },
         "backgroundColor": "rgba(214, 30, 38, 1)",
         "overlayColor": "rgba(214, 30, 38, 0.9)",

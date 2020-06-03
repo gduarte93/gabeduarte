@@ -4,9 +4,9 @@
         "title": "Gabriel Duarte",
         "subtitle": "about me",
         "background": {
-            "small": "https://res.cloudinary.com/dwkr3rvtr/image/upload/w_1440,c_limit,dpr_auto/miami_beach_tjso4s.jpg",
-            "medium": "https://res.cloudinary.com/dwkr3rvtr/image/upload/w_1440,c_limit,dpr_auto/miami_beach_tjso4s.jpg",
-            "large": "https://res.cloudinary.com/dwkr3rvtr/image/upload/w_2048,c_limit,dpr_auto/miami_beach_tjso4s.jpg"
+            "small": "https://res.cloudinary.com/dwkr3rvtr/image/upload/w_1440,c_limit,dpr_auto,f_auto/miami_beach_tjso4s",
+            "medium": "https://res.cloudinary.com/dwkr3rvtr/image/upload/w_1440,c_limit,dpr_auto,f_auto/miami_beach_tjso4s",
+            "large": "https://res.cloudinary.com/dwkr3rvtr/image/upload/w_2048,c_limit,dpr_auto,f_auto/miami_beach_tjso4s"
         },
         "backgroundColor": "rgba(93, 172, 194, 1)",
         "overlayColor": "rgba(93, 172, 194, 0.9)",
@@ -30,9 +30,9 @@
         "title": "Walt Disney DTCI",
         "subtitle": "professional experience",
         "background": {
-            "small": "https://res.cloudinary.com/dwkr3rvtr/image/upload/w_1440,c_limit,dpr_auto/dtci_slide_jnxk6t.png",
-            "medium": "https://res.cloudinary.com/dwkr3rvtr/image/upload/w_1440,c_limit,dpr_auto/dtci_slide_jnxk6t.png",
-            "large": "https://res.cloudinary.com/dwkr3rvtr/image/upload/w_2048,c_limit,dpr_auto/dtci_slide_jnxk6t.png"
+            "small": "https://res.cloudinary.com/dwkr3rvtr/image/upload/w_1440,c_limit,dpr_auto,f_auto/dtci_slide_jnxk6t",
+            "medium": "https://res.cloudinary.com/dwkr3rvtr/image/upload/w_1440,c_limit,dpr_auto,f_auto/dtci_slide_jnxk6t",
+            "large": "https://res.cloudinary.com/dwkr3rvtr/image/upload/w_2048,c_limit,dpr_auto,f_auto/dtci_slide_jnxk6t"
         },
         "backgroundColor": "#ffffff",
         "overlayColor": "rgba(164, 222, 249, 0.9)",
@@ -55,9 +55,9 @@
         "id": "espn",
         "title": "ESPN",
         "background": {
-            "small": "https://res.cloudinary.com/dwkr3rvtr/image/upload/w_1440,c_limit,dpr_auto/espn_dgaqr1.jpg",
-            "medium": "https://res.cloudinary.com/dwkr3rvtr/image/upload/w_1440,c_limit,dpr_auto/espn_dgaqr1.jpg",
-            "large": "https://res.cloudinary.com/dwkr3rvtr/image/upload/w_2048,c_limit,dpr_auto/espn_dgaqr1.jpg"
+            "small": "https://res.cloudinary.com/dwkr3rvtr/image/upload/w_1440,c_limit,dpr_auto,f_auto/espn_dgaqr1",
+            "medium": "https://res.cloudinary.com/dwkr3rvtr/image/upload/w_1440,c_limit,dpr_auto,f_auto/espn_dgaqr1",
+            "large": "https://res.cloudinary.com/dwkr3rvtr/image/upload/w_2048,c_limit,dpr_auto,f_auto/espn_dgaqr1"
         },
         "backgroundColor": "rgba(214, 30, 38, 1)",
         "overlayColor": "rgba(214, 30, 38, 0.9)",
@@ -80,9 +80,9 @@
         "id": "pixelsupply",
         "title": "Pixel Supply Co",
         "background": {
-            "small": "https://res.cloudinary.com/dwkr3rvtr/image/upload/w_1440,c_limit,dpr_auto/miracle_mile_vilvft.jpg",
-            "medium": "https://res.cloudinary.com/dwkr3rvtr/image/upload/w_1440,c_limit,dpr_auto/miracle_mile_vilvft.jpg",
-            "large": "https://res.cloudinary.com/dwkr3rvtr/image/upload/w_2048,c_limit,dpr_auto/miracle_mile_vilvft.jpg"
+            "small": "https://res.cloudinary.com/dwkr3rvtr/image/upload/w_1440,c_limit,dpr_auto,f_auto/miracle_mile_vilvft",
+            "medium": "https://res.cloudinary.com/dwkr3rvtr/image/upload/w_1440,c_limit,dpr_auto,f_auto/miracle_mile_vilvft",
+            "large": "https://res.cloudinary.com/dwkr3rvtr/image/upload/w_2048,c_limit,dpr_auto,f_auto/miracle_mile_vilvft"
         },
         "backgroundColor": "rgba(224, 197, 136, 1)",
         "overlayColor": "rgba(224, 197, 136, 0.9)",
@@ -107,9 +107,9 @@
         "title": "University of Florida",
         "subtitle": "education",
         "background": {
-            "small": "https://res.cloudinary.com/dwkr3rvtr/image/upload/w_1440,c_limit,dpr_auto/TheSwamp_pm3lwa.jpg",
-            "medium": "https://res.cloudinary.com/dwkr3rvtr/image/upload/w_1440,c_limit,dpr_auto/TheSwamp_pm3lwa.jpg",
-            "large": "https://res.cloudinary.com/dwkr3rvtr/image/upload/w_2048,c_limit,dpr_auto/TheSwamp_pm3lwa.jpg"
+            "small": "https://res.cloudinary.com/dwkr3rvtr/image/upload/w_1440,c_limit,dpr_auto,f_auto/TheSwamp_pm3lwa",
+            "medium": "https://res.cloudinary.com/dwkr3rvtr/image/upload/w_1440,c_limit,dpr_auto,f_auto/TheSwamp_pm3lwa",
+            "large": "https://res.cloudinary.com/dwkr3rvtr/image/upload/w_2048,c_limit,dpr_auto,f_auto/TheSwamp_pm3lwa"
         },
         "backgroundColor": "#fa4616",
         "overlayColor": "rgba(0, 33, 165, 0.9)",

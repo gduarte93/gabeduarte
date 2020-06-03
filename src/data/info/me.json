@@ -4,9 +4,9 @@
         "title": "Gabriel Duarte ",
         "subtitle": "Software Engineer - Front End",
         "background": {
-            "small": "https://res.cloudinary.com/dwkr3rvtr/image/upload/w_1440,c_limit,dpr_auto/miami_beach_tjso4s.jpg",
-            "medium": "https://res.cloudinary.com/dwkr3rvtr/image/upload/w_1440,c_limit,dpr_auto/miami_beach_tjso4s.jpg",
-            "large": "https://res.cloudinary.com/dwkr3rvtr/image/upload/w_2048,c_limit,dpr_auto/miami_beach_tjso4s.jpg"
+            "small": "https://res.cloudinary.com/dwkr3rvtr/image/upload/w_1440,c_limit,dpr_auto,f_auto/miami_beach_tjso4s",
+            "medium": "https://res.cloudinary.com/dwkr3rvtr/image/upload/w_1440,c_limit,dpr_auto,f_auto/miami_beach_tjso4s",
+            "large": "https://res.cloudinary.com/dwkr3rvtr/image/upload/w_2048,c_limit,dpr_auto,f_auto/miami_beach_tjso4s"
         },
         "backgroundColor": "#3a8499",
         "overlayColor": "rgba(93, 172, 194, 0.9)",

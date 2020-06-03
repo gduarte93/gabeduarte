@@ -65,12 +65,17 @@ class ImageLightbox extends Component {
             src           = typeof currentImage === "string" ? currentImage : currentImage.src,
             isFirstImage  = currentIdx === 0,
             isLastImage   = currentIdx === images.length - 1,
+            windowWidth   = window && window.innerWidth,
             image;
 
         if (publicId) {
             image = (
                 <Image publicId={publicId} alt={title} className="ImageLightbox__image">
-                    <Transformation width="1280" crop="limit" dpr="auto" fetchFormat="auto"/>
+                    {
+                        windowWidth <= 768 ?
+                            <Transformation width="600" crop="limit" dpr="auto" fetchFormat="auto"/> :
+                            <Transformation width="1280" crop="limit" dpr="auto" fetchFormat="auto"/>
+                    }
                 </Image>
             );
         } else {

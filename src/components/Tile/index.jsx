@@ -31,13 +31,10 @@ function Tile(_props) {
         projectImage = renderImage(publicId, src, imageAlt),
         url          = props.url || '#',
         title        = props.title || '[missing title]';
-        subtitle     = props.subtitle,
-        style        = {
-            backgroundImage: `url(${src})`
-        };
+        subtitle     = props.subtitle;
     
     return (
-        <a className="Tile" href={url} style={style} target="_blank">
+        <a className="Tile" href={url} target="_blank">
             { projectImage }
             <div className="Tile__overlay">
                 <div className="Tile__overlay--title">{title}</div>

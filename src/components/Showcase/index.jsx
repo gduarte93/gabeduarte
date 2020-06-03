@@ -27,6 +27,7 @@ class Showcase extends Component {
             leftImage            = imagePosition === LEFT,
             backgroundImage      = data && data.backgroundImage,
             backgroundColor      = data && data.backgroundColor,
+            windowWidth          = window && window.innerWidth,
             imageLength          = images.length,
             imgContainerSubClass = imageLength === 1 ? 'Showcase__imageContainer--solo'
                 : imageLength > 1 && imageLength < 6 ? 'Showcase__imageContainer--duo'
@@ -54,7 +55,11 @@ class Showcase extends Component {
                             className="Showcase__image"
                             onClick={openLightbox.bind(this, images, idx)}
                         >
-                            <Transformation width="500" crop="limit" dpr="auto" fetchFormat="auto"/>
+                            {
+                                windowWidth <= 768 ?
+                                    <Transformation width="300" crop="limit" dpr="auto" fetchFormat="auto"/> :
+                                    <Transformation width="500" crop="limit" dpr="auto" fetchFormat="auto"/>
+                            }
                         </Image>
                     );
                 } else {

@@ -29,16 +29,16 @@
                 "description": "Gainesville, FL"
             },
             {
-                "title": "CEN 3031",
-                "description": "Worked in a team of 4 to develop a scheduling web app for a local business"
+                "title": "CIS 4914",
+                "description": "Created an online music locker desktop application for windows using C# and AWS"
             },
             {
                 "title": "CIS 4301",
                 "description": "Worked in a team of 4 to develop a temporary social media app using PostgreSQL and web technologies"
             },
             {
-                "title": "CIS 4914",
-                "description": "Created an online music locker desktop application for windows using C# and AWS"
+                "title": "CEN 3031",
+                "description": "Worked in a team of 6 to develop a scheduling web app for a local business"
             }
         ]
     },
@@ -49,18 +49,58 @@
                 "imgPos": "left",
                 "images": [
                     {
-                        "publicId": "CEN3031_CalendarPage_cdkl6l",
-                        "src": "https://res.cloudinary.com/dwkr3rvtr/image/upload/v1590379184/CEN3031_CalendarPage_cdkl6l.png",
-                        "alt": "Calendar Page, showing the top nav, and right panel"
+                        "publicId": "Senior_Project_Slide1",
+                        "src": "https://res.cloudinary.com/dwkr3rvtr/image/upload/v1590375416/Senior_Project_Slide1.png",
+                        "alt": "Slide 1"
                     },
                     {
-                        "publicId": "CEN3031_Settings_Logout_Btn_keyozw",
-                        "src": "https://res.cloudinary.com/dwkr3rvtr/image/upload/v1590379187/CEN3031_Settings_Logout_Btn_keyozw.png",
-                        "alt": "Settings and Logout buttons"
+                        "publicId": "Senior_Project_Slide2",
+                        "src": "https://res.cloudinary.com/dwkr3rvtr/image/upload/v1590375419/Senior_Project_Slide2.png",
+                        "alt": "Slide 2"
+                    },
+                    {
+                        "publicId": "Senior_Project_Slide3",
+                        "src": "https://res.cloudinary.com/dwkr3rvtr/image/upload/v1590375422/Senior_Project_Slide3.png",
+                        "alt": "Slide 3"
+                    },
+                    {
+                        "publicId": "Senior_Project_Slide4",
+                        "src": "https://res.cloudinary.com/dwkr3rvtr/image/upload/v1590375417/Senior_Project_Slide4.png",
+                        "alt": "Slide 4"
+                    },
+                    {
+                        "publicId": "Senior_Project_Slide5",
+                        "src": "https://res.cloudinary.com/dwkr3rvtr/image/upload/v1590375414/Senior_Project_Slide5.png",
+                        "alt": "Slide 5"
+                    },
+                    {
+                        "publicId": "Senior_Project_Slide6",
+                        "src": "https://res.cloudinary.com/dwkr3rvtr/image/upload/v1590375419/Senior_Project_Slide6.png",
+                        "alt": "Slide 6"
+                    },
+                    {
+                        "publicId": "Senior_Project_Slide7",
+                        "src": "https://res.cloudinary.com/dwkr3rvtr/image/upload/v1590375417/Senior_Project_Slide7.png",
+                        "alt": "Slide 7"
+                    },
+                    {
+                        "publicId": "Senior_Project_Slide8",
+                        "src": "https://res.cloudinary.com/dwkr3rvtr/image/upload/v1590375418/Senior_Project_Slide8.png",
+                        "alt": "Slide 8"
+                    },
+                    {
+                        "publicId": "Senior_Project_Slide9",
+                        "src": "https://res.cloudinary.com/dwkr3rvtr/image/upload/v1590375417/Senior_Project_Slide9.png",
+                        "alt": "Slide 9"
+                    },
+                    {
+                        "publicId": "Senior_Project_Slide10",
+                        "src": "https://res.cloudinary.com/dwkr3rvtr/image/upload/v1590375415/Senior_Project_Slide10.png",
+                        "alt": "Slide 10"
                     }
                 ],
-                "title": "CEN 3031",
-                "description": "Worked with a team of 4 to develop a fullstack web app for a local construction business. The application is a tool they would use internally to schedule and keep track of jobs.<br/><br/>The integration with Google Calendar would show when jobs were to take place, and the integration with Google Maps would show in what specific location.<br/><br/>I worked on the front end, using HTML, CSS, and JavaScript to create the UI, and integrating Google Calendar."
+                "title": "CIS 4914",
+                "description": "For my senior project, I created an online music locker to be able to listen to your music collection wherever you have access to the internet, as well as free up hard drive space.<br/><br/>The app is a Microsoft Windows desktop application built using C# with Visual Studio, PostgreSQL, and stored on AWS.<br/><br/>Users are able to register for an account and log in. They are able to upload songs, play songs, create playlists, delete playlists, remove songs from a playlist, and delete songs from their library. They are also able to sort songs by name, artist, album, and length as well as search via a search bar."
             }
         },
         {
@@ -129,58 +169,18 @@
                 "imgPos": "left",
                 "images": [
                     {
-                        "publicId": "Senior_Project_Slide1",
-                        "src": "https://res.cloudinary.com/dwkr3rvtr/image/upload/v1590375416/Senior_Project_Slide1.png",
-                        "alt": "Slide 1"
+                        "publicId": "CEN3031_CalendarPage_cdkl6l",
+                        "src": "https://res.cloudinary.com/dwkr3rvtr/image/upload/v1590379184/CEN3031_CalendarPage_cdkl6l.png",
+                        "alt": "Calendar Page, showing the top nav, and right panel"
                     },
                     {
-                        "publicId": "Senior_Project_Slide2",
-                        "src": "https://res.cloudinary.com/dwkr3rvtr/image/upload/v1590375419/Senior_Project_Slide2.png",
-                        "alt": "Slide 2"
-                    },
-                    {
-                        "publicId": "Senior_Project_Slide3",
-                        "src": "https://res.cloudinary.com/dwkr3rvtr/image/upload/v1590375422/Senior_Project_Slide3.png",
-                        "alt": "Slide 3"
-                    },
-                    {
-                        "publicId": "Senior_Project_Slide4",
-                        "src": "https://res.cloudinary.com/dwkr3rvtr/image/upload/v1590375417/Senior_Project_Slide4.png",
-                        "alt": "Slide 4"
-                    },
-                    {
-                        "publicId": "Senior_Project_Slide5",
-                        "src": "https://res.cloudinary.com/dwkr3rvtr/image/upload/v1590375414/Senior_Project_Slide5.png",
-                        "alt": "Slide 5"
-                    },
-                    {
-                        "publicId": "Senior_Project_Slide6",
-                        "src": "https://res.cloudinary.com/dwkr3rvtr/image/upload/v1590375419/Senior_Project_Slide6.png",
-                        "alt": "Slide 6"
-                    },
-                    {
-                        "publicId": "Senior_Project_Slide7",
-                        "src": "https://res.cloudinary.com/dwkr3rvtr/image/upload/v1590375417/Senior_Project_Slide7.png",
-                        "alt": "Slide 7"
-                    },
-                    {
-                        "publicId": "Senior_Project_Slide8",
-                        "src": "https://res.cloudinary.com/dwkr3rvtr/image/upload/v1590375418/Senior_Project_Slide8.png",
-                        "alt": "Slide 8"
-                    },
-                    {
-                        "publicId": "Senior_Project_Slide9",
-                        "src": "https://res.cloudinary.com/dwkr3rvtr/image/upload/v1590375417/Senior_Project_Slide9.png",
-                        "alt": "Slide 9"
-                    },
-                    {
-                        "publicId": "Senior_Project_Slide10",
-                        "src": "https://res.cloudinary.com/dwkr3rvtr/image/upload/v1590375415/Senior_Project_Slide10.png",
-                        "alt": "Slide 10"
+                        "publicId": "CEN3031_Settings_Logout_Btn_keyozw",
+                        "src": "https://res.cloudinary.com/dwkr3rvtr/image/upload/v1590379187/CEN3031_Settings_Logout_Btn_keyozw.png",
+                        "alt": "Settings and Logout buttons"
                     }
                 ],
-                "title": "CIS 4914",
-                "description": "Created an online music locker to be able to listen to your music collection wherever you have access to the internet, as well as free up hard drive space.<br/><br/>The app is a Microsoft Windows desktop application built using C# with Visual Studio, PostgreSQL, and stored on AWS.<br/><br/>Users are able to register for an account and log in. They are able to upload songs, play songs, create playlists, delete playlists, remove songs from a playlist, and delete songs from their library. They are also able to sort songs by name, artist, album, and length as well as search via a search bar."
+                "title": "CEN 3031",
+                "description": "Worked with a team of six to develop a fullstack web app for a local construction business. The application is a tool they would use internally to schedule and keep track of jobs.<br/><br/>The integration with Google Calendar would show when jobs were to take place, and the integration with Google Maps would show in what specific location.<br/><br/>I worked on the front end, using HTML, CSS, and JavaScript to create the UI, and integrating Google Calendar."
             }
         }
     ]

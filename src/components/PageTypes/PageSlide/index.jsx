@@ -233,7 +233,11 @@ class PageSlide extends Component {
                                     <div className="Link__info--text">
                                         See more
                                     </div>
-                                    <div className="PageSlide__description" style={primaryColorStyle} dangerouslySetInnerHTML={{__html: desc}} />
+                                    <div className="PageSlide__description" style={primaryColorStyle}>
+                                        <span dangerouslySetInnerHTML={{__html: desc}} />
+                                        &nbsp;
+                                        <Link className="PageSlide__description--link" onClick={me.handleInfoClick.bind(me, infoUrl)}>(see more)</Link>
+                                    </div>
                                 </div>
                             </div>
                         </div>

@@ -40,9 +40,11 @@ function Routes(props) {
                             id       = slide && slide.id,
                             infoData = infoDataMap[id];
 
-                        return (
-                            <Route key={idx} path={infoPath} render={(props) => <PageInfo {...props} state={Object.assign({}, state, { content: infoData, backUrl: path })}/>}/>
-                        )
+                        if (infoPath) {
+                            return (
+                                <Route key={idx} path={infoPath} render={(props) => <PageInfo {...props} state={Object.assign({}, state, { content: infoData, backUrl: path })}/>}/>
+                            );
+                        }
                     });
 
                 return (

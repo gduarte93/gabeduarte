@@ -1,15 +1,15 @@
-var React         = require('react'),
-    PropTypes     = require('prop-types'),
-    Component     = React.Component,
-    Link          = require('react-router-dom').Link,
-    slidesData    = require('../../../data/slide/slides.json'),
+var React          = require('react'),
+    PropTypes      = require('prop-types'),
+    Component      = React.Component,
+    Link           = require('react-router-dom').Link,
+    slidesData     = require('../../../data/slide/slides.json'),
     Cloudinary     = require('cloudinary-react'),
     Image          = Cloudinary.Image,
     Transformation = Cloudinary.Transformation,
 
-    CONSTANTS     = require('common-constants'),
-    PAGE_TYPES    = CONSTANTS.PAGE_TYPES,
-    MENU          = PAGE_TYPES.MENU;
+    CONSTANTS      = require('common-constants'),
+    PAGE_TYPES     = CONSTANTS.PAGE_TYPES,
+    MENU           = PAGE_TYPES.MENU;
 
 require('./PageMenu.css')
 

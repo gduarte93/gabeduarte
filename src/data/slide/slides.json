@@ -19,16 +19,41 @@
             "subtitle": "Front End",
             "location": "Hartford, CT",
             "url": "/info",
-            "description": "I’m a front end software engineer, working at Walt Disney Direct-to-Consumer & International. There, I work on front end projects across Disney's brands using Node, React, and MobX. When I’m not working, you can usually find me browsing reddit, playing games, or learning new things."
+            "description": "I’m a front end software engineer, working at Disney Entertainment and ESPN Product & Technology. There, I work on front end projects across Disney's News brands using Node, React, and MobX. When I’m not working, you can usually find me browsing reddit, playing games, and learning new things."
         },
         "path": "/",
-        "next": "/disney",
+        "next": "/disneyNews",
         "prev": "/uf"
+    },
+    {
+        "id": "disneyNews",
+        "title": "Disney Entertainment and ESPN Product & Technology",
+        "subtitle": "professional experience",
+        "background": {
+            "small": "https://res.cloudinary.com/dwkr3rvtr/image/upload/w_1440,c_limit,dpr_auto,f_auto/DEET_Cover_ehftca",
+            "medium": "https://res.cloudinary.com/dwkr3rvtr/image/upload/w_1440,c_limit,dpr_auto,f_auto/DEET_Cover_ehftca",
+            "large": "https://res.cloudinary.com/dwkr3rvtr/image/upload/w_2048,c_limit,dpr_auto,f_auto/DEET_Cover_ehftca"
+        },
+        "backgroundColor": "#0c1d69",
+        "overlayColor": "rgba(255, 255, 255, 0.9)",
+        "info": {
+            "color": {
+                "primary": "#0c1d69",
+                "secondary": "#000000"
+            },
+            "title": "Senior Software Engineer",
+            "subtitle": "2022 - present",
+            "location": "Bristol, CT",
+            "url": "",
+            "description": "With the reorginazation to Disney Entertainment and ESPN Product & Technology, I am now on the News Frontend team, where I work as the ABC News release manager and additionally contribute to our 8 local stations as well as Good Morning America"
+        },
+        "path": "/disneyNews",
+        "next": "/disney",
+        "prev": "/"
     },
     {
         "id": "disney",
         "title": "Walt Disney DTCI",
-        "subtitle": "professional experience",
         "background": {
             "small": "https://res.cloudinary.com/dwkr3rvtr/image/upload/w_1440,c_limit,dpr_auto,f_auto/dtci_slide_jnxk6t",
             "medium": "https://res.cloudinary.com/dwkr3rvtr/image/upload/w_1440,c_limit,dpr_auto,f_auto/dtci_slide_jnxk6t",
@@ -42,14 +67,14 @@
                 "secondary": "#ffffff"
             },
             "title": "Software Engineer II",
-            "subtitle": "2018 - present",
+            "subtitle": "2018 - 2022",
             "location": "Bristol, CT",
             "url": "/disney/info",
-            "description": "In 2018, with Disney consolidating their multiple technology groups under one umbrella, ESPN Technology became part of Walt Disney Direct-to-Consumer & International. Because of this, in addition to working on products for the Worldwide Leader in Sports, I now also contribute to our other brands including ABC, Disney, FX, and National Geographic."
+            "description": "In 2018, with Disney consolidating their multiple technology groups under one umbrella, ESPN Technology became part of Walt Disney Direct-to-Consumer & International. Because of this, in addition to working on products for the Worldwide Leader in Sports, I also contributed to our other brands including ABC, Disney, FX, and National Geographic..."
         },
         "path": "/disney",
         "next": "/espn",
-        "prev": "/"
+        "prev": "/disneyNews"
     },
     {
         "id": "espn",
@@ -70,7 +95,7 @@
             "subtitle": "2016 - 2018",
             "location": "Bristol, CT",
             "url": "/espn/info",
-            "description": "My journey with ESPN began on the Product Engineering team where I worked on maintaining multiple consumer facing sites including espn.com, secsports.com, and espnfc.us."
+            "description": "My journey with ESPN began on the Product Engineering team where I worked on maintaining multiple consumer facing sites including espn.com, secsports.com, and espnfc.us..."
         },
         "path": "/espn",
         "next": "/pixelsupply",
@@ -96,7 +121,7 @@
             "subtitle": "2014 - 2016",
             "location": "Miami, FL",
             "url": "/pixelsupply/info",
-            "description": "I started with Pixel Supply as an intern sophomore year, and then was hired on full-time after I graduated. While there, I worked on many different e-commerce websites for our clients on the Shopify platform. I also built the company’s first Shopify app, UrPic, using Ruby on Rails."
+            "description": "I started with Pixel Supply as an intern sophomore year, and then was hired on full-time after I graduated. While there, I worked on many different e-commerce websites for our clients on the Shopify platform. I also built the company’s first Shopify app, UrPic, using Ruby on Rails..."
         },
         "path": "/pixelsupply",
         "next": "/uf",
@@ -122,7 +147,7 @@
             "subtitle": "2012 - 2015",
             "location": "Gainesville, FL",
             "url": "/uf/info",
-            "description": "I graduated from the University of Florida (go Gators!) with a degree in Computer Science. This is where my passion for web development began, and where I spent many late nights trying to cram <i>just one more feature</i> into my assignments."
+            "description": "I graduated from the University of Florida (go Gators!) with a degree in Computer Science. This is where my passion for web development began, and where I spent many late nights trying to cram <i>just one more feature</i> into my assignments..."
         },
         "path": "/uf",
         "next": "/",

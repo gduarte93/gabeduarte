@@ -223,20 +223,24 @@ class PageSlide extends Component {
                                             </div>
                                             : null
                                     }
-                                    <Link className={`Link__info--button ${isIndex && !hasHoveredInfo && 'Link__info--home'}`} to={infoUrl} aria-label='See More' onMouseOut={me.handleMouseOutInfo} onClick={me.handleInfoClick.bind(me, infoUrl)}>
-                                        <div className="Threedots">
-                                            <div className="Threedots__dot" />
-                                            <div className="Threedots__dot" />
-                                            <div className="Threedots__dot" />
-                                        </div>
-                                    </Link>
-                                    <div className="Link__info--text">
-                                        See more
-                                    </div>
+                                    {
+                                        infoUrl ? <>
+                                            <Link className={`Link__info--button ${isIndex && !hasHoveredInfo && 'Link__info--home'}`} to={infoUrl} aria-label='See More' onMouseOut={me.handleMouseOutInfo} onClick={me.handleInfoClick.bind(me, infoUrl)}>
+                                                <div className="Threedots">
+                                                    <div className="Threedots__dot" />
+                                                    <div className="Threedots__dot" />
+                                                    <div className="Threedots__dot" />
+                                                </div>
+                                            </Link>
+                                            <div className="Link__info--text">
+                                                See more
+                                            </div>
+                                        </> : null
+                                    }
                                     <div className="PageSlide__description" style={primaryColorStyle}>
                                         <span dangerouslySetInnerHTML={{__html: desc}} />
                                         &nbsp;
-                                        <Link className="PageSlide__description--link" to={infoUrl} onClick={me.handleInfoClick.bind(me, infoUrl)}>(see more)</Link>
+                                        { infoUrl ? <Link className="PageSlide__description--link" to={infoUrl} onClick={me.handleInfoClick.bind(me, infoUrl)}>(see more)</Link> : null }
                                     </div>
                                 </div>
                             </div>
